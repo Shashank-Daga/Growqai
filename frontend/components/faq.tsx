@@ -32,7 +32,7 @@ const faqs: FAQItem[] = [
 ];
 
 export default function FAQ() {
-  const [openIndex, setOpenIndex] = useState<number | null>(0);
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const toggleFAQ = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -52,7 +52,7 @@ export default function FAQ() {
       <div className="grid lg:grid-cols-2 items-start">
         {/* Left Column - Title */}
         <div>
-          <h2 className="text-3xl font-bold text-gray-900">
+          <h2 className="text-2xl font-bold text-gray-900">
             Frequently Asked Questions
           </h2>
         </div>
@@ -71,7 +71,7 @@ export default function FAQ() {
                 <span className="text-lg font-medium text-gray-900">
                   {faq.question}
                 </span>
-                <span className="text-2xl font-light text-gray-800">
+                <span className="text-xl font-light text-gray-800">
                   {openIndex === index ? "−" : "+"}
                 </span>
               </button>

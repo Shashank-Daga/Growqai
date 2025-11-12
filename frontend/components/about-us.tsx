@@ -19,7 +19,7 @@ export default function AboutUsSection() {
         <div className="grid lg:grid-cols-2 gap-16 items-start mb-20">
           {/* Left Content */}
           <div>
-            <h1 className="text-5xl md:text-6xl font-semibold text-gray-900 mb-8 leading-tight">
+            <h1 className="text-4xl md:text-5xl font-semibold text-gray-900 mb-8 leading-tight">
               The partner you have been looking for
             </h1>
 
@@ -38,10 +38,10 @@ export default function AboutUsSection() {
             </button>
 
             {/* Join Us Section */}
-            <div className="bg-gray-50 p-12">
+            <div className="bg-gray-50 p-16">
               <div className="flex flex-col md:flex-row items-start md:items-end justify-between gap-8">
                 <div className="max-w-md">
-                  <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                  <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
                     Join us
                   </h2>
                   <p className="text-lg text-gray-700 leading-relaxed">

@@ -43,7 +43,7 @@ export function TestimonialsSlider() {
           </div>
           <p className="text-sm text-gray-600 mb-6 tracking-wide">/TESTIMONIALS</p>
           {/* <div className="flex flex-col md:flex-row justify-between items-start gap-8">
-            <h2 className="text-5xl md:text-6xl font-bold">Capabilities</h2>
+            <h2 className="text-4xl md:text-5xl font-bold">Capabilities</h2>
             <p className="text-gray-700 max-w-md text-lg leading-relaxed">
               We design and deliver AI solutions that solve real business challenges, create measurable impact, and build capabilities that will last inside your organization.
             </p>
@@ -59,8 +59,8 @@ export function TestimonialsSlider() {
           transition={{ duration: animationConfig.duration.normal }}
           className="bg-white dark:bg-slate-900 rounded-2xl p-12 max-w-4xl mx-auto border border-border text-center"
         >
-          <div className="text-6xl mb-6">{testimonials[activeIndex].avatar}</div>
-          <p className="text-2xl font-semibold mb-4">{testimonials[activeIndex].text}</p>
+          <div className="text-5xl mb-6">{testimonials[activeIndex].avatar}</div>
+          <p className="text-xl font-semibold mb-4">{testimonials[activeIndex].text}</p>
           <div>
             <p className="font-semibold">{testimonials[activeIndex].name}</p>
             <p className="text-muted-foreground">{testimonials[activeIndex].role}</p>

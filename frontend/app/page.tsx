@@ -3,23 +3,27 @@
 import { Navbar } from "@/components/navbar"
 import { HeroSection } from "@/components/hero-section"
 import { ServicesGrid } from "@/components/services-grid"
-// import { ShowcaseCarousel } from "@/components/showcase-carousel"
 import { TestimonialsSlider } from "@/components/testimonials-slider"
 import { ContactSection } from "@/components/contact-section"
 import { motion } from "framer-motion"
 import AboutUsSection from "@/components/about-us"
 import FAQ from "@/components/faq"
+import JoinUsSection from "@/components/join-us"
+import SolutionsSection from "@/components/solutions"
+import NewsSection from "@/components/news-section"
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-linear-to-b from-background to-secondary/20">
       <Navbar />
       <HeroSection />
-      {/* <ShowcaseCarousel /> */}
+      <JoinUsSection />
       <ServicesGrid />
+      <SolutionsSection />
       <TestimonialsSlider />
       <AboutUsSection />
       <FAQ />
+      <NewsSection />
       <ContactSection />
 
       {/* Footer */}

@@ -101,7 +101,7 @@ export function ServicesGrid() {
           </div>
           <p className="text-sm text-gray-600 mb-6 tracking-wide">/OUR SERVICES</p>
           <div className="flex flex-col md:flex-row justify-between items-start gap-8">
-            <h2 className="text-5xl md:text-6xl font-bold">Capabilities</h2>
+            <h2 className="text-4xl md:text-5xl font-bold">Capabilities</h2>
             <p className="text-gray-700 max-w-md text-lg leading-relaxed">
               We design and deliver AI solutions that solve real business challenges, create measurable impact, and build capabilities that will last inside your organization.
             </p>
@@ -127,7 +127,7 @@ export function ServicesGrid() {
                 <div className="mb-4">
                   {service.icon}
                 </div>
-                <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
+                <h3 className="text-xl font-bold mb-4">{service.title}</h3>
                 <p className="text-gray-700 leading-relaxed">{service.description}</p>
               </motion.div>
             ))}
@@ -144,7 +144,7 @@ export function ServicesGrid() {
                 <div className="mb-4">
                   {service.icon}
                 </div>
-                <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
+                <h3 className="text-xl font-bold mb-4">{service.title}</h3>
                 <p className="text-gray-700 leading-relaxed">{service.description}</p>
               </motion.div>
             ))}

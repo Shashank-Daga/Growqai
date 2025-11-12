@@ -16,7 +16,7 @@ export function ContactSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">Let's Connect</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Let's Connect</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             Have a project in mind? We'd love to hear about it and explore how we can help bring your vision to life.
           </p>

@@ -9,7 +9,7 @@ import { animationConfig } from "@/lib/animations"
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
 
-  const navItems = ["Services", "Use Cases", "Company"]
+  const navItems = ["Services", "Use Cases", "Company", "News", "Careers"]
 
   const fadeInDown = {
     initial: { opacity: 0, y: -20 },
@@ -35,7 +35,7 @@ export function Navbar() {
                 height={40}
                 className="object-contain"
               /> */}
-              <span className="font-semibold text-3xl tracking-tight text-gray-900">
+              <span className="font-semibold text-2xl tracking-tight text-gray-900">
                 GrowQai
               </span>
             </motion.div>
