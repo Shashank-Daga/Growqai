@@ -1,84 +1,117 @@
 "use client"
 
-import { useRef } from "react"
-import { motion, useScroll, useTransform } from "framer-motion"
+import { useEffect, useRef } from "react"
+import { gsap } from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { AlertTriangle } from "lucide-react"
 
+gsap.registerPlugin(ScrollTrigger)
+
 export default function JoinUsSection() {
-    const challenges = [
-        {
-            id: 1,
-            text: "Skilled teams stuck in repetitive work instead of creating value.",
-            position: "top-0 left-0 translate-x-12 translate-y-8",
-        },
-        {
-            id: 2,
-            text: "Processes that slow decisions and frustrate customers.",
-            position: "top-0 right-0 -translate-x-12 translate-y-8",
-        },
-        {
-            id: 3,
-            text: "Scaling that requires more people instead of smarter systems.",
-            position: "bottom-0 left-0 translate-x-12 -translate-y-8",
-        },
-        {
-            id: 4,
-            text: "Technology investments that add cost instead of driving growth.",
-            position: "bottom-0 right-0 -translate-x-12 -translate-y-8",
-        },
-    ]
+  const sectionRef = useRef<HTMLDivElement>(null)
+  const cardsRef = useRef<HTMLDivElement[]>([])
 
-    const sectionRef = useRef(null)
+  const challenges = [
+    {
+      id: 1,
+      text: "Skilled teams stuck in repetitive work instead of creating value.",
+      position: "bottom-3/4 left-0 translate-x-8 -translate-y-4",
+    },
+    {
+      id: 2,
+      text: "Processes that slow decisions and frustrate customers.",
+      position: "bottom-3/4 right-0 -translate-x-8 -translate-y-4",
+    },
+    {
+      id: 3,
+      text: "Scaling that requires more people instead of smarter systems.",
+      position: "bottom-1/4 left-0 translate-x-8 translate-y-4",
+    },
+    {
+      id: 4,
+      text: "Technology investments that add cost instead of driving growth.",
+      position: "bottom-1/4 right-0 -translate-x-8 translate-y-4",
+    },
+  ]
 
-    const { scrollYProgress } = useScroll({
-        target: sectionRef,
-        // Delay start by using "start end" + small offset
-        offset: ["start 80%", "end start"], 
-    })
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      // Fade in title when section enters view
+      gsap.fromTo(
+        ".joinus-title",
+        { opacity: 0, y: 45 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.8,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: "top 80%",
+            toggleActions: "play none none none",
+          },
+        }
+      )
 
-    return (
-        <section
-            ref={sectionRef}
-            id="joinUs"
-            className="relative py-32 bg-white overflow-hidden"
+      // Scroll-triggered fade-ins for each card
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top top",
+          end: "+=3000",
+          pin: true,
+          scrub: true,
+          anticipatePin: 1,
+        },
+      })
+
+      cardsRef.current.forEach((card, i) => {
+        tl.fromTo(
+          card,
+          { opacity: 0, y: 50 },
+          { opacity: 1, y: 0, duration: 1, ease: "power2.out" },
+          i + 0.5
+        )
+      })
+    }, sectionRef)
+
+    return () => ctx.revert()
+  }, [])
+
+  return (
+    <section
+      ref={sectionRef}
+      id="joinUs"
+      className="relative py-24 bg-white overflow-hidden min-h-screen"
+    >
+      <div className="max-w-6xl mx-auto px-6 md:px-12 text-center relative flex flex-col items-center justify-center min-h-screen">
+        {/* Title */}
+        <h2
+          className="joinus-title text-2xl md:text-3xl font-semibold text-gray-900 leading-snug max-w-3xl mx-auto opacity-0 mb-16"
+          style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 0.3)" }}
         >
-            <div className="max-w-6xl mx-auto px-6 md:px-12 text-center relative min-h-[60vh] flex flex-col items-center justify-center">
+          We recognize the challenges you face. That is why your path to impact
+          with AI starts here.
+        </h2>
 
-                {/* Floating Cards with scroll-based animation */}
-                <div className="absolute inset-0">
-                    {challenges.map((item, index) => {
-                        // Slightly stagger each card
-                        const start = 0.1 + index * 0.1 // add initial delay 0.1
-                        const end = start + 0.3
-
-                        const opacity = useTransform(scrollYProgress, [start, end], [0, 1])
-                        const y = useTransform(scrollYProgress, [start, end], [50, 0])
-                        const scale = useTransform(scrollYProgress, [start, end], [0.95, 1])
-
-                        return (
-                            <motion.div
-                                key={item.id}
-                                style={{ opacity, y, scale }}
-                                className={`absolute ${item.position} bg-gray-50 border border-gray-200 shadow-sm px-5 py-3 rounded-sm flex items-start gap-2 max-w-xs`}
-                            >
-                                <AlertTriangle className="w-5 h-5 text-yellow-500 mt-0.5 shrink-0" />
-                                <p className="text-sm text-gray-800 text-left leading-snug">
-                                    {item.text}
-                                </p>
-                            </motion.div>
-                        )
-                    })}
-                </div>
-
-                {/* Center Text */}
-                <h2
-                    className="text-2xl md:text-3xl font-semibold text-gray-900 leading-snug max-w-3xl mx-auto"
-                    style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 0.3)" }}
-                >
-                    We recognize the challenges you face. That is why your path to impact
-                    with AI starts here.
-                </h2>
+        {/* Floating challenge cards */}
+        <div className="absolute inset-0 pointer-events-none">
+          {challenges.map((item, index) => (
+            <div
+              key={item.id}
+              ref={(el) => {
+                if (el) cardsRef.current[index] = el
+              }}
+              className={`absolute ${item.position} bg-gray-50 border border-gray-200 shadow-sm px-4 py-2 rounded-md flex items-start gap-3 max-w-xs opacity-0`}
+            >
+              <AlertTriangle className="w-5 h-5 text-yellow-500 mt-1 shrink-0" />
+              <p className="text-sm text-gray-800 text-left leading-snug">
+                {item.text}
+              </p>
             </div>
-        </section>
-    )
+          ))}
+        </div>
+      </div>
+    </section>
+  )
 }
