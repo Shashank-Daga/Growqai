@@ -40,12 +40,15 @@ export default function NewsSection() {
   return (
     <section className="py-24 px-6 bg-white" id="latest-insights">
       <div className="max-w-7xl mx-auto">
-        {/* Header */}
-        <div className="flex items-center justify-between mb-10">
-          <div>
-            <p className="text-xs uppercase tracking-widest text-gray-500 mb-2">/NEWS</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Latest insights</h2>
+        {/* Section Header */}
+        <div className="mb-20">
+          <div className="relative mb-2">
+            <div className="h-px bg-gray-400 w-full"></div>
+            <div className="absolute top-0 left-0 w-48 h-[3px] bg-gray-600 -translate-y-0.5"></div>
           </div>
+        {/* Header */}
+            <p className="text-xs uppercase tracking-widest text-gray-500 mb-8">/NEWS</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Latest insights</h2>
           <Link
             href="#"
             className="inline-flex items-center gap-2 border border-gray-300 text-sm font-medium px-4 py-2 rounded-md hover:bg-gray-50 transition"
