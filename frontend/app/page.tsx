@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import { AnimatePresence } from "framer-motion"
 
 import { Navbar } from "@/components/navbar"
 import { HeroSection } from "@/components/hero-section"
@@ -21,26 +22,28 @@ export default function Home() {
 
   return (
     <>
-      {!introDone && <IntroSection onComplete={() => setIntroDone(true)} />}
+      {/* Intro Section - shows first, blocks everything else */}
+      <AnimatePresence>
+        {!introDone && <IntroSection onComplete={() => setIntroDone(true)} />}
+      </AnimatePresence>
 
-      <main
-        className={`min-h-screen bg-linear-to-b from-background to-secondary/20 transition-opacity duration-700 ${
-          introDone ? "opacity-100" : "opacity-0"
-        }`}
-      >
-        <Navbar />
-        <HeroSection />
-        <ChallengeSection />
-        <ApproachSection />
-        <Services />
-        <SolutionsSection />
-        <Testimonials />
-        <AboutUsSection />
-        <FAQ />
-        <NewsSection />
-        <ContactSection />
-        <Footer />
-      </main>
+      {/* Main Content - only renders after intro is done */}
+      {introDone && (
+        <main className="min-h-screen bg-linear-to-b from-background to-secondary/20">
+          <Navbar />
+          <HeroSection />
+          <ChallengeSection />
+          <ApproachSection />
+          <Services />
+          <SolutionsSection />
+          <Testimonials />
+          <AboutUsSection />
+          <FAQ />
+          <NewsSection />
+          <ContactSection />
+          <Footer />
+        </main>
+      )}
     </>
   )
 }

@@ -82,7 +82,7 @@ export default function SolutionsSection() {
                     {useCases.map((useCase, index) => (
                         <div
                             key={index}
-                            className="flex items-start gap-4 p-4 bg-gray-50 rounded-lg shadow-sm w-122"
+                            className="flex items-start gap-4 p-4 bg-gray-50 rounded-lg shadow-sm max-w-lg"
                         >
                             <div className="shrink-0">{useCase.icon}</div><hr />
                             <div>

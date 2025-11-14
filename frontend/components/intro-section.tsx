@@ -6,12 +6,11 @@ import { motion, AnimatePresence } from "framer-motion"
 const slides = [
   { id: 1, text: "Empowering growth with intelligence." },
   { id: 2, text: "Transforming challenges into opportunities." },
-  { id: 3, text: "Welcome to the future of work — GrowQai." },
+  { id: 3, text: "Welcome to the future of work – GrowQai." },
 ]
 
 export default function IntroSection({ onComplete }: { onComplete: () => void }) {
   const [currentSlide, setCurrentSlide] = useState(0)
-  const [showIntro, setShowIntro] = useState(true)
 
   useEffect(() => {
     if (currentSlide < slides.length - 1) {
@@ -21,17 +20,19 @@ export default function IntroSection({ onComplete }: { onComplete: () => void })
       return () => clearTimeout(timer)
     } else {
       const endTimer = setTimeout(() => {
-        setShowIntro(false)
         onComplete?.()
       }, 2000)
       return () => clearTimeout(endTimer)
     }
-  }, [currentSlide])
-
-  if (!showIntro) return null
+  }, [currentSlide, onComplete])
 
   return (
-    <div className="fixed inset-0 z-9999 flex items-center justify-center bg-black text-white">
+    <motion.div 
+      className="fixed inset-0 z-9999 flex items-center justify-center bg-black text-white"
+      initial={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.5 }}
+    >
       <AnimatePresence mode="wait">
         <motion.div
           key={slides[currentSlide].id}
@@ -44,6 +45,6 @@ export default function IntroSection({ onComplete }: { onComplete: () => void })
           {slides[currentSlide].text}
         </motion.div>
       </AnimatePresence>
-    </div>
+    </motion.div>
   )
 }

@@ -2,7 +2,7 @@
 
 import Image from "next/image"
 import { motion } from "framer-motion"
-import { scaleIn } from "@/lib/animations"
+import { scaleIn, staggerContainer, fadeInUp } from "@/lib/animations"
 
 export function HeroSection() {
   return (
@@ -10,14 +10,21 @@ export function HeroSection() {
       id="home"
       className="relative w-full bg-white text-foreground overflow-hidden pt-28 md:pt-20 pb-24"
     >
-      <div className="max-w-7xl mx-auto px-4 md:px-8">
+      <motion.div
+        className="max-w-7xl mx-auto px-4 md:px-8"
+        variants={staggerContainer}
+        initial="initial"
+        animate="animate"
+        transition={{ delayChildren: 1.5}}
+      >
         {/* Heading Row */}
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 relative">
+        <motion.div
+          className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 relative"
+          variants={fadeInUp}
+        >
           {/* Left: Heading */}
           <motion.h1
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            variants={fadeInUp}
             className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight tracking-tight max-w-3xl"
           >
             Unlocking growth with <br />
@@ -27,8 +34,7 @@ export function HeroSection() {
 
           {/* Top-right small image */}
           <motion.div
-            {...scaleIn}
-            transition={{ delay: 0.4, duration: 1 }}
+            variants={scaleIn}
             className="w-40 sm:w-48 md:w-56 lg:w-64 xl:w-72 aspect-[4/2.5] rounded-md overflow-hidden shadow-md md:absolute md:top-0 md:right-0"
           >
             <Image
@@ -38,14 +44,16 @@ export function HeroSection() {
               className="object-cover"
             />
           </motion.div>
-        </div>
+        </motion.div>
 
         {/* Content Row */}
-        <div className="mt-16 grid md:grid-cols-2 gap-10 md:gap-20 items-start">
+        <motion.div
+          className="mt-16 grid md:grid-cols-2 gap-10 md:gap-20 items-start"
+          variants={fadeInUp}
+        >
           {/* Left: Main Image */}
           <motion.div
-            {...scaleIn}
-            transition={{ delay: 0.5, duration: 1.2 }}
+            variants={scaleIn}
             className="relative w-full"
           >
             <div className="w-full aspect-[4/2.5] rounded-xl overflow-hidden border border-gray-200 shadow-xl">
@@ -59,12 +67,13 @@ export function HeroSection() {
           </motion.div>
 
           {/* Right: Text and Buttons */}
-          <div>
+          <motion.div
+            variants={fadeInUp}
+            className="space-y-7"
+          >
             <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2, duration: 0.8 }}
-              className="text-base md:text-lg text-muted-foreground max-w-md mb-7"
+              variants={fadeInUp}
+              className="text-base md:text-lg text-muted-foreground max-w-md"
             >
               From data strategy to managed AI solutions. At GrowQai we align
               technology advancements with your business model — turning pressure
@@ -72,10 +81,8 @@ export function HeroSection() {
             </motion.p>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4, duration: 0.8 }}
-              className="flex flex-col sm:flex-row gap-4 mb-10"
+              variants={fadeInUp}
+              className="flex flex-col sm:flex-row gap-4"
             >
               <button className="flex items-center justify-center gap-2 px-6 py-3 bg-black text-white rounded-md font-medium hover:scale-105 hover:shadow-lg transition-all duration-300">
                 Free Discovery Call
@@ -89,9 +96,7 @@ export function HeroSection() {
 
             {/* Trusted By Section */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6, duration: 0.8 }}
+              variants={fadeInUp}
               className="relative pt-5"
             >
               {/* Decorative top line */}
@@ -106,7 +111,10 @@ export function HeroSection() {
               </p>
 
               {/* Logos Row */}
-              <div className="flex flex-wrap items-center gap-8 opacity-70">
+              <motion.div
+                variants={fadeInUp}
+                className="flex flex-wrap items-center gap-8 opacity-70"
+              >
                 <Image
                   src="/logos/marks-walters.svg"
                   alt="Marks Walters"
@@ -131,12 +139,12 @@ export function HeroSection() {
                   width={100}
                   height={30}
                 />
-              </div>
+              </motion.div>
             </motion.div>
 
-          </div>
-        </div>
-      </div>
+          </motion.div>
+        </motion.div>
+      </motion.div>
     </section>
   )
 }
