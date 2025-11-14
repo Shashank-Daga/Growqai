@@ -33,9 +33,9 @@ export default function Home() {
           <Navbar />
           <HeroSection />
           <ChallengeSection />
-          <ApproachSection />
           <Services />
           <SolutionsSection />
+          <ApproachSection />
           <Testimonials />
           <AboutUsSection />
           <FAQ />

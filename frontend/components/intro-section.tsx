@@ -4,9 +4,9 @@ import { useEffect, useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 
 const slides = [
-  { id: 1, text: "Empowering growth with intelligence." },
-  { id: 2, text: "Transforming challenges into opportunities." },
-  { id: 3, text: "Welcome to the future of work – GrowQai." },
+  { id: 1, text: "Scale Smartly" },
+  { id: 2, text: "Leveraging the power of AI" },
+  { id: 3, text: "Growqai." },
 ]
 
 export default function IntroSection({ onComplete }: { onComplete: () => void }) {

@@ -8,30 +8,18 @@ import { motion } from "framer-motion"
 const articles = [
   {
     id: 1,
-    category: "INSIGHTS",
-    date: "NOV 4, 2025",
-    title: "Subduxion and Databricks join forces to make applied AI solutions possible",
-    excerpt:
-      "Together, Subduxion and Databricks make AI work in reality: connecting data, compliance, and operations into one trusted backbone.",
+    title: "The Growth Gap: Why Most Companies Fail to Scale (and How AI Can Fix It)",
     image: "/news/databricks-subduxion.png",
     large: true,
   },
   {
     id: 2,
-    category: "TIPS",
-    date: "NOV 3, 2025",
-    title: "Closing the Gap Between AI’s Promise and Reality: Private AI Infrastructure",
-    excerpt:
-      "Bridge the gap between AI’s promise and reality. In this blog we explain how we ...",
+    title: "Data Discipline Over AI: The Missing Link in Most Growth Strategies",
     image: "/news/ai-infra.png",
   },
   {
     id: 3,
-    category: "INSIGHTS",
-    date: "OCT 12, 2025",
-    title: "Subduxion Running Team Participated in the ASML Marathon 2025",
-    excerpt:
-      "On Sunday, October 12, the Subduxion team laced up their running shoes for a ...",
+    title: "Smart Growth for Smart Founders: Why Consulting with AI Is the New Competitive Edge",
     image: "/news/marathon.png",
   },
 ]
@@ -56,11 +44,13 @@ export default function NewsSection() {
             </h2>
 
             <Link
-              href="#"
-              className="inline-flex items-center gap-2 border border-gray-300 text-sm font-medium px-6 py-2 rounded-md hover:bg-gray-50 transition"
+              href="/insights"
+              className="inline-flex items-center gap-2 border border-gray-300 text-sm font-medium px-6 py-2 rounded-md transition bg-black text-white"
             >
               Discover more
-              <ArrowUpRight className="w-4 h-4" />
+              <span className="bg-blue-100 text-black rounded-sm p-[3px]">
+                <ArrowUpRight className="w-4 h-4" />
+              </span>
             </Link>
           </div>
         </div>
@@ -77,7 +67,7 @@ export default function NewsSection() {
             },
           }}
         >
-          {articles.map((article) => (
+          {articles.slice(0, 3).map((article) => (
             <motion.div
               key={article.id}
               variants={{
@@ -97,19 +87,10 @@ export default function NewsSection() {
                 />
               </div>
 
-              {/* Meta */}
-              <div className="flex items-center justify-between text-xs text-gray-500 mb-2">
-                <span>▪ {article.category}</span>
-                <span>/{article.date}</span>
-              </div>
-
               {/* Title */}
               <h3 className="font-semibold text-lg text-gray-900 leading-snug mb-2">
                 {article.title}
               </h3>
-
-              {/* Excerpt */}
-              <p className="text-sm text-gray-600 line-clamp-2">{article.excerpt}</p>
             </motion.div>
           ))}
         </motion.div>

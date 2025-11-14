@@ -27,9 +27,9 @@ const fadeInDirection = (direction: "left" | "right" | "up"): Variants => {
 const services = [
   {
     id: 1,
-    title: "AI Strategy & Consulting",
+    title: "Arrange Capital",
     description:
-      "Turn ambition into action with a clear AI roadmap. We align AI opportunities with your business priorities, define use cases with ROI, and guide you through adoption with confidence.",
+      "Identify & Engage with potential investors & expediting capital Infusion.",
     icon: (
       <svg viewBox="0 0 120 120" className="w-20 h-20">
         <path
@@ -45,9 +45,9 @@ const services = [
   },
   {
     id: 2,
-    title: "Data Enablement",
+    title: "Attract Client",
     description:
-      "Lay the foundation for AI success. From data strategy and architecture to governance and integration, we ensure your data is ready to power scalable, intelligent solutions.",
+      "Expand your client base through AI-powered Lead Generation & Conversion.",
     icon: (
       <svg viewBox="0 0 120 120" className="w-20 h-20">
         <ellipse cx="60" cy="35" rx="35" ry="8" fill="#d1d5db" />
@@ -60,9 +60,9 @@ const services = [
   },
   {
     id: 3,
-    title: "Managed AI Solutions",
+    title: "Accelerate Talent",
     description:
-      "We architect, design, build, and manage AI agentic solutions tailored to your business, so you can focus on outcomes without the technological hassle.",
+      "Identify and hire top-tier talent with AI-powered hiring.",
     icon: (
       <svg viewBox="0 0 120 120" className="w-20 h-20">
         <path

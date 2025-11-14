@@ -27,9 +27,7 @@ export function HeroSection() {
             variants={fadeInUp}
             className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight tracking-tight max-w-3xl"
           >
-            Unlocking growth with <br />
-            data, technology and <br />
-            artificial intelligence.
+            Scale your business faster, smartly.
           </motion.h1>
 
           {/* Top-right small image */}
@@ -75,23 +73,21 @@ export function HeroSection() {
               variants={fadeInUp}
               className="text-base md:text-lg text-muted-foreground max-w-md"
             >
-              From data strategy to managed AI solutions. At GrowQai we align
-              technology advancements with your business model — turning pressure
-              from AI into performance and data investments into impact.
+              Unlock Extraordinary Growth Across Capital, Client, and Talent - Powered by AI, to Elevate Your Business to New Heights.
             </motion.p>
 
             <motion.div
               variants={fadeInUp}
-              className="flex flex-col sm:flex-row gap-4"
+              className="flex flex-col sm:flex-row gap-4 mb-15"
             >
-              <button className="flex items-center justify-center gap-2 px-6 py-3 bg-black text-white rounded-md font-medium hover:scale-105 hover:shadow-lg transition-all duration-300">
+              <a href="#contact" className="flex items-center justify-center gap-2 px-6 py-3 bg-black text-white rounded-md font-medium hover:scale-105 hover:shadow-lg transition-all duration-300">
                 Free Discovery Call
                 <span className="inline-block">↗</span>
-              </button>
-              <button className="flex items-center justify-center gap-2 px-6 py-3 border border-gray-400 text-gray-800 rounded-md font-medium hover:bg-gray-100 transition-all duration-300">
+              </a>
+              <a href="/services" className="flex items-center justify-center gap-2 px-6 py-3 border border-gray-400 text-gray-800 rounded-md font-medium hover:bg-gray-100 transition-all duration-300">
                 Explore Our Services
                 <span className="inline-block">↗</span>
-              </button>
+              </a>
             </motion.div>
 
             {/* Trusted By Section */}

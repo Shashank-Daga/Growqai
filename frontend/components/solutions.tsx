@@ -8,44 +8,64 @@ import {
     Puzzle,
     Repeat2,
 } from "lucide-react"
+import { motion } from "framer-motion"
+import { fadeInUp } from "@/lib/animations"
 
 export default function SolutionsSection() {
     const useCases = [
         {
             icon: <FileText className="w-6 h-6 text-gray-900" />,
-            title: "Knowledge & Retrieval",
+            title: "Funding Readiness",
             description:
-                "Searches across documents and systems, extracts facts, links context, and returns reliable answers. Converts unstructured files into structured knowledge with memory for reuse.",
+                "Strengthens business models, financial structures, and growth narratives to make companies investment-ready. Aligns strategy and performance with investor expectations.",
         },
         {
             icon: <Workflow className="w-6 h-6 text-gray-900" />,
-            title: "Workflow Automation",
+            title: "Investor Matching",
             description:
-                "Digitizes manual data entry, reconciliations, and routine admin work in finance, HR, and operations. Cuts errors and cycle time with end-to-end automation.",
+                "Connects high-potential businesses with curated investors aligned by industry, stage, and vision. Bridges the gap between opportunity and capital.",
         },
         {
             icon: <Users className="w-6 h-6 text-gray-900" />,
-            title: "Workforce Productivity",
+            title: "Capital Infusion",
             description:
-                "Supports drafting, meeting capture, task routing, and team coordination inside existing tools. Raises throughput without adding headcount.",
+                "Facilitates strategic fundraising and partnership-driven investments. Fuels scalability and sustains long-term financial growth.",
         },
         {
             icon: <ShieldCheck className="w-6 h-6 text-gray-900" />,
-            title: "Monitoring & Compliance",
+            title: "Boost client's pipeline",
             description:
-                "Tracks KPIs, policies, and regulatory updates in real time. Builds audit trails, validates data against rules, and enforces governance.",
+                "Accelerates demand generation through data-led outreach, partnerships, and performance-driven acquisition strategies. Expands the client base with precision.",
         },
         {
             icon: <Puzzle className="w-6 h-6 text-gray-900" />,
-            title: "Decision & Planning",
+            title: "Effective Engagement",
             description:
-                "Combines forecasting, scenario modeling, and optimization to guide plans, schedules, and pricing. Moves decisions from periodic to continuous and data driven.",
+                "Builds meaningful client relationships through personalized touchpoints and structured engagement models. Enhances retention and long-term value.",
         },
         {
             icon: <Repeat2 className="w-6 h-6 text-gray-900" />,
-            title: "Operations & Execution",
+            title: "Target Conversions",
             description:
-                "Runs service workflows, approvals, and case resolution across systems. Orchestrates handoffs between people and software to shorten cycle times.",
+                "Transforms marketing and sales operations into conversion-focused ecosystems. Drives measurable results across every stage of the funnel.",
+        },
+        {
+            icon: <ShieldCheck className="w-6 h-6 text-gray-900" />,
+            title: "Automated talent sourcing",
+            description:
+                "Implements intelligent sourcing systems that identify and attract top talent efficiently. Reduces hiring effort while improving candidate quality.",
+        },
+        {
+            icon: <Puzzle className="w-6 h-6 text-gray-900" />,
+            title: "Expedite hiring",
+            description:
+                "Streamlines recruitment processes with technology-led assessments and workflow automation. Enables faster team expansion without compromising quality.",
+        },
+        {
+            icon: <Repeat2 className="w-6 h-6 text-gray-900" />,
+            title: "Leverage the power of AI",
+            description:
+                "Infuses AI across growth, capital, and talent functions to unlock real-time insights and operational efficiency. Powers data-driven, scalable business decisions.",
         },
     ]
 
@@ -78,10 +98,25 @@ export default function SolutionsSection() {
                 </div>
 
                 {/* Grid */}
-                <div className="grid md:grid-cols-2 gap-x-8 gap-y-12 translate-x-0 md:translate-x-12"> {/* smaller gaps */}
+                <motion.div
+                    className="grid md:grid-cols-2 gap-x-8 gap-y-12 translate-x-0 md:translate-x-12"
+                    initial="initial"
+                    whileInView="animate"
+                    viewport={{ once: true }}
+                    variants={{
+                        initial: {},
+                        animate: {
+                            transition: {
+                                staggerChildren: 0.1,
+                                delayChildren: 0.1,
+                            },
+                        },
+                    }}
+                >
                     {useCases.map((useCase, index) => (
-                        <div
+                        <motion.div
                             key={index}
+                            variants={fadeInUp}
                             className="flex items-start gap-4 p-4 bg-gray-50 rounded-lg shadow-sm max-w-lg"
                         >
                             <div className="shrink-0">{useCase.icon}</div><hr />
@@ -93,9 +128,9 @@ export default function SolutionsSection() {
                                     {useCase.description}
                                 </p>
                             </div>
-                        </div>
+                        </motion.div>
                     ))}
-                </div>
+                </motion.div>
 
             </div>
         </section>

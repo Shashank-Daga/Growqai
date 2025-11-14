@@ -1,75 +1,77 @@
 "use client"
 
-import { motion } from "framer-motion"
-import { useState } from "react"
-import { animationConfig } from "@/lib/animations"
+import Image from "next/image"
 
 const testimonials = [
   {
     id: 1,
-    name: "Sarah Johnson",
-    role: "Creative Director",
-    text: "The animations are absolutely stunning. They bring our vision to life in ways we never imagined.",
-    avatar: "👩‍💼",
+    name: "Chintaman Sanap",
+    company: "Kosoku",
+    text: "Growqai's collaborative approach, attention to detail, and commitment to delivering results set them apart from other consulting firms. I wouldn't hesitate to recommend.",
+    img: "/testimonials/chintaman.jpg", // add correct image later
   },
   {
     id: 2,
-    name: "Michael Chen",
-    role: "Product Manager",
-    text: "Performance and beauty combined. This is exactly what we were looking for in a modern web experience.",
-    avatar: "👨‍💼",
+    name: "Abhi Karn",
+    company: "Merito",
+    text: "Their team's depth of knowledge, strategic thinking, and commitment to excellence have been instrumental in helping us innovate talent acquisition at scale.",
+    img: "/testimonials/abhi.jpg",
   },
   {
     id: 3,
-    name: "Emma Davis",
-    role: "UX Designer",
-    text: "Every interaction feels intentional and delightful. The attention to detail is remarkable.",
-    avatar: "👩‍🎨",
+    name: "Manoj Baraskar",
+    company: "RAMS",
+    text: "The team at Growqai exceeded our expectations in every way. We are grateful for their partnership and the positive impact they've had on our business.",
+    img: "/testimonials/manoj.jpg",
   },
 ]
 
 export function Testimonials() {
-  const [activeIndex, setActiveIndex] = useState(0)
-
   return (
-    <section id="testimonials" className="py-20 px-4 bg-white">
+    <section id="testimonials" className="py-24 px-4 bg-white">
       <div className="max-w-7xl mx-auto">
-        {/* Section Header */}
-        <div className="mb-20">
+        <div className="mb-12">
           {/* Decorative top line */}
           <div className="relative mb-2">
             <div className="h-px bg-gray-400 w-full"></div>
             <div className="absolute top-0 left-0 w-48 h-[3px] bg-gray-600 -translate-y-0.5"></div>
           </div>
-          <p className="text-sm text-gray-600 mb-6 tracking-wide">/TESTIMONIALS</p>
+          <p className="text-sm tracking-wide text-gray-800 font-medium">/TESTIMONIALS</p>
         </div>
+        <div className="grid md:grid-cols-3 gap-10">
+          {testimonials.map((item) => (
+            <div
+              key={item.id}
+              className="bg-white p-10 rounded-2xl shadow-sm border border-gray-200"
+            >
+              {/* Stars */}
+              <div className="flex gap-1 mb-5">
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <span key={i} className="text-yellow-500 text-lg">★</span>
+                ))}
+              </div>
 
-        {/* Testimonial Card */}
-        <motion.div
-          key={activeIndex}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -20 }}
-          transition={{ duration: animationConfig.duration.normal }}
-          className="bg-white dark:bg-slate-900 rounded-2xl p-12 max-w-4xl mx-auto border border-border text-center"
-        >
-          <div className="text-5xl mb-6">{testimonials[activeIndex].avatar}</div>
-          <p className="text-xl font-semibold mb-4">{testimonials[activeIndex].text}</p>
-          <div>
-            <p className="font-semibold">{testimonials[activeIndex].name}</p>
-            <p className="text-muted-foreground">{testimonials[activeIndex].role}</p>
-          </div>
-        </motion.div>
+              {/* Text */}
+              <p className="text-gray-700 leading-relaxed mb-8">
+                {item.text}
+              </p>
 
-        {/* Navigation Dots */}
-        <div className="flex justify-center gap-3 mt-8">
-          {testimonials.map((_, i) => (
-            <motion.button
-              key={i}
-              onClick={() => setActiveIndex(i)}
-              className={`h-3 rounded-full transition-all ${i === activeIndex ? "bg-primary w-8" : "bg-border w-3"}`}
-              whileHover={{ scale: 1.1 }}
-            />
+              {/* Profile */}
+              <div className="flex items-center gap-3">
+                <Image
+                  src={item.img}
+                  alt={item.name}
+                  width={48}
+                  height={48}
+                  className="rounded-full border"
+                />
+
+                <div>
+                  <p className="font-semibold text-gray-900">{item.name}</p>
+                  <p className="text-sm text-gray-500">{item.company}</p>
+                </div>
+              </div>
+            </div>
           ))}
         </div>
       </div>

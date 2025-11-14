@@ -9,25 +9,25 @@ type FAQItem = {
 
 const faqs: FAQItem[] = [
   {
-    question: "Why Subduxion?",
+    question: "Why is Growqai different?",
     answer:
-      "Subduxion is dedicated to unlocking sustainable growth for your business, boosting long-term value, efficiency, and impact through managed AI solutions. Based at the High Tech Campus AI Innovation Center, we optimize every aspect of your AI strategy from assessment, design, development, and scalability, leveraging deep AI expertise and digital innovation. Our managed services consistently deliver measurable efficiency gains and revenue improvements tailored to each client’s context.",
+      "Unlike traditional consulting firms, Growqai combines <strong>strategic expertise with AI-backed precision.</strong> We don’t just advise — we enable execution with data, technology, and performance-driven systems.",
   },
   {
-    question: "What makes Subduxion different?",
-    answer: "",
+    question: "How does Growqai help with Capital, Client, and Talent?",
+    answer: "We help ventures <strong>attract the right capital, acquire quality clients, and build capable teams</strong>, ensuring all three growth levers work together seamlessly for long-term success.",
   },
   {
-    question: "What industries benefit from your managed AI expertise?",
-    answer: "",
+    question: "How does Growqai use AI in its consulting approach?",
+    answer: "AI helps us go beyond assumptions. We use intelligent data models to analyze performance, identify growth gaps, and design strategies that create measurable impact.",
   },
   {
-    question: "Do we need an in-house AI team to partner with you?",
-    answer: "",
+    question: "What industries does Growqai work with?",
+    answer: "We collaborate with businesses across <strong>tech, finance, real estate, and professional services</strong>, offering customized growth frameworks that fit each industry’s unique challenges.",
   },
   {
-    question: "What ongoing management and support do you provide?",
-    answer: "",
+    question: "How does Growqai help businesses scale faster?",
+    answer: "Growqai partners with ventures to unlock growth across <strong>Capital, Client, and Talent.</strong> Using <strong>AI-led insights</strong>, we design data-backed strategies that turn potential into predictable performance.",
   },
 ];
 
@@ -77,9 +77,10 @@ export default function FAQ() {
               </button>
 
               {openIndex === index && faq.answer && (
-                <div className="px-6 pb-6 pt-0 text-gray-700 leading-relaxed text-base">
-                  {faq.answer}
-                </div>
+                <div
+                  className="px-6 pb-6 pt-0 text-gray-700 leading-relaxed text-base"
+                  dangerouslySetInnerHTML={{ __html: faq.answer }}
+                />
               )}
             </div>
           ))}

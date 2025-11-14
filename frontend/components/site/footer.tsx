@@ -13,8 +13,6 @@ export function Footer() {
             <p className="text-[#40444b] text-sm">
               Growqai is a growth consulting firm designed for the new-age business era.<br />
               We empower companies to scale through Capital, Clients, and Talent.<br />
-              Our approach combines strategy, execution, and partnership to deliver measurable outcomes.<br />
-              Because at Growqai, growth isn&apos;t a goal; it&apos;s a process we master.
             </p>
           </div>
 
@@ -25,17 +23,14 @@ export function Footer() {
               <Link href="/" className="block text-[#40444b] hover:text-[#004250] text-sm transition-colors">
                 Home
               </Link>
-              <Link href="#services" className="block text-[#40444b] hover:text-[#004250] text-sm transition-colors">
+              <Link href="/services" className="block text-[#40444b] hover:text-[#004250] text-sm transition-colors">
                 Services
               </Link>
-              <Link href="#latest-insights" className="block text-[#40444b] hover:text-[#004250] text-sm transition-colors">
+              {/* <Link href="/latest-insights" className="block text-[#40444b] hover:text-[#004250] text-sm transition-colors">
                 Case Studies
-              </Link>
+              </Link> */}
               <Link href="#testimonials" className="block text-[#40444b] hover:text-[#004250] text-sm transition-colors">
                 Testimonials
-              </Link>
-              <Link href="#latest-insights" className="block text-[#40444b] hover:text-[#004250] text-sm transition-colors">
-                Insights
               </Link>
             </div>
           </div>
@@ -44,11 +39,17 @@ export function Footer() {
           <div>
             <h3 className="font-semibold mb-4">Company</h3>
             <div className="space-y-2">
-              <Link href="#about-us" className="block text-[#40444b] hover:text-[#004250] text-sm transition-colors">
+              <Link href="/hub" className="block text-[#40444b] hover:text-[#004250] text-sm transition-colors">
+                HUB
+              </Link>
+              <Link href="/about-us" className="block text-[#40444b] hover:text-[#004250] text-sm transition-colors">
                 About us
               </Link>
-              <Link href="#contact" className="block text-[#40444b] hover:text-[#004250] text-sm transition-colors">
+              <Link href="/contact" className="block text-[#40444b] hover:text-[#004250] text-sm transition-colors">
                 Contact
+              </Link>
+              <Link href="/latest-insights" className="block text-[#40444b] hover:text-[#004250] text-sm transition-colors">
+                Insights
               </Link>
             </div>
           </div>
@@ -67,7 +68,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-[#40444b] mt-8 pt-8 text-center">
+        <div className="border-t border-[#40444b] mt-8 pt-8">
           <p className="text-[#40444b] text-sm">
             © 2025 Growqai. All rights reserved.
           </p>

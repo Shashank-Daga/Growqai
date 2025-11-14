@@ -10,9 +10,9 @@ gsap.registerPlugin(ScrollTrigger)
 const approachSteps = [
   {
     number: "/01",
-    title: "Envision",
+    title: "A-Assess",
     description:
-      "It begins by understanding your goals and challenges to identify where AI can create the most value for your organization. This step clarifies priorities, exposes inefficiencies, and reveals new monetization opportunities.",
+      "Analyzes the business landscape, identifies growth gaps, and benchmarks performance across capital, client, and talent verticals. Establishes a clear foundation for scalable growth.",
     icon: (
       <svg viewBox="0 0 300 400" className="w-full h-full">
         <defs>
@@ -30,9 +30,9 @@ const approachSteps = [
   },
   {
     number: "/02",
-    title: "Blueprint",
+    title: "C- Create",
     description:
-      "From shaping a roadmap to addressing urgent challenges, we design and architect AI solutions by identifying both everyday inefficiencies and mission-critical pain points.",
+      "Designs tailored strategies, systems, and processes that align with business objectives. Builds actionable roadmaps that convert insights into measurable outcomes.",
     icon: (
       <svg viewBox="0 0 300 400" className="w-full h-full">
         <defs>
@@ -61,9 +61,9 @@ const approachSteps = [
   },
   {
     number: "/03",
-    title: "Deploy",
+    title: "E- Enable",
     description:
-      "We build and integrate AI solutions into new or existing workflows, ensuring secure data foundations, current IT system integration, and measurable results from day one.",
+      "Implements the right tools, networks, and expertise to execute and sustain growth. Empowers businesses to accelerate performance and maintain long-term impact.",
     icon: (
       <svg viewBox="0 0 300 400" className="w-full h-full relative">
         <defs>

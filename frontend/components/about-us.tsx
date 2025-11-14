@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { ArrowUpRight } from 'lucide-react';
 
 export default function AboutUsSection() {
@@ -19,22 +20,23 @@ export default function AboutUsSection() {
           {/* Left Content */}
           <div>
             <h1 className="text-4xl md:text-5xl font-semibold text-gray-900 mb-8 leading-tight">
-              The partner you have been looking for
+              We are obsessed with growth
             </h1>
 
             <p className="text-lg text-gray-700 mb-8 leading-relaxed max-w-xl">
-              We bring together a wealth of experience to make technology work. Partnering with organizations to design bespoke solutions that can meet their highest standards.
+              Growth is never by mere chance but by the choices you make, and we help you make the
+              right choices to unlock your growth potential.
             </p>
 
             {/* About Us Button */}
-            <button className="group flex items-center gap-0 bg-blue-100 hover:bg-blue-200 transition-colors">
+            <Link href="/about-us" className="group flex w-fit items-center gap-0 bg-blue-100 hover:bg-blue-200 transition-colors">
               <span className="px-8 text-lg font-medium text-gray-900">
                 About Us
               </span>
               <span className="bg-black px-4 py-4 flex items-center justify-center">
                 <ArrowUpRight className="w-6 h-6 text-white" />
               </span>
-            </button>
+            </Link>
           </div>
 
           {/* Right Image */}
@@ -47,7 +49,7 @@ export default function AboutUsSection() {
           </div>
 
         </div>
-        
+
       </div>
     </section>
   );

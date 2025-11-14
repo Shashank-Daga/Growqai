@@ -14,12 +14,12 @@ export default function ChallengeSection() {
   const challenges = [
     {
       id: 1,
-      text: "Skilled teams stuck in repetitive work instead of creating value.",
+      text: "Difficulty in sourcing capital to fuel growth.",
       position: "bottom-3/4 left-0 translate-x-8 -translate-y-4",
     },
     {
       id: 2,
-      text: "Processes that slow decisions and frustrate customers.",
+      text: "Stagnant or unpredictable client pipelines.",
       position: "bottom-3/4 right-0 -translate-x-8 -translate-y-4",
     },
     {
@@ -29,7 +29,7 @@ export default function ChallengeSection() {
     },
     {
       id: 4,
-      text: "Technology investments that add cost instead of driving growth.",
+      text: "Leveraging Technology for bringing predictable outcomes.",
       position: "bottom-1/4 right-0 -translate-x-8 translate-y-4",
     },
   ]
@@ -95,11 +95,8 @@ export default function ChallengeSection() {
       <div className="max-w-6xl mx-auto px-6 md:px-12 text-center relative flex flex-col items-center justify-center min-h-screen">
         {/* Title */}
         <h2
-          className="joinus-title text-2xl md:text-3xl font-semibold text-gray-900 leading-snug max-w-3xl mx-auto opacity-0 mb-16"
-          style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 0.3)" }}
-        >
-          We recognize the challenges you face. That is why your path to impact
-          with AI starts here.
+          className="joinus-title text-2xl md:text-3xl font-semibold text-gray-900 leading-snug max-w-3xl mx-auto opacity-0 mb-16">
+          We understand the growth challenges you face.
         </h2>
 
         {/* Floating challenge cards */}

@@ -84,13 +84,14 @@ export function ContactSection() {
           </motion.div>
 
           {/* Contact Form */}
-          <motion.form
+          <motion.div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: animationConfig.duration.normal }}
             viewport={{ once: true }}
-            className="space-y-6"
+            className="border border-gray-200 rounded-lg p-6"
           >
+            <form className="space-y-6">
             <input
               type="text"
               placeholder="Your Name"
@@ -113,7 +114,8 @@ export function ContactSection() {
             >
               Send Message
             </motion.button>
-          </motion.form>
+            </form>
+          </motion.div>
         </div>
       </div>
     </section>
