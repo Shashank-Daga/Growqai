@@ -7,7 +7,7 @@ import { AlertTriangle } from "lucide-react"
 
 gsap.registerPlugin(ScrollTrigger)
 
-export default function JoinUsSection() {
+export default function ChallengeSection() {
   const sectionRef = useRef<HTMLDivElement>(null)
   const cardsRef = useRef<HTMLDivElement[]>([])
 
@@ -43,7 +43,7 @@ export default function JoinUsSection() {
         {
           opacity: 1,
           y: 0,
-          duration: 0.8,
+          duration: 0.5,
           ease: "power2.out",
           scrollTrigger: {
             trigger: sectionRef.current,
@@ -58,9 +58,9 @@ export default function JoinUsSection() {
         scrollTrigger: {
           trigger: sectionRef.current,
           start: "top top",
-          end: "+=3000",
+          end: "+=2000",
           pin: true,
-          scrub: true,
+          scrub: 0.5,
           anticipatePin: 1,
         },
       })
@@ -69,8 +69,8 @@ export default function JoinUsSection() {
         tl.fromTo(
           card,
           { opacity: 0, y: 50 },
-          { opacity: 1, y: 0, duration: 1, ease: "power2.out" },
-          i + 0.5
+          { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" },
+          i * 0.5
         )
       })
     }, sectionRef)
@@ -84,6 +84,14 @@ export default function JoinUsSection() {
       id="joinUs"
       className="relative py-24 bg-white overflow-hidden min-h-screen"
     >
+      <div className="max-w-7xl mx-auto">
+        <div className="relative mb-2">
+          <div className="h-px bg-gray-400 w-full"></div>
+          <div className="absolute top-0 left-0 w-48 h-[3px] bg-gray-600 -translate-y-0.5"></div>
+        </div>
+        <p className="text-sm text-gray-600 mb-6 tracking-wide">/Challenges</p>
+      </div>
+      
       <div className="max-w-6xl mx-auto px-6 md:px-12 text-center relative flex flex-col items-center justify-center min-h-screen">
         {/* Title */}
         <h2

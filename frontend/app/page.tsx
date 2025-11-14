@@ -9,7 +9,7 @@ import { Testimonials } from "@/components/testimonials-slider"
 import { ContactSection } from "@/components/contact-section"
 import AboutUsSection from "@/components/about-us"
 import FAQ from "@/components/faq"
-import JoinUsSection from "@/components/join-us"
+import ChallengeSection from "@/components/challenges-section"
 import SolutionsSection from "@/components/solutions"
 import NewsSection from "@/components/news-section"
 import { ApproachSection } from "@/components/approach-section"
@@ -30,7 +30,7 @@ export default function Home() {
       >
         <Navbar />
         <HeroSection />
-        <JoinUsSection />
+        <ChallengeSection />
         <ApproachSection />
         <Services />
         <SolutionsSection />

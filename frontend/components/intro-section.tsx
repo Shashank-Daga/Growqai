@@ -17,7 +17,7 @@ export default function IntroSection({ onComplete }: { onComplete: () => void })
     if (currentSlide < slides.length - 1) {
       const timer = setTimeout(() => {
         setCurrentSlide((prev) => prev + 1)
-      }, 1800) // duration per slide
+      }, 1000) // duration per slide
       return () => clearTimeout(timer)
     } else {
       const endTimer = setTimeout(() => {
@@ -38,7 +38,7 @@ export default function IntroSection({ onComplete }: { onComplete: () => void })
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 1 }}
+          transition={{ duration: 0.5 }}
           className="text-center text-2xl md:text-4xl font-medium px-6"
         >
           {slides[currentSlide].text}

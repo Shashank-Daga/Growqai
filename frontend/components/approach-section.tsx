@@ -103,7 +103,7 @@ export function ApproachSection() {
         scrollTrigger: {
           trigger: sectionRef.current,
           start: "top top",
-          end: "+=3500",
+          end: "+=2500",
           pin: true,
           scrub: true,
           anticipatePin: 1,
