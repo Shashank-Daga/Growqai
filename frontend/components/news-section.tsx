@@ -46,16 +46,23 @@ export default function NewsSection() {
             <div className="h-px bg-gray-400 w-full"></div>
             <div className="absolute top-0 left-0 w-48 h-[3px] bg-gray-600 -translate-y-0.5"></div>
           </div>
-        {/* Header */}
-            <p className="text-xs uppercase tracking-widest text-gray-500 mb-8">/NEWS</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Latest insights</h2>
-          <Link
-            href="#"
-            className="inline-flex items-center gap-2 border border-gray-300 text-sm font-medium px-4 py-2 rounded-md hover:bg-gray-50 transition"
-          >
-            Discover more
-            <ArrowUpRight className="w-4 h-4" />
-          </Link>
+
+          <p className="text-xs uppercase tracking-widest text-gray-500 mb-8">/NEWS</p>
+
+          {/* FIXED: Heading + Button aligned horizontally */}
+          <div className="flex items-center justify-between">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+              Latest insights
+            </h2>
+
+            <Link
+              href="#"
+              className="inline-flex items-center gap-2 border border-gray-300 text-sm font-medium px-6 py-2 rounded-md hover:bg-gray-50 transition"
+            >
+              Discover more
+              <ArrowUpRight className="w-4 h-4" />
+            </Link>
+          </div>
         </div>
 
         {/* Articles Layout */}
@@ -77,9 +84,8 @@ export default function NewsSection() {
                 hidden: { opacity: 0, y: 20 },
                 visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
               }}
-              className={`flex flex-col ${
-                article.large ? "md:col-span-1 md:row-span-2 md:aspect-4/3" : ""
-              }`}
+              className={`flex flex-col ${article.large ? "md:col-span-1 md:row-span-2 md:aspect-4/3" : ""
+                }`}
             >
               {/* Image */}
               <div className="relative w-full aspect-4/3 mb-4">

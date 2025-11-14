@@ -2,7 +2,7 @@
 
 import Image from "next/image"
 import { motion } from "framer-motion"
-import { animationConfig, scaleIn } from "@/lib/animations"
+import { scaleIn } from "@/lib/animations"
 
 export function HeroSection() {
   return (

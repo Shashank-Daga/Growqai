@@ -89,6 +89,7 @@ export function Services() {
   return (
     <section id="services" className="py-24 px-6 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto">
+
         {/* Section Header */}
         <div className="mb-20">
           <div className="relative mb-2">
@@ -150,6 +151,7 @@ export function Services() {
             )
           })}
         </div>
+        
       </div>
     </section>
   )

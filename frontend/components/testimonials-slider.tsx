@@ -28,11 +28,11 @@ const testimonials = [
   },
 ]
 
-export function TestimonialsSlider() {
+export function Testimonials() {
   const [activeIndex, setActiveIndex] = useState(0)
 
   return (
-    <section id="about" className="py-20 px-4 bg-white">
+    <section id="testimonials" className="py-20 px-4 bg-white">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="mb-20">
@@ -42,12 +42,6 @@ export function TestimonialsSlider() {
             <div className="absolute top-0 left-0 w-48 h-[3px] bg-gray-600 -translate-y-0.5"></div>
           </div>
           <p className="text-sm text-gray-600 mb-6 tracking-wide">/TESTIMONIALS</p>
-          {/* <div className="flex flex-col md:flex-row justify-between items-start gap-8">
-            <h2 className="text-4xl md:text-5xl font-bold">Capabilities</h2>
-            <p className="text-gray-700 max-w-md text-lg leading-relaxed">
-              We design and deliver AI solutions that solve real business challenges, create measurable impact, and build capabilities that will last inside your organization.
-            </p>
-          </div> */}
         </div>
 
         {/* Testimonial Card */}

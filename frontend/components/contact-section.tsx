@@ -2,12 +2,22 @@
 
 import { motion } from "framer-motion"
 import { animationConfig, fadeInUp, staggerContainer } from "@/lib/animations"
-import { Mail, Phone, MapPin } from "lucide-react"
+import { Mail, MapPin, Linkedin } from "lucide-react"
 
 export function ContactSection() {
   return (
-    <section id="contact" className="py-20 px-4">
-      <div className="max-w-6xl mx-auto">
+    <section id="contact" className="py-24 px-6 bg-white overflow-hidden">
+      <div className="max-w-7xl mx-auto">
+        {/* Top Label */}
+        <div className="mb-12">
+          {/* Decorative top line */}
+          <div className="relative mb-2">
+            <div className="h-px bg-gray-400 w-full"></div>
+            <div className="absolute top-0 left-0 w-48 h-[3px] bg-gray-600 -translate-y-0.5"></div>
+          </div>
+          <p className="text-sm tracking-wide text-gray-800 font-medium">/CONTACT US</p>
+        </div>
+
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -32,19 +42,41 @@ export function ContactSection() {
             className="space-y-8"
           >
             {[
-              { icon: Mail, label: "Email", value: "hello@growqai.com" },
-              { icon: Phone, label: "Phone", value: "+1 (555) 123-4567" },
-              { icon: MapPin, label: "Location", value: "San Francisco, CA" },
+              { icon: Mail, label: "Email", value: "info@growqai.com" },
+              {
+                icon: Linkedin,
+                label: "LinkedIn",
+                value: "linkedin.com/company/growqai",
+                link: "https://www.linkedin.com/company/growqai/",
+              },
+              {
+                icon: MapPin,
+                label: "Location",
+                value:
+                  "101, 1st Floor, Shreyas Crest, S.No. 48/1/5, 6 & 7, Pashan - Sus Rd, Baner, Pune, Maharashtra 411045",
+                link: "https://maps.app.goo.gl/kuKMxRDjATTGEtGPA",
+              },
             ].map((item, i) => {
               const Icon = item.icon
               return (
-                <motion.div key={i} variants={fadeInUp} className="flex gap-4">
+                <motion.div key={i} variants={fadeInUp} className="flex items-start gap-4">
                   <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center shrink-0">
                     <Icon className="w-5 h-5 text-primary" />
                   </div>
-                  <div>
-                    <p className="font-semibold">{item.label}</p>
-                    <p className="text-muted-foreground">{item.value}</p>
+                  <div className="max-w-sm wrap-break-word">
+                    <p className="font-semibold mb-1">{item.label}</p>
+                    {item.link ? (
+                      <a
+                        href={item.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-muted-foreground hover:text-primary transition-colors wrap-break-word"
+                      >
+                        {item.value}
+                      </a>
+                    ) : (
+                      <p className="text-muted-foreground wrap-break-word">{item.value}</p>
+                    )}
                   </div>
                 </motion.div>
               )

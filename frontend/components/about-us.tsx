@@ -1,10 +1,9 @@
-import React from 'react';
 import { ArrowUpRight } from 'lucide-react';
 
 export default function AboutUsSection() {
   return (
-    <section className="min-h-screen bg-white px-8 md:px-16 lg:px-24 py-16">
-      <div className="max-w-[1400px] mx-auto">
+    <section id="about-us" className="py-24 px-6 bg-white overflow-hidden">
+      <div className="max-w-7xl mx-auto">
         {/* Top Label */}
         <div className="mb-12">
           {/* Decorative top line */}
@@ -36,45 +35,19 @@ export default function AboutUsSection() {
                 <ArrowUpRight className="w-6 h-6 text-white" />
               </span>
             </button>
-
-            {/* Join Us Section */}
-            <div className="bg-gray-50 p-16">
-              <div className="flex flex-col md:flex-row items-start md:items-end justify-between gap-8">
-                <div className="max-w-md">
-                  <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                    Join us
-                  </h2>
-                  <p className="text-lg text-gray-700 leading-relaxed">
-                    We are shaping the future of work with AI and we need bold minds to make it happen.
-                  </p>
-                </div>
-
-                <div className="relative md:-translate-y-10">
-                  <button className="group flex items-center gap-0 border-2 border-gray-300 hover:border-gray-400 transition-colors bg-white">
-                    <span className="px-8 text-lg font-medium text-gray-900">
-                      Careers
-                    </span>
-                    <span className="border-l-2 border-gray-300 group-hover:border-gray-400 px-4 py-4 flex items-center justify-center">
-                      <ArrowUpRight className="w-6 h-6 text-gray-900" />
-                    </span>
-                  </button>
-                </div>
-
-              </div>
-            </div>
           </div>
 
           {/* Right Image */}
-          <div className="relative flex items-start justify-end py-12">
+          <div className="relative flex items-start justify-end">
             <img
               src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&h=600&fit=crop"
               alt="Business professionals handshake"
-              className="w-full h-[500px] object-cover"
+              className="w-full h-[400px] object-cover"
             />
           </div>
+
         </div>
-
-
+        
       </div>
     </section>
   );

@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { Menu, X, Search, Globe, ArrowUpRight } from "lucide-react"
+import { Menu, X, ArrowUpRight } from "lucide-react"
 import Image from "next/image"
 import { animationConfig } from "@/lib/animations"
 

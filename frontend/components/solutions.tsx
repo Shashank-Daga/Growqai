@@ -52,6 +52,7 @@ export default function SolutionsSection() {
     return (
         <section id="use-cases" className="py-24 px-6 bg-white">
             <div className="max-w-7xl mx-auto">
+                
                 {/* Section Header */}
                 <div className="mb-20">
                     {/* Decorative top line */}
@@ -95,6 +96,7 @@ export default function SolutionsSection() {
                         </div>
                     ))}
                 </div>
+
             </div>
         </section>
     )
