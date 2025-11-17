@@ -9,18 +9,18 @@ const articles = [
   {
     id: 1,
     title: "The Growth Gap: Why Most Companies Fail to Scale (and How AI Can Fix It)",
-    image: "/news/databricks-subduxion.png",
+    image: "/placeholder.svg",
     large: true,
   },
   {
     id: 2,
     title: "Data Discipline Over AI: The Missing Link in Most Growth Strategies",
-    image: "/news/ai-infra.png",
+    image: "/placeholder.svg",
   },
   {
     id: 3,
     title: "Smart Growth for Smart Founders: Why Consulting with AI Is the New Competitive Edge",
-    image: "/news/marathon.png",
+    image: "/placeholder.svg",
   },
 ]
 

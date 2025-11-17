@@ -80,11 +80,11 @@ export function HeroSection() {
               variants={fadeInUp}
               className="flex flex-col sm:flex-row gap-4 mb-15"
             >
-              <a href="#contact" className="flex items-center justify-center gap-2 px-6 py-3 bg-black text-white rounded-md font-medium hover:scale-105 hover:shadow-lg transition-all duration-300">
+              <a href="#contact" className="flex items-center justify-center gap-2 px-6 py-3 bg-black text-white font-medium hover:scale-105 hover:shadow-lg transition-all duration-300">
                 Free Discovery Call
                 <span className="inline-block">↗</span>
               </a>
-              <a href="/services" className="flex items-center justify-center gap-2 px-6 py-3 border border-gray-400 text-gray-800 rounded-md font-medium hover:bg-gray-100 transition-all duration-300">
+              <a href="/services" className="flex items-center justify-center gap-2 px-6 py-3 border border-gray-400 text-gray-800 font-medium hover:bg-gray-100 transition-all duration-300">
                 Explore Our Services
                 <span className="inline-block">↗</span>
               </a>
@@ -112,25 +112,25 @@ export function HeroSection() {
                 className="flex flex-wrap items-center gap-8 opacity-70"
               >
                 <Image
-                  src="/logos/marks-walters.svg"
+                  src="/placeholder.svg"
                   alt="Marks Walters"
                   width={100}
                   height={30}
                 />
                 <Image
-                  src="/logos/essentra.svg"
+                  src="/placeholder.svg"
                   alt="Essentra"
                   width={100}
                   height={30}
                 />
                 <Image
-                  src="/logos/flaneur.svg"
+                  src="/placeholder.svg"
                   alt="Flaneur"
                   width={100}
                   height={30}
                 />
                 <Image
-                  src="/logos/marmite.svg"
+                  src="/placeholder.svg"
                   alt="Marmite"
                   width={100}
                   height={30}

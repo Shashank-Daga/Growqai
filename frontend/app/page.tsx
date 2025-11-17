@@ -1,9 +1,8 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { AnimatePresence } from "framer-motion"
 
-import { Navbar } from "@/components/navbar"
 import { HeroSection } from "@/components/hero-section"
 import { Services } from "@/components/services"
 import { Testimonials } from "@/components/testimonials-slider"
@@ -18,19 +17,31 @@ import IntroSection from "@/components/intro-section"
 import { Footer } from "@/components/site/footer"
 
 export default function Home() {
-  const [introDone, setIntroDone] = useState(false)
+  const [introDone, setIntroDone] = useState(true)
+
+  useEffect(() => {
+    const nav = performance.getEntriesByType("navigation")[0] as PerformanceNavigationTiming
+
+    const isReload = nav?.type === "reload"
+    const hasSeenIntro = sessionStorage.getItem("intro_shown")
+
+    if (!hasSeenIntro || isReload) {
+      // Show intro on:
+      // - first ever visit
+      // - browser refresh (F5, Cmd+R)
+      setIntroDone(false)
+      sessionStorage.setItem("intro_shown", "true")
+    }
+  }, [])
 
   return (
     <>
-      {/* Intro Section - shows first, blocks everything else */}
       <AnimatePresence>
         {!introDone && <IntroSection onComplete={() => setIntroDone(true)} />}
       </AnimatePresence>
 
-      {/* Main Content - only renders after intro is done */}
       {introDone && (
         <main className="min-h-screen bg-linear-to-b from-background to-secondary/20">
-          <Navbar />
           <HeroSection />
           <ChallengeSection />
           <Services />

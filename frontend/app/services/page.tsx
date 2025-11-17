@@ -2,6 +2,8 @@ import Link from "next/link"
 import { ArrowLeft } from "lucide-react"
 import Image from "next/image"
 import { Metadata } from "next"
+import { Footer } from "@/components/site/footer"
+import { ContactSection } from "@/components/contact-section"
 
 export const metadata: Metadata = {
     title: "Our Services | Growqai",
@@ -33,7 +35,7 @@ export default function ServicesPage() {
                 <div className="space-y-32">
 
                     {/* BLOCK 1 — Arrange Capital (TEXT LEFT + IMAGE RIGHT) */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+                    <div id="arrange-capital" className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
                         <div>
                             <h2 className="text-3xl font-bold text-gray-900 mb-6">Arrange Capital</h2>
                             <h3 className="text-2xl font-semibold text-gray-800 mb-4">
@@ -90,7 +92,7 @@ export default function ServicesPage() {
 
                         <div>
                             <Image
-                                src="/placeholder.jpg"
+                                src="/services/1.jpg"
                                 width={800}
                                 height={600}
                                 alt="Arrange Capital"
@@ -100,10 +102,10 @@ export default function ServicesPage() {
                     </div>
 
                     {/* BLOCK 2 — Attract Clients (IMAGE LEFT + TEXT RIGHT) */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+                    <div id="attract-clients" className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
                         <div>
                             <Image
-                                src="/placeholder.jpg"
+                                src="/services/2.jpg"
                                 width={800}
                                 height={600}
                                 alt="Attract Clients"
@@ -163,7 +165,7 @@ export default function ServicesPage() {
                     </div>
 
                     {/* BLOCK 3 — Accelerate Talent (TEXT LEFT + IMAGE RIGHT) */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+                    <div id="accelerate-talent" className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
                         <div>
                             <h2 className="text-3xl font-bold text-gray-900 mb-6">Accelerate Talent</h2>
                             <h3 className="text-2xl font-semibold text-gray-800 mb-4">
@@ -207,7 +209,7 @@ export default function ServicesPage() {
 
                         <div>
                             <Image
-                                src="/placeholder.jpg"
+                                src="/services/3.jpg"
                                 width={800}
                                 height={600}
                                 alt="Accelerate Talent"
@@ -216,6 +218,12 @@ export default function ServicesPage() {
                         </div>
                     </div>
                 </div>
+
+                {/* ============ END SERVICE BLOCKS ============ */}
+                
+                <ContactSection />
+                <Footer />
+
             </div>
         </section>
     )

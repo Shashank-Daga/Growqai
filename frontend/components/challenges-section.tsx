@@ -107,7 +107,7 @@ export default function ChallengeSection() {
               ref={(el) => {
                 if (el) cardsRef.current[index] = el
               }}
-              className={`absolute ${item.position} bg-gray-50 border border-gray-200 shadow-sm px-4 py-2 rounded-md flex items-start gap-3 max-w-xs opacity-0`}
+              className={`absolute ${item.position} bg-gray-50 border border-gray-200 shadow-sm px-4 py-2 flex items-start gap-3 max-w-xs opacity-0`}
             >
               <AlertTriangle className="w-5 h-5 text-yellow-500 mt-1 shrink-0" />
               <p className="text-sm text-gray-800 text-left leading-snug">

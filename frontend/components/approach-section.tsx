@@ -4,92 +4,31 @@ import { useEffect, useRef } from "react"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { Sparkles } from "lucide-react"
+import Image from "next/image"
 
 gsap.registerPlugin(ScrollTrigger)
 
 const approachSteps = [
   {
-    number: "/01",
+    number: "1",
     title: "A-Assess",
     description:
       "Analyzes the business landscape, identifies growth gaps, and benchmarks performance across capital, client, and talent verticals. Establishes a clear foundation for scalable growth.",
-    icon: (
-      <svg viewBox="0 0 300 400" className="w-full h-full">
-        <defs>
-          <linearGradient id="barGradient1" x1="0%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" stopColor="#93c5fd" />
-            <stop offset="100%" stopColor="#bfdbfe" />
-          </linearGradient>
-        </defs>
-        <rect x="60" y="260" width="40" height="80" fill="url(#barGradient1)" opacity="0.7" />
-        <rect x="110" y="220" width="40" height="120" fill="url(#barGradient1)" opacity="0.8" />
-        <rect x="160" y="180" width="40" height="160" fill="url(#barGradient1)" opacity="0.9" />
-        <rect x="210" y="140" width="40" height="200" fill="url(#barGradient1)" />
-      </svg>
-    ),
+    image: "/placeholder.jpg",
   },
   {
-    number: "/02",
+    number: "2",
     title: "C- Create",
     description:
       "Designs tailored strategies, systems, and processes that align with business objectives. Builds actionable roadmaps that convert insights into measurable outcomes.",
-    icon: (
-      <svg viewBox="0 0 300 400" className="w-full h-full">
-        <defs>
-          <linearGradient id="layerGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" stopColor="#93c5fd" />
-            <stop offset="100%" stopColor="#bfdbfe" />
-          </linearGradient>
-        </defs>
-        <path d="M 150 120 L 220 180 L 150 240 L 80 180 Z" fill="url(#layerGradient)" />
-        <path
-          d="M 150 200 L 240 270 L 150 340 L 60 270 Z"
-          fill="none"
-          stroke="#93c5fd"
-          strokeWidth="2"
-          opacity="0.5"
-        />
-        <path
-          d="M 150 240 L 260 320 L 150 400 L 40 320 Z"
-          fill="none"
-          stroke="#93c5fd"
-          strokeWidth="2"
-          opacity="0.3"
-        />
-      </svg>
-    ),
+    image: "/placeholder.jpg",
   },
   {
-    number: "/03",
+    number: "3",
     title: "E- Enable",
     description:
       "Implements the right tools, networks, and expertise to execute and sustain growth. Empowers businesses to accelerate performance and maintain long-term impact.",
-    icon: (
-      <svg viewBox="0 0 300 400" className="w-full h-full relative">
-        <defs>
-          <linearGradient id="stackGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" stopColor="#93c5fd" />
-            <stop offset="100%" stopColor="#bfdbfe" />
-          </linearGradient>
-        </defs>
-        <path
-          d="M 80 300 L 150 260 L 220 300 L 220 340 L 150 380 L 80 340 Z"
-          fill="url(#stackGradient)"
-          opacity="0.5"
-        />
-        <path
-          d="M 80 240 L 150 200 L 220 240 L 220 280 L 150 320 L 80 280 Z"
-          fill="url(#stackGradient)"
-          opacity="0.7"
-        />
-        <path
-          d="M 80 180 L 150 140 L 220 180 L 220 220 L 150 260 L 80 220 Z"
-          fill="url(#stackGradient)"
-        />
-        <circle cx="150" cy="130" r="20" fill="#3b82f6" opacity="0.8" />
-        <Sparkles className="absolute" style={{ left: "50%", top: "20%", transform: "translate(-50%, -50%)" }} />
-      </svg>
-    ),
+    image: "/placeholder.jpg",
   },
 ]
 
@@ -153,8 +92,15 @@ export function ApproachSection() {
                 {step.number}
               </p>
 
-              {/* Icon */}
-              <div className="w-[260px] h-[340px] shrink-0">{step.icon}</div>
+              {/* Image */}
+              <div className="w-[260px] h-[340px] shrink-0 relative rounded-lg overflow-hidden">
+                <Image
+                  src={step.image}
+                  alt={step.title}
+                  fill
+                  className="object-cover"
+                />
+              </div>
 
               {/* Title + Description */}
               <div className="max-w-xl text-left space-y-4">

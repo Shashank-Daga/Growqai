@@ -4,6 +4,7 @@ import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Menu, X, ArrowUpRight } from "lucide-react"
 import Image from "next/image"
+import Link from "next/link"
 import { animationConfig } from "@/lib/animations"
 
 export function Navbar() {
@@ -26,18 +27,17 @@ export function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
-            {/* Logo and Brand */}
+            {/* Logo */}
             <motion.div {...fadeInDown} className="flex items-center gap-3">
-              {/* <Image
-                src="/growQai.avif"
-                alt="GrowQai Logo"
-                width={40}
-                height={40}
-                className="object-contain"
-              /> */}
-              <span className="font-semibold text-2xl tracking-tight text-gray-900">
-                GrowQai
-              </span>
+              <Link href="/" className="cursor-pointer">
+                <Image
+                  src="/growqai.png"
+                  alt="Growqai Logo"
+                  width={200}
+                  height={40}
+                  className="object-contain hover:opacity-80 transition-opacity"
+                />
+              </Link>
             </motion.div>
 
             {/* Desktop Navigation */}

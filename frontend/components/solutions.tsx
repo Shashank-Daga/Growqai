@@ -121,10 +121,10 @@ export default function SolutionsSection() {
                         >
                             <div className="shrink-0">{useCase.icon}</div><hr />
                             <div>
-                                <h3 className="text-lg font-semibold text-gray-900 mb-1">
+                                <h3 className="text-2xl font-semibold text-gray-900 mb-1">
                                     {useCase.title}
                                 </h3>
-                                <p className="text-gray-700 text-sm leading-snug">
+                                <p className="text-gray-700 text-1xl leading-snug">
                                     {useCase.description}
                                 </p>
                             </div>

@@ -2,6 +2,8 @@ import Link from "next/link"
 import { ArrowLeft } from "lucide-react"
 import { Metadata } from "next"
 import Image from "next/image"
+import { ContactSection } from "@/components/contact-section"
+import { Footer } from "@/components/site/footer"
 
 export const metadata: Metadata = {
     title: "Growth HUB | Growqai",
@@ -110,6 +112,10 @@ export default function HubPage() {
                         <p className="text-lg">👉 Explore our spaces | Become a member | Collaborate with us</p>
                     </div>
                 </div>
+
+                <ContactSection />
+                <Footer />
+
             </div>
         </section>
     )

@@ -23,42 +23,42 @@ const articles = [
   {
     id: 3,
     title: "Subduxion Running Team Participated in the ASML Marathon 2025",
-    image: "/news/marathon.png",
+    image: "/placeholder.svg",
   },
   {
     id: 4,
     title: "From Capital to Capability: How Growth Consulting Firms Accelerate ROI",
-    image: "/news/ai-infra.png",
+    image: "/placeholder.svg",
   },
   {
     id: 5,
     title: "How AI-Enabled Growth Consulting Is Changing the Startup Ecosystem in India",
-    image: "/news/marathon.png",
+    image: "/placeholder.svg",
   },
   {
     id: 6,
     title: "Capital + Clients + Talent: The 3 Growth Levers Every Founder Should Master",
-    image: "/news/ai-infra.png",
+    image: "/placeholder.svg",
   },
   {
     id: 7,
     title: "The Talent Equation: Why AI-Driven Teams Outperform Traditional Organizations",
-    image: "/news/marathon.png",
+    image: "/placeholder.svg",
   },
   {
     id: 8,
     title: "From Leads to Loyalists: How Growth Consulting Firms Build Stronger Client Pipelines",
-    image: "/news/ai-infra.png",
+    image: "/placeholder.svg",
   },
   {
     id: 9,
     title: "Capital Intelligence: How Data-Driven Insights Are Transforming Investment Decisions",
-    image: "/news/marathon.png",
+    image: "/placeholder.svg",
   },
   {
     id: 10,
     title: "The Future of Growth Consulting: How AI Is Redefining Consulting Services.",
-    image: "/news/ai-infra.png",
+    image: "/placeholder.svg",
   },
 ]
 

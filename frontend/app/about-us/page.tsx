@@ -3,6 +3,7 @@ import { ArrowLeft } from "lucide-react"
 import { Footer } from "@/components/site/footer"
 import { Metadata } from "next"
 import Image from "next/image"
+import { ContactSection } from "@/components/contact-section"
 
 export const metadata: Metadata = {
   title: "About Us | Growqai",
@@ -136,22 +137,7 @@ export default function AboutUsPage() {
         </div>
       </div>
 
-      {/* ---------------------- CTA SECTION ---------------------- */}
-      <div className="py-24 bg-gray-50 text-center border-t border-gray-200">
-        <h2 className="text-3xl font-bold text-gray-900 mb-4">
-          Book a Discovery Call
-        </h2>
-        <p className="text-gray-600 max-w-2xl mx-auto mb-8">
-          Let’s explore how Growqai can help you scale smarter with AI-driven growth solutions.
-        </p>
-
-        <a
-          href="/contact"
-          className="px-8 py-4 bg-black text-white text-lg rounded-md hover:bg-gray-800 transition"
-        >
-          Book a Call
-        </a>
-      </div>
+      <ContactSection />
 
       <Footer />
 

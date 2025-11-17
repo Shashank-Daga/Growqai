@@ -2,11 +2,12 @@
 
 import { useEffect, useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
+import Image from "next/image"
 
 const slides = [
   { id: 1, text: "Scale Smartly" },
   { id: 2, text: "Leveraging the power of AI" },
-  { id: 3, text: "Growqai." },
+  { id: 3, type: "logo" },
 ]
 
 export default function IntroSection({ onComplete }: { onComplete: () => void }) {
@@ -15,24 +16,32 @@ export default function IntroSection({ onComplete }: { onComplete: () => void })
   useEffect(() => {
     if (currentSlide < slides.length - 1) {
       const timer = setTimeout(() => {
-        setCurrentSlide((prev) => prev + 1)
-      }, 1000) // duration per slide
+        setCurrentSlide(prev => prev + 1)
+      }, 1000)
       return () => clearTimeout(timer)
     } else {
       const endTimer = setTimeout(() => {
-        onComplete?.()
+        onComplete()
       }, 2000)
       return () => clearTimeout(endTimer)
     }
   }, [currentSlide, onComplete])
 
   return (
-    <motion.div 
-      className="fixed inset-0 z-9999 flex items-center justify-center bg-black text-white"
+    <motion.div
+      className="fixed inset-0 z-9999 flex items-center justify-center text-white"
       initial={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
     >
+      <Image
+        src="/intro.jpg"
+        alt="Intro background"
+        fill
+        className="object-cover"
+        priority
+      />
+
       <AnimatePresence mode="wait">
         <motion.div
           key={slides[currentSlide].id}
@@ -40,9 +49,19 @@ export default function IntroSection({ onComplete }: { onComplete: () => void })
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-center text-2xl md:text-4xl font-medium px-6"
+          className="relative z-10 text-center text-2xl md:text-4xl font-medium px-6"
         >
-          {slides[currentSlide].text}
+          {slides[currentSlide].type === "logo" ? (
+            <Image
+              src="/growqai.png"
+              alt="GrowQai Logo"
+              width={300}
+              height={60}
+              className="object-contain mx-auto bg-white"
+            />
+          ) : (
+            slides[currentSlide].text
+          )}
         </motion.div>
       </AnimatePresence>
     </motion.div>

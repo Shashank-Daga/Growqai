@@ -2,6 +2,7 @@
 
 import { motion, Variants } from "framer-motion"
 import Image from "next/image"
+import Link from "next/link"
 
 // Reusable fade-in-from-direction animation
 const fadeInDirection = (direction: "left" | "right" | "up"): Variants => {
@@ -28,6 +29,7 @@ const services = [
   {
     id: 1,
     title: "Arrange Capital",
+    slug: "arrange-capital",
     description:
       "Identify & Engage with potential investors & expediting capital Infusion.",
     icon: (
@@ -41,11 +43,12 @@ const services = [
         <path d="M60 20 L90 30 L90 60 L60 50 Z" fill="#9ca3af" />
       </svg>
     ),
-    image: "/placeholder.jpg",
+    image: "/services/1.jpg",
   },
   {
     id: 2,
     title: "Attract Client",
+    slug: "attract-clients",
     description:
       "Expand your client base through AI-powered Lead Generation & Conversion.",
     icon: (
@@ -56,11 +59,12 @@ const services = [
         <ellipse cx="60" cy="80" rx="35" ry="8" fill="#d1d5db" />
       </svg>
     ),
-    image: "/placeholder.jpg",
+    image: "/services/2.jpg",
   },
   {
     id: 3,
     title: "Accelerate Talent",
+    slug: "accelerate-talent",
     description:
       "Identify and hire top-tier talent with AI-powered hiring.",
     icon: (
@@ -81,7 +85,7 @@ const services = [
         />
       </svg>
     ),
-    image: "/placeholder.jpg",
+    image: "/services/3.jpg",
   },
 ]
 
@@ -127,9 +131,11 @@ export function Services() {
                   className="flex-1"
                 >
                   <div className="mb-6">{service.icon}</div>
-                  <h3 className="text-2xl font-bold mb-4 text-gray-900">
-                    {service.title}
-                  </h3>
+                  <Link href={`/services#${service.slug}`} className="block">
+                    <h3 className="text-2xl font-bold mb-4 text-gray-900 hover:text-gray-700 transition-colors cursor-pointer">
+                      {service.title}
+                    </h3>
+                  </Link>
                   <p className="text-gray-700 text-lg leading-relaxed">
                     {service.description}
                   </p>
