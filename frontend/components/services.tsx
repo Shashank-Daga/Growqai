@@ -43,7 +43,7 @@ const services = [
         <path d="M60 20 L90 30 L90 60 L60 50 Z" fill="#9ca3af" />
       </svg>
     ),
-    image: "/services/1.jpg",
+    image: "/Service/1.jpg",
   },
   {
     id: 2,
@@ -59,7 +59,7 @@ const services = [
         <ellipse cx="60" cy="80" rx="35" ry="8" fill="#d1d5db" />
       </svg>
     ),
-    image: "/services/2.jpg",
+    image: "/Service/2.jpg",
   },
   {
     id: 3,
@@ -85,7 +85,7 @@ const services = [
         />
       </svg>
     ),
-    image: "/services/3.jpg",
+    image: "/Service/3.jpg",
   },
 ]
 

@@ -92,7 +92,7 @@ export default function ServicesPage() {
 
                         <div>
                             <Image
-                                src="/services/1.jpg"
+                                src="/Service/1.jpg"
                                 width={800}
                                 height={600}
                                 alt="Arrange Capital"
@@ -105,7 +105,7 @@ export default function ServicesPage() {
                     <div id="attract-clients" className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
                         <div>
                             <Image
-                                src="/services/2.jpg"
+                                src="/Service/2.jpg"
                                 width={800}
                                 height={600}
                                 alt="Attract Clients"
@@ -209,7 +209,7 @@ export default function ServicesPage() {
 
                         <div>
                             <Image
-                                src="/services/3.jpg"
+                                src="/Service/3.jpg"
                                 width={800}
                                 height={600}
                                 alt="Accelerate Talent"
