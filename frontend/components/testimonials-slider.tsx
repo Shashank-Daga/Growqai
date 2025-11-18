@@ -28,7 +28,7 @@ const testimonials = [
 
 export function Testimonials() {
   return (
-    <section id="testimonials" className="py-24 px-4 bg-white">
+    <section id="testimonials" className="py-24 px-4 bg-[#E7E9F1]">
       <div className="max-w-7xl mx-auto">
         <div className="mb-12">
           {/* Decorative top line */}
@@ -42,7 +42,7 @@ export function Testimonials() {
           {testimonials.map((item) => (
             <div
               key={item.id}
-              className="bg-white p-10 rounded-2xl shadow-sm border border-gray-200"
+              className="bg-white p-10 rounded-2xl shadow-sm border border-[#E7E9F1]"
             >
               {/* Stars */}
               <div className="flex gap-1 mb-5">

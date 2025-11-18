@@ -19,11 +19,11 @@ export default function AboutUsSection() {
         <div className="grid lg:grid-cols-2 gap-16 items-start mb-20">
           {/* Left Content */}
           <div>
-            <h1 className="text-4xl md:text-5xl font-semibold text-gray-900 mb-8 leading-tight">
+            <h1 className="text-4xl md:text-5xl font-semibold text-[#050659] mb-8 leading-tight">
               We are obsessed with growth
             </h1>
 
-            <p className="text-lg text-gray-700 mb-8 leading-relaxed max-w-xl">
+            <p className="text-lg text-[#2527D9] mb-8 leading-relaxed max-w-xl">
               Growth is never by mere chance but by the choices you make, and we help you make the
               right choices to unlock your growth potential.
             </p>

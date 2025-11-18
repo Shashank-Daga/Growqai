@@ -31,18 +31,18 @@ export default function HubPage() {
                 <div className="text-sm text-gray-500 mb-10">/HUB</div>
 
                 {/* Title */}
-                <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                <h1 className="text-4xl md:text-5xl font-bold text-[#050659] mb-4">
                     Growth HUB — Hustle. Unite. Build.
                 </h1>
 
                 {/* Subtitle */}
-                <h2 className="text-2xl md:text-3xl font-semibold text-gray-800 mb-12">
+                <h2 className="text-2xl md:text-3xl font-semibold text-[#2527D9] mb-12">
                     Where Ideas Thrive and Founders Connect
                 </h2>
 
                 {/* Intro Description */}
                 <div className="max-w-4xl mb-16 space-y-6">
-                    <p className="text-lg text-gray-700 leading-relaxed">
+                    <p className="text-lg text-[#313447] leading-relaxed">
                         Growth HUB is the community workspace vertical under Growqai, built to empower founders, creators, and innovators. It's more than just a workspace; it's a thriving ecosystem designed for collaboration, learning, and collective growth. Whether you're scaling your startup, building your personal brand, or exploring your next big idea, Growth HUB gives you the space, network, and energy to make it happen.
                     </p>
                     <p className="text-lg text-gray-700 leading-relaxed">
@@ -52,14 +52,14 @@ export default function HubPage() {
 
                 {/* Why Growth HUB */}
                 <div className="mb-16">
-                    <h3 className="text-3xl font-bold text-gray-900 mb-6">Why Growth HUB</h3>
-                    <p className="text-lg text-gray-700 leading-relaxed mb-6 max-w-4xl">
+                    <h3 className="text-3xl font-bold text-[#050659] mb-6">Why Growth HUB</h3>
+                    <p className="text-lg text-[#313447] leading-relaxed mb-6 max-w-4xl">
                         Because growth doesn't happen in isolation. At Growth HUB, we're redefining the coworking experience — it's not just about a seat and Wi-Fi, it's about being surrounded by people who push boundaries.
                     </p>
-                    <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                    <p className="text-lg text-[#313447] leading-relaxed mb-6">
                         What makes us different:
                     </p>
-                    <ul className="list-disc list-inside space-y-2 ml-4 text-lg text-gray-700">
+                    <ul className="list-disc list-inside space-y-2 ml-4 text-lg text-[#313447]">
                         <li><strong>Community of Doers:</strong> A curated network of founders, creators, and professionals who collaborate, learn, and build together.</li>
                         <li><strong>Ecosystem Access:</strong> Direct connection to Growqai's growth consulting verticals; Capital, Client, and Talent helping ventures scale faster.</li>
                         <li><strong>Events & Learning Sessions:</strong> From founder roundtables to AI-led growth workshops, we create spaces for knowledge and inspiration.</li>
@@ -69,16 +69,16 @@ export default function HubPage() {
 
                 {/* Our Active Hubs */}
                 <div className="mb-16">
-                    <h3 className="text-3xl font-bold text-gray-900 mb-8">Our Active Hubs</h3>
-                    <p className="text-lg text-gray-700 leading-relaxed mb-8 max-w-4xl">
+                    <h3 className="text-3xl font-bold text-[#050659] mb-2">Our Active Hubs</h3>
+                    <p className="text-lg text-[#313447] leading-relaxed mb-8 max-w-4xl">
                         We're growing and so is our community.
                     </p>
 
                     <div className="grid md:grid-cols-2 gap-8">
                         {/* Growth HUB – Shreyas Crest */}
                         <div className="bg-gray-50 p-8 rounded-lg">
-                            <h4 className="text-2xl font-semibold text-gray-900 mb-4">Growth HUB – Shreyas Crest</h4>
-                            <p className="text-gray-700 leading-relaxed mb-6">
+                            <h4 className="text-2xl font-semibold text-[#2527D9] mb-4">Growth HUB – Shreyas Crest</h4>
+                            <p className="text-[#313447] leading-relaxed mb-6">
                                 A vibrant, modern workspace that blends functionality with creativity. It's where early-stage startups, solopreneurs, and growth-driven teams collaborate to turn ideas into action.
                             </p>
                             <div className="bg-gray-200 h-48 rounded-lg flex items-center justify-center text-gray-500">
@@ -88,8 +88,8 @@ export default function HubPage() {
 
                         {/* Growth HUB – Aariv Elegant */}
                         <div className="bg-gray-50 p-8 rounded-lg">
-                            <h4 className="text-2xl font-semibold text-gray-900 mb-4">Growth HUB – Aariv Elegant</h4>
-                            <p className="text-gray-700 leading-relaxed mb-6">
+                            <h4 className="text-2xl font-semibold text-[#2527D9] mb-4">Growth HUB – Aariv Elegant</h4>
+                            <p className="text-[#313447] leading-relaxed mb-6">
                                 A space built for founders who believe in scaling fast and smart. With premium amenities and a like-minded community, Aariv Elegant is where innovation finds its rhythm.
                             </p>
                             <div className="bg-gray-200 h-48 rounded-lg flex items-center justify-center text-gray-500">
@@ -101,8 +101,8 @@ export default function HubPage() {
 
                 {/* Join the Movement */}
                 <div className="mb-16">
-                    <h3 className="text-3xl font-bold text-gray-900 mb-6">Join the Movement</h3>
-                    <p className="text-lg text-gray-700 leading-relaxed mb-6 max-w-4xl">
+                    <h3 className="text-3xl font-bold text-[#050659] mb-6">Join the Movement</h3>
+                    <p className="text-lg text-[#313447] leading-relaxed mb-6 max-w-4xl">
                         Growth HUB isn't just a place to work; it's where Hustle, Unity, and Building come together. If you're ready to surround yourself with ambition, innovation, and purpose, join the Growth HUB community today.
                     </p>
                     <p className="text-lg text-gray-700 leading-relaxed mb-8">

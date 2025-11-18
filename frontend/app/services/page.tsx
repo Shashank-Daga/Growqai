@@ -165,7 +165,7 @@ export default function ServicesPage() {
                     </div>
 
                     {/* BLOCK 3 — Accelerate Talent (TEXT LEFT + IMAGE RIGHT) */}
-                    <div id="accelerate-talent" className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+                    <div id="accelerate-talent" className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start mb-18">
                         <div>
                             <h2 className="text-3xl font-bold text-gray-900 mb-6">Accelerate Talent</h2>
                             <h3 className="text-2xl font-semibold text-gray-800 mb-4">

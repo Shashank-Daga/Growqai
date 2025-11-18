@@ -31,11 +31,11 @@ export default function AboutUsPage() {
       <div className="text-sm text-gray-500 mb-10">/ABOUT US</div>
 
       {/* ---------------------- HERO SECTION ---------------------- */}
-      <div className="text-center py-24 border-b border-gray-200">
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+      <div className="text-center py-24 border-b border-[#E7E9F1]">
+        <h1 className="text-4xl md:text-5xl font-bold text-[#050659] mb-6">
           We are obsessed with growth
         </h1>
-        <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+        <p className="text-lg text-[#2527D9] max-w-3xl mx-auto">
           Growth is never by mere chance but by the choices you make, and we help you make the right choices to unlock your growth potential.
         </p>
       </div>
@@ -46,10 +46,10 @@ export default function AboutUsPage() {
 
           {/* Left Text Section */}
           <div>
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">
+            <h2 className="text-3xl font-bold text-[#050659] mb-6">
               Our Values
             </h2>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-[#313447] leading-relaxed">
               At the core of Growqai are our guiding values: integrity, excellence, collaboration, and innovation. These principles guide every decision we make and shape how we work with clients, partners, and one another. They inspire us to build lasting relationships, deliver outstanding results, and constantly push the boundaries of what’s possible for your business growth.
             </p>
           </div>
@@ -64,12 +64,12 @@ export default function AboutUsPage() {
       </div>
 
       {/* ---------------------- OUR LEADER ---------------------- */}
-      <div className="py-24 bg-gray-50 border-y border-gray-200">
+      <div className="py-24 bg-gray-50 border-y border-[#E7E9F1]">
         <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-gray-900 text-center mb-6">
+          <h2 className="text-3xl font-bold text-[#050659] text-center mb-6">
             Our Leader
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto text-center mb-16">
+          <p className="text-[#2527D9] max-w-2xl mx-auto text-center mb-16">
             Meet the vision behind Growqai.
           </p>
 
@@ -93,7 +93,7 @@ export default function AboutUsPage() {
             {/* Right - Text */}
             <div>
 
-              <p className="text-gray-700 leading-relaxed">
+              <p className="text-[#313447] leading-relaxed">
                 Rushikesh Humbe is a seasoned business leader and growth strategist
                 with over 20 years of cross-functional experience in consulting,
                 entrepreneurship, and tech transformation.
@@ -120,10 +120,10 @@ export default function AboutUsPage() {
 
           {/* Left Text Section */}
           <div>
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">
+            <h2 className="text-3xl font-bold text-[#050659] mb-6">
               Our Approach
             </h2>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-[#313447] leading-relaxed">
               Our approach at Growqai blends the cutting-edge capabilities of Artificial Intelligence (AI) with the practical wisdom of Acquired Intelligence (AI)—the deep industry insights and experience our team brings. By combining these strengths, we deliver solutions that are not only data-driven and innovative but also grounded in a real-world understanding of business challenges. This synergy allows us to create sustainable growth for our clients.
             </p>
           </div>

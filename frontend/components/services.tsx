@@ -101,10 +101,10 @@ export function Services() {
             <div className="absolute top-0 left-0 w-48 h-[3px] bg-gray-600 -translate-y-0.5"></div>
           </div>
           <p className="text-sm text-gray-600 mb-6 tracking-wide">/OUR SERVICES</p>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-[#050659] mb-6">
             Capabilities
           </h2>
-          <p className="text-lg text-gray-700 max-w-3xl">
+          <p className="text-lg text-[#2527D9] max-w-3xl">
             We design and deliver AI solutions that solve real business challenges,
             create measurable impact, and build capabilities that last inside your
             organization.

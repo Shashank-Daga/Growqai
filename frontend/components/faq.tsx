@@ -39,7 +39,7 @@ export default function FAQ() {
   };
 
   return (
-    <section className="min-h-screen bg-white px-8 md:px-16 lg:px-24 py-16">
+    <section className="min-h-screen bg-[#E7E9F1] px-8 md:px-16 lg:px-24 py-16">
       {/* Decorative top line */}
       <div className="relative mb-2">
         <div className="h-px bg-gray-400 w-full"></div>
@@ -52,7 +52,7 @@ export default function FAQ() {
       <div className="grid lg:grid-cols-2 items-start">
         {/* Left Column - Title */}
         <div>
-          <h2 className="text-2xl font-bold text-gray-900">
+          <h2 className="text-2xl font-bold text-[#050659]">
             Frequently Asked Questions
           </h2>
         </div>
@@ -62,7 +62,7 @@ export default function FAQ() {
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="bg-gray-50 rounded-md border border-gray-200 shadow-sm"
+              className="bg-gray-50 rounded-md border border-[#E7E9F1] shadow-sm"
             >
               <button
                 onClick={() => toggleFAQ(index)}

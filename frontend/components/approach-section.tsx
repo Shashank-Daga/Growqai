@@ -104,10 +104,10 @@ export function ApproachSection() {
 
               {/* Title + Description */}
               <div className="max-w-xl text-left space-y-4">
-                <h3 className="text-4xl md:text-5xl font-bold text-gray-900">
+                <h3 className="text-4xl md:text-5xl font-bold text-[#2527D9]">
                   {step.title}
                 </h3>
-                <p className="text-lg text-gray-700 leading-relaxed">
+                <p className="text-lg text-[#313447] leading-relaxed">
                   {step.description}
                 </p>
               </div>

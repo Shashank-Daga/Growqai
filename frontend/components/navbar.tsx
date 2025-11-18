@@ -23,7 +23,7 @@ export function Navbar() {
       <motion.nav
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        className="fixed top-0 left-0 right-0 z-50 bg-white backdrop-blur-md border-b border-gray-200"
+        className="fixed top-0 left-0 right-0 z-50 bg-white backdrop-blur-md border-b border-[#E7E9F1]"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
@@ -52,7 +52,7 @@ export function Navbar() {
                     delay: i * 0.05,
                     duration: animationConfig.duration.fast,
                   }}
-                  className="text-sm uppercase tracking-wide text-gray-800 hover:text-black transition-colors"
+                  className="text-sm uppercase tracking-wide text-[#050659] hover:text-black transition-colors"
                 >
                   {item}
                 </motion.a>
@@ -68,7 +68,7 @@ export function Navbar() {
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.3 }}
-                className="flex items-center gap-2 bg-black text-white px-4 py-2 rounded-md font-medium text-sm hover:opacity-90 transition-all"
+                className="flex items-center gap-2 bg-[#1718FF] text-white px-4 py-2 rounded-md font-medium text-sm hover:opacity-90 hover:bg-[#4B4DFF] transition-all"
               >
                 Get in touch
                 <span className="bg-blue-100 text-black rounded-sm p-[3px]">
@@ -93,7 +93,7 @@ export function Navbar() {
                 initial={{ opacity: 0, height: 0 }}
                 animate={{ opacity: 1, height: "auto" }}
                 exit={{ opacity: 0, height: 0 }}
-                className="md:hidden flex flex-col gap-4 py-4 border-t border-gray-200"
+              className="md:hidden flex flex-col gap-4 py-4 border-t border-[#E7E9F1]"
               >
                 {navItems.map((item) => (
                   <a

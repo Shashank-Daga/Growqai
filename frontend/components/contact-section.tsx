@@ -6,7 +6,7 @@ import { Mail, MapPin, Linkedin } from "lucide-react"
 
 export function ContactSection() {
   return (
-    <section id="contact" className="py-24 px-6 bg-white overflow-hidden">
+    <section id="contact" className="py-18 px-6 bg-[#E7E9F1] overflow-hidden">
       <div className="max-w-7xl mx-auto">
         {/* Top Label */}
         <div className="mb-12">
@@ -26,8 +26,8 @@ export function ContactSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Let's Connect</h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+          <h2 className="text-3xl md:text-4xl text-[#050659] font-bold mb-4">Let's Connect</h2>
+          <p className="text-[#2527D9] max-w-2xl mx-auto">
             Have a project in mind? We'd love to hear about it and explore how we can help bring your vision to life.
           </p>
         </motion.div>
@@ -89,7 +89,7 @@ export function ContactSection() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: animationConfig.duration.normal }}
             viewport={{ once: true }}
-            className="border border-gray-200 rounded-lg p-6"
+            className="border border-[#E7E9F1] rounded-lg p-6"
           >
             <form className="space-y-6">
             <input

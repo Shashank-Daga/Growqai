@@ -70,7 +70,7 @@ export default function SolutionsSection() {
     ]
 
     return (
-        <section id="use-cases" className="py-24 px-6 bg-white">
+        <section id="use-cases" className="py-24 px-6 bg-[#E7E9F1]">
             <div className="max-w-7xl mx-auto">
                 
                 {/* Section Header */}
@@ -86,11 +86,11 @@ export default function SolutionsSection() {
                             <p className="text-sm uppercase tracking-widest text-gray-600 mb-8">
                                 /SOLUTIONS
                             </p>
-                            <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
+                            <h2 className="text-4xl md:text-5xl font-bold text-[#050659]">
                                 Use cases
                             </h2>
                         </div>
-                        <p className="text-lg text-gray-700 max-w-md mt-12 md:-translate-x-28">
+                        <p className="text-lg text-[#313447] max-w-md mt-12 md:-translate-x-28">
                             We focus on domains where agents solve entrenched business problems
                             and unlock measurable value.
                         </p>
@@ -121,10 +121,10 @@ export default function SolutionsSection() {
                         >
                             <div className="shrink-0">{useCase.icon}</div><hr />
                             <div>
-                                <h3 className="text-2xl font-semibold text-gray-900 mb-1">
+                                <h3 className="text-2xl font-semibold text-[#2527D9] mb-1">
                                     {useCase.title}
                                 </h3>
-                                <p className="text-gray-700 text-1xl leading-snug">
+                                <p className="text-[#313447] text-1xl leading-snug">
                                     {useCase.description}
                                 </p>
                             </div>

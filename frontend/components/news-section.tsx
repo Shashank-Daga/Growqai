@@ -37,9 +37,9 @@ export default function NewsSection() {
 
           <p className="text-xs uppercase tracking-widest text-gray-500 mb-8">/NEWS</p>
 
-          {/* FIXED: Heading + Button aligned horizontally */}
+          {/* Heading + Button aligned horizontally */}
           <div className="flex items-center justify-between">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#050659]">
               Latest insights
             </h2>
 

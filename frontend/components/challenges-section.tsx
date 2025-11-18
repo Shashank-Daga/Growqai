@@ -82,7 +82,7 @@ export default function ChallengeSection() {
     <section
       ref={sectionRef}
       id="joinUs"
-      className="relative py-24 bg-white overflow-hidden min-h-screen"
+      className="relative py-24 bg-[#E7E9F1] overflow-hidden min-h-screen"
     >
       <div className="max-w-7xl mx-auto">
         <div className="relative mb-2">
@@ -95,7 +95,7 @@ export default function ChallengeSection() {
       <div className="max-w-6xl mx-auto px-6 md:px-12 text-center relative flex flex-col items-center justify-center min-h-screen">
         {/* Title */}
         <h2
-          className="joinus-title text-2xl md:text-3xl font-semibold text-gray-900 leading-snug max-w-3xl mx-auto opacity-0 mb-16">
+          className="joinus-title text-2xl md:text-3xl font-semibold text-[#050659] leading-snug max-w-3xl mx-auto opacity-0 mb-16">
           We understand the growth challenges you face.
         </h2>
 
@@ -107,10 +107,10 @@ export default function ChallengeSection() {
               ref={(el) => {
                 if (el) cardsRef.current[index] = el
               }}
-              className={`absolute ${item.position} bg-gray-50 border border-gray-200 shadow-sm px-4 py-2 flex items-start gap-3 max-w-xs opacity-0`}
+              className={`absolute ${item.position} bg-gray-50 border border-[#E7E9F1] shadow-sm px-4 py-2 flex items-start gap-3 max-w-xs opacity-0`}
             >
               <AlertTriangle className="w-5 h-5 text-yellow-500 mt-1 shrink-0" />
-              <p className="text-sm text-gray-800 text-left leading-snug">
+              <p className="text-sm text-[#2527D9] text-left leading-snug">
                 {item.text}
               </p>
             </div>
