@@ -43,7 +43,7 @@ const services = [
         <path d="M60 20 L90 30 L90 60 L60 50 Z" fill="#9ca3af" />
       </svg>
     ),
-    image: "/Services/1.jpg",
+    image: "frontend/public/Services/1.jpg",
   },
   {
     id: 2,
