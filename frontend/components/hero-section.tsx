@@ -84,10 +84,9 @@ export function HeroSection() {
 
           {/* LOGOS ROW */}
           <div className="flex flex-wrap items-center gap-10">
-            <Image src="/placeholder.svg" alt="Marks Walters" width={110} height={40} />
-            <Image src="/placeholder.svg" alt="Essentra" width={110} height={40} />
-            <Image src="/placeholder.svg" alt="Flaneur" width={110} height={40} />
-            <Image src="/placeholder.svg" alt="Marmite" width={110} height={40} />
+            <Image src="/T.C. Logo/Kosoku.jpeg" alt="Kosoku" width={110} height={40} />
+            <Image src="/T.C. Logo/Merito.jpeg" alt="Merito" width={110} height={40} />
+            <Image src="/T.C. Logo/RAMS.jpeg" alt="RAMS" width={110} height={40} />
           </div>
         </motion.div>
 

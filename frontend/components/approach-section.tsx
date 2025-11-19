@@ -14,21 +14,21 @@ const approachSteps = [
     title: "A-Assess",
     description:
       "Analyzes the business landscape, identifies growth gaps, and benchmarks performance across capital, client, and talent verticals. Establishes a clear foundation for scalable growth.",
-    image: "/placeholder.jpg",
+    image: "/Appr/1.jpg",
   },
   {
     number: "2",
     title: "C- Create",
     description:
       "Designs tailored strategies, systems, and processes that align with business objectives. Builds actionable roadmaps that convert insights into measurable outcomes.",
-    image: "/placeholder.jpg",
+    image: "/Appr/2.jpg",
   },
   {
     number: "3",
     title: "E- Enable",
     description:
       "Implements the right tools, networks, and expertise to execute and sustain growth. Empowers businesses to accelerate performance and maintain long-term impact.",
-    image: "/placeholder.jpg",
+    image: "/Appr/3.jpg",
   },
 ]
 

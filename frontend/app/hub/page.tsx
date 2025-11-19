@@ -7,112 +7,179 @@ import { Footer } from "@/components/site/footer"
 
 export const metadata: Metadata = {
     title: "Growth HUB | Growqai",
-    description: "Growth HUB - Where Ideas Thrive and Founders Connect. Community workspace for founders, creators, and innovators.",
+    description:
+        "Growth HUB - Where Ideas Thrive and Founders Connect. Community workspace for founders, creators, and innovators.",
 }
 
 export default function HubPage() {
     return (
-        <section className="min-h-screen bg-white px-8 md:px-16 lg:px-24 py-16">
+        <section className="bg-white">
+            <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 pt-6">
+                <Link href="/" className="inline-flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors">
+                    <ArrowLeft className="w-4 h-4" />
+                </Link>
+            </div>
+
             <div className="max-w-7xl mx-auto">
-                {/* Back Button */}
-                <div className="mb-8">
-                    <Link href="/" className="inline-flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors">
-                        <ArrowLeft className="w-4 h-4" />
-                    </Link>
+
+                {/* ================= HERO SECTION ================ */}
+                <div className="relative w-full h-[80vh] md:h-[85vh] lg:h-[90vh]">
+                    <Image
+                        src="/hero_UI.png" // replace with your actual hero image
+                        alt="hero"
+                        fill
+                        className="object-cover"
+                    />
+
+                    <div className="absolute inset-0 bg-black/30" />
+
+                    {/* Hero Content */}
+                    <div className="relative z-10 max-w-7xl mx-auto h-full px-6 md:px-12 lg:px-20 flex flex-col justify-center">
+                        <h1 className="text-[#050659] text-4xl md:text-5xl lg:text-6xl font-bold max-w-2xl leading-tight">
+                            Growth HUB — Hustle. Unite. Build.
+                        </h1>
+
+                        <p className="text-lg md:text-xl text-[#2527D9] mt-4 max-w-xl">
+                            Where Ideas Thrive and Founders Connect
+                        </p>
+
+                        {/* Buttons like reference */}
+                        <div className="mt-6 flex gap-4">
+                            <button className="px-6 py-3 bg-[#1718FF] text-black font-medium rounded-lg shadow-md hover:bg-[#4B4DFF]">
+                                Book Now
+                            </button>
+                            <button className="px-6 py-3 bg-transparent border border-white text-white font-medium rounded-lg hover:bg-white/10">
+                                Read More
+                            </button>
+                        </div>
+
+                        {/* Right-side Card in hero section */}
+                        <div className="absolute right-10 bottom-10 bg-white/90 backdrop-blur-md rounded-xl p-4 shadow-lg max-w-xs">
+                            <h3 className="font-semibold text-gray-900 text-lg">
+                                New Location
+                            </h3>
+                            <p className="text-gray-600 text-sm mt-1">
+                                Our new location is finally ready! Schedule your
+                                first desk tour and grand opening promotion.
+                            </p>
+                        </div>
+                    </div>
                 </div>
 
-                {/* Decorative top line */}
-                <div className="relative mb-2">
-                    <div className="h-px bg-gray-400 w-full"></div>
-                    <div className="absolute top-0 left-0 w-48 h-[3px] bg-gray-600 -translate-y-0.5"></div>
+                {/* ============ GROWTH HUB SECTION ============== */}
+                <div className="bg-[#faf7ef] py-16 px-6 md:px-12 lg:px-20">
+                    <div className="max-w-7xl mx-auto">
+
+                        <div className="justify-between items-center mb-8">
+                            <h2 className="text-3xl font-bold text-[#050659] mb-2">Why Growth HUB</h2>
+                            <span className="text-[#313447] hover:text-gray-900 cursor-pointer">
+                                Because growth doesn't happen in isolation. At Growth HUB, we're redefining the coworking experience — it's not just about a seat and Wi-Fi, it's about being surrounded by people who push boundaries.
+                            </span>
+                        </div>
+
+                        <div className="grid md:grid-cols-4 gap-6">
+
+                            <div className="bg-white p-6 rounded-xl shadow-sm border">
+                                <h3 className="font-semibold mb-2 text-[#2527D9]">Community of Doers</h3>
+                                <p className="text-[#313447] text-sm">
+                                    A curated network of founders, creators, and professionals who collaborate, learn, and build together.
+                                </p>
+                            </div>
+
+                            <div className="bg-white p-6 rounded-xl shadow-sm border">
+                                <h3 className="font-semibold mb-2 text-[#2527D9]">Ecosystem Access</h3>
+                                <p className="text-[#313447] text-sm">
+                                    Direct connection to Growqai's growth consulting verticals; Capital, Client, and Talent helping ventures scale faster.
+                                </p>
+                            </div>
+
+                            <div className="bg-white p-6 rounded-xl shadow-sm border">
+                                <h3 className="font-semibold mb-2 text-[#2527D9]">Events & Learning Sessions</h3>
+                                <p className="text-[#313447] text-sm">
+                                    From founder roundtables to AI-led growth workshops, we create spaces for knowledge and inspiration.
+                                </p>
+                            </div>
+
+                            <div className="bg-white p-6 rounded-xl shadow-sm border">
+                                <h3 className="font-semibold mb-2 text-[#2527D9]">Curated Ambience</h3>
+                                <p className="text-[#313447] text-sm">
+                                    Modern, inspiring workspaces designed to boost focus, creativity, and meaningful interaction.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
 
-                {/* Breadcrumb */}
-                <div className="text-sm text-gray-500 mb-10">/HUB</div>
+                {/* ================== OUR ACTIVE HUBS =================== */}
+                <div className="max-w-7xl mx-auto py-20 px-6 md:px-12 lg:px-20">
 
-                {/* Title */}
-                <h1 className="text-4xl md:text-5xl font-bold text-[#050659] mb-4">
-                    Growth HUB — Hustle. Unite. Build.
-                </h1>
-
-                {/* Subtitle */}
-                <h2 className="text-2xl md:text-3xl font-semibold text-[#2527D9] mb-12">
-                    Where Ideas Thrive and Founders Connect
-                </h2>
-
-                {/* Intro Description */}
-                <div className="max-w-4xl mb-16 space-y-6">
-                    <p className="text-lg text-[#313447] leading-relaxed">
-                        Growth HUB is the community workspace vertical under Growqai, built to empower founders, creators, and innovators. It's more than just a workspace; it's a thriving ecosystem designed for collaboration, learning, and collective growth. Whether you're scaling your startup, building your personal brand, or exploring your next big idea, Growth HUB gives you the space, network, and energy to make it happen.
-                    </p>
-                    <p className="text-lg text-gray-700 leading-relaxed">
-                        Here, ambition meets action. Every desk, every conversation, and every collaboration fuels the next breakthrough.
-                    </p>
-                </div>
-
-                {/* Why Growth HUB */}
-                <div className="mb-16">
-                    <h3 className="text-3xl font-bold text-[#050659] mb-6">Why Growth HUB</h3>
-                    <p className="text-lg text-[#313447] leading-relaxed mb-6 max-w-4xl">
-                        Because growth doesn't happen in isolation. At Growth HUB, we're redefining the coworking experience — it's not just about a seat and Wi-Fi, it's about being surrounded by people who push boundaries.
-                    </p>
-                    <p className="text-lg text-[#313447] leading-relaxed mb-6">
-                        What makes us different:
-                    </p>
-                    <ul className="list-disc list-inside space-y-2 ml-4 text-lg text-[#313447]">
-                        <li><strong>Community of Doers:</strong> A curated network of founders, creators, and professionals who collaborate, learn, and build together.</li>
-                        <li><strong>Ecosystem Access:</strong> Direct connection to Growqai's growth consulting verticals; Capital, Client, and Talent helping ventures scale faster.</li>
-                        <li><strong>Events & Learning Sessions:</strong> From founder roundtables to AI-led growth workshops, we create spaces for knowledge and inspiration.</li>
-                        <li><strong>Curated Ambience:</strong> Modern, inspiring workspaces designed to boost focus, creativity, and meaningful interaction.</li>
-                    </ul>
-                </div>
-
-                {/* Our Active Hubs */}
-                <div className="mb-16">
-                    <h3 className="text-3xl font-bold text-[#050659] mb-2">Our Active Hubs</h3>
-                    <p className="text-lg text-[#313447] leading-relaxed mb-8 max-w-4xl">
+                    <h2 className="text-3xl font-bold text-[#050659]">Our Active Hubs</h2>
+                    <p className="text-[#313447] mt-2 mb-10">
                         We're growing and so is our community.
                     </p>
 
-                    <div className="grid md:grid-cols-2 gap-8">
-                        {/* Growth HUB – Shreyas Crest */}
-                        <div className="bg-gray-50 p-8 rounded-lg">
-                            <h4 className="text-2xl font-semibold text-[#2527D9] mb-4">Growth HUB – Shreyas Crest</h4>
-                            <p className="text-[#313447] leading-relaxed mb-6">
-                                A vibrant, modern workspace that blends functionality with creativity. It's where early-stage startups, solopreneurs, and growth-driven teams collaborate to turn ideas into action.
+                    <div className="grid md:grid-cols-2 gap-10">
+
+                        <div className="bg-gray-50 p-8 rounded-xl shadow-sm">
+                            <h3 className="text-2xl font-semibold text-[#2527D9] mb-4">
+                                Growth HUB – Shreyas Crest
+                            </h3>
+                            <p className="text-gray-700 mb-6 leading-relaxed">
+                                A vibrant, modern workspace that blends functionality
+                                with creativity. It's where early-stage startups,
+                                solopreneurs, and growth-driven teams collaborate to
+                                turn ideas into action.
                             </p>
-                            <div className="bg-gray-200 h-48 rounded-lg flex items-center justify-center text-gray-500">
+
+                            <div className="bg-gray-200 h-52 rounded-xl flex items-center justify-center text-gray-600">
                                 (Property video and details will appear here)
                             </div>
                         </div>
 
-                        {/* Growth HUB – Aariv Elegant */}
-                        <div className="bg-gray-50 p-8 rounded-lg">
-                            <h4 className="text-2xl font-semibold text-[#2527D9] mb-4">Growth HUB – Aariv Elegant</h4>
-                            <p className="text-[#313447] leading-relaxed mb-6">
-                                A space built for founders who believe in scaling fast and smart. With premium amenities and a like-minded community, Aariv Elegant is where innovation finds its rhythm.
+                        <div className="bg-gray-50 p-8 rounded-xl shadow-sm">
+                            <h3 className="text-2xl font-semibold text-[#2527D9] mb-4">
+                                Growth HUB – Aariv Elegant
+                            </h3>
+                            <p className="text-gray-700 mb-6 leading-relaxed">
+                                A space built for founders who believe in scaling
+                                fast and smart. With premium amenities and a
+                                like-minded community, Aariv Elegant is where
+                                innovation finds its rhythm.
                             </p>
-                            <div className="bg-gray-200 h-48 rounded-lg flex items-center justify-center text-gray-500">
+
+                            <div className="bg-gray-200 h-52 rounded-xl flex items-center justify-center text-gray-600">
                                 (Property video and details will appear here)
                             </div>
                         </div>
+
                     </div>
                 </div>
 
-                {/* Join the Movement */}
-                <div className="mb-16">
-                    <h3 className="text-3xl font-bold text-[#050659] mb-6">Join the Movement</h3>
-                    <p className="text-lg text-[#313447] leading-relaxed mb-6 max-w-4xl">
-                        Growth HUB isn't just a place to work; it's where Hustle, Unity, and Building come together. If you're ready to surround yourself with ambition, innovation, and purpose, join the Growth HUB community today.
+                {/* JOIN THE MOVEMENT */}
+                <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 pb-20">
+
+                    <h3 className="text-3xl font-bold text-[#050659] mb-6">
+                        Join the Movement
+                    </h3>
+
+                    <p className="text-[#313447] leading-relaxed mb-6 max-w-4xl">
+                        Growth HUB isn't just a place to work; it's where Hustle,
+                        Unity, and Building come together. If you're ready to
+                        surround yourself with ambition, innovation, and purpose,
+                        join the Growth HUB community today.
                     </p>
-                    <p className="text-lg text-gray-700 leading-relaxed mb-8">
+
+                    <p className="text-[#313447] mb-8">
                         Let's Grow Together.
                     </p>
-                    <div className="space-y-4">
-                        <p className="text-lg">👉 Explore our spaces | Become a member | Collaborate with us</p>
-                    </div>
+
+                    <p className="text-lg">
+                        👉 Explore our spaces | Become a member | Collaborate with us
+                    </p>
                 </div>
 
+                {/* CONTACT + FOOTER */}
                 <ContactSection />
                 <Footer />
 
