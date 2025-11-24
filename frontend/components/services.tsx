@@ -1,29 +1,7 @@
 "use client"
 
-import { motion, Variants } from "framer-motion"
+import { motion } from "framer-motion"
 import Image from "next/image"
-import Link from "next/link"
-
-// Reusable fade-in-from-direction animation
-const fadeInDirection = (direction: "left" | "right" | "up"): Variants => {
-  const distance = 100
-  return {
-    initial: {
-      opacity: 0,
-      x: direction === "left" ? -distance : direction === "right" ? distance : 0,
-      y: direction === "up" ? distance : 0,
-    },
-    animate: {
-      opacity: 1,
-      x: 0,
-      y: 0,
-      transition: {
-        duration: 0.8,
-        ease: [0.25, 0.1, 0.25, 1],
-      },
-    },
-  }
-}
 
 const services = [
   {
@@ -89,75 +67,57 @@ const services = [
   },
 ]
 
-export function Services() {
+export default function Services() {
   return (
-    <section id="services" className="py-24 px-6 bg-white overflow-hidden">
+    <section className="py-20 px-6 bg-white">
       <div className="max-w-7xl mx-auto">
 
-        {/* Section Header */}
-        <div className="mb-20">
-          <div className="relative mb-2">
-            <div className="h-px bg-gray-400 w-full"></div>
-            <div className="absolute top-0 left-0 w-48 h-[3px] bg-gray-600 -translate-y-0.5"></div>
-          </div>
-          <p className="text-sm text-gray-600 mb-6 tracking-wide">/OUR SERVICES</p>
-          <h2 className="text-4xl md:text-5xl font-bold text-[#050659] mb-6">
-            Capabilities
-          </h2>
-          <p className="text-lg text-[#2527D9] max-w-3xl">
-            We design and deliver AI solutions that solve real business challenges,
-            create measurable impact, and build capabilities that last inside your
-            organization.
-          </p>
-        </div>
+        {/* Header */}
+        <h2 className="text-5xl font-bold text-[#050659] leading-tight mb-4">
+          Building Brands with <br /> Standout Creative Services
+        </h2>
 
-        {/* Alternating Layout */}
-        <div className="space-y-24">
-          {services.map((service, index) => {
-            const isReversed = index % 2 !== 0
-            return (
-              <motion.div
-                key={service.id}
-                className={`flex flex-col md:flex-row items-center gap-12 ${
-                  isReversed ? "md:flex-row-reverse" : ""
-                }`}
-                initial="initial"
-                whileInView="animate"
-                viewport={{ once: true, amount: 0.3 }} // 👈 triggers when this row enters view
-              >
-                {/* Text Card */}
-                <motion.div
-                  variants={fadeInDirection(isReversed ? "right" : "left")}
-                  className="flex-1"
-                >
-                  <div className="mb-6">{service.icon}</div>
-                  <Link href={`/services#${service.slug}`} className="block">
-                    <h3 className="text-2xl font-bold mb-4 text-gray-900 hover:text-gray-700 transition-colors cursor-pointer">
-                      {service.title}
-                    </h3>
-                  </Link>
-                  <p className="text-gray-700 text-lg leading-relaxed">
-                    {service.description}
-                  </p>
-                </motion.div>
+        {/* Single Service Layout */}
+        {services.map((service) => (
+          <motion.div
+            key={service.id}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+            viewport={{ once: true }}
+            className="mt-16 grid grid-cols-1 lg:grid-cols-2 gap-10"
+          >
+            {/* LEFT IMAGE */}
+            <div className="relative w-full h-[420px] rounded-3xl overflow-hidden shadow-lg">
+              <Image
+                src={service.image}
+                alt={service.title}
+                fill
+                className="object-cover"
+              />
+            </div>
 
-                {/* Image */}
-                <motion.div
-                  variants={fadeInDirection("up")}
-                  className="flex-1 w-full relative aspect-4/3 overflow-hidden rounded-xl"
-                >
-                  <Image
-                    src={service.image}
-                    alt={service.title}
-                    fill
-                    className="object-cover rounded-xl transition-transform duration-700 hover:scale-105"
-                  />
-                </motion.div>
-              </motion.div>
-            )
-          })}
-        </div>
-        
+            {/* RIGHT CARD */}
+            <div className="rounded-3xl border border-[#d2f7c9] p-10 shadow-[0_0_25px_rgba(0,255,0,0.15)]">
+              
+              {/* Avatar + Title */}
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-14 h-14 rounded-xl bg-[#0f5e48] flex items-center justify-center text-3xl">
+                  {service.icon}
+                </div>
+                <h3 className="text-3xl font-semibold text-[#003d31]">
+                  {service.title}
+                </h3>
+              </div>
+
+              {/* DESCRIPTION */}
+              <p className="text-gray-700 text-lg leading-relaxed mb-10">
+                {service.description}
+              </p>
+
+            </div>
+          </motion.div>
+        ))}
       </div>
     </section>
   )

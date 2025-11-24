@@ -6,10 +6,10 @@ import { Mail, MapPin, Linkedin } from "lucide-react"
 
 export function ContactSection() {
   return (
-    <section id="contact" className="py-18 px-6 bg-[#E7E9F1] overflow-hidden">
+    <section id="contact" className="py-9 px-6 bg-[#E7E9F1] overflow-hidden">
       <div className="max-w-7xl mx-auto">
         {/* Top Label */}
-        <div className="mb-12">
+        <div className="mb-9">
           {/* Decorative top line */}
           <div className="relative mb-2">
             <div className="h-px bg-gray-400 w-full"></div>

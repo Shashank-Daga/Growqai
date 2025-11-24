@@ -14,6 +14,7 @@ interface ServiceSection {
 
 interface Service {
   id: string;
+  t1: string;
   title: string;
   image: string;
   subtitle: string;
@@ -24,6 +25,7 @@ interface Service {
 const services: Service[] = [
   {
     id: "arrange-capital",
+    t1: "Capital",
     title: "Arrange Capital",
     image: "/Service/1.jpg",
     subtitle: "Capital fuels your growth journey",
@@ -50,6 +52,7 @@ const services: Service[] = [
   },
   {
     id: "attract-clients",
+    t1: "Clients",
     title: "Attract Clients",
     image: "/Service/2.jpg",
     subtitle: "Expand your client base through AI-powered lead generation & targeted customer conversions.",
@@ -80,6 +83,7 @@ const services: Service[] = [
   },
   {
     id: "accelerate-talent",
+    t1: "Talent",
     title: "Accelerate Talent",
     image: "/Service/3.jpg",
     subtitle: "Attract, engage, and hire top-tier talent with AI-assisted sourcing, hiring, and retention.",
@@ -117,7 +121,7 @@ export default function ServicesPage() {
     <div className="bg-white min-h-screen">
       <section className="px-8 md:px-16 lg:px-24 py-8">
         <div className="max-w-7xl mx-auto">
-          
+
           {/* Back Button */}
           <div className="mb-28">
             <button className="inline-flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors">
@@ -147,12 +151,90 @@ export default function ServicesPage() {
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                  <h3 className="text-2xl font-bold mb-2">{service.title}</h3>
-                  <p className="text-sm text-gray-200 line-clamp-2">{service.subtitle}</p>
+                  <h3 className="text-2xl font-bold mb-2">{service.t1}</h3>
                 </div>
               </motion.div>
             ))}
           </div>
+
+
+          {/* Modal for Service Details */}
+          {/* Service Details Below the Grid */}
+          <AnimatePresence>
+            {selectedService && (
+              <div className="mt-20 border border-gray-200 rounded-3xl mb-16">
+                <motion.div
+                  initial={{ opacity: 0, y: 40 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 40 }}
+                  transition={{ duration: 0.5 }}
+                  className="p-10 rounded-3xl bg-gray-50 shadow-lg"
+                >
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+
+                  {/* LEFT SIDE IMAGE */}
+                  <div className="w-full">
+                    <img
+                      src={selectedService.image}
+                      alt={selectedService.title}
+                      className="rounded-2xl shadow-lg object-cover w-full h-full"
+                    />
+                  </div>
+
+                  {/* RIGHT SIDE CONTENT */}
+                  <div>
+                    <h2 className="text-3xl font-bold text-[#050659] mb-4">
+                      {selectedService.title}
+                    </h2>
+
+                    {selectedService.subtitle && (
+                      <h3 className="text-xl font-semibold text-[#2527D9] mb-4">
+                        {selectedService.subtitle}
+                      </h3>
+                    )}
+
+                    {selectedService.description && (
+                      <p className="text-lg text-[#313447] leading-relaxed mb-6">
+                        {selectedService.description}
+                      </p>
+                    )}
+
+                    {selectedService.sections.map((section, idx) => (
+                      <div key={idx} className="mb-6">
+                        <h4 className="text-xl font-semibold text-[#2527D9] mb-2">
+                          {section.heading}
+                        </h4>
+
+                        {section.intro && (
+                          <p className="text-lg text-gray-700 mb-2">
+                            {section.intro}
+                          </p>
+                        )}
+
+                        {section.bullets && (
+                          <ul className="list-disc list-inside space-y-2 ml-4 text-lg text-gray-700">
+                            {section.bullets.map((bullet, bidx) => (
+                              <li key={bidx} dangerouslySetInnerHTML={{ __html: bullet }} />
+                            ))}
+                          </ul>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+
+                </div>
+
+                {/* Close Button */}
+                <button
+                  onClick={() => setSelectedService(null)}
+                  className="mt-8 px-6 py-3 bg-black text-white text-sm rounded-full hover:bg-gray-800 transition"
+                >
+                  Close
+                </button>
+                </motion.div>
+              </div>
+            )}
+          </AnimatePresence>
 
           {/* Stats Section */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
@@ -202,92 +284,6 @@ export default function ServicesPage() {
 
         </div>
       </section>
-
-      {/* Modal for Service Details */}
-      <AnimatePresence>
-        {selectedService && (
-          <>
-            {/* Backdrop */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              onClick={() => setSelectedService(null)}
-              className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40"
-            />
-
-            {/* Modal */}
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: 50 }}
-              transition={{ type: "spring", damping: 25 }}
-              className="fixed inset-x-4 top-20 bottom-20 md:inset-x-auto md:left-1/2 md:-translate-x-1/2 md:w-full md:max-w-5xl bg-white rounded-3xl shadow-2xl overflow-hidden z-50"
-            >
-              {/* Close Button */}
-              <button
-                onClick={() => setSelectedService(null)}
-                className="absolute top-6 right-6 w-10 h-10 bg-black text-white rounded-full flex items-center justify-center hover:bg-gray-800 transition-colors z-10"
-              >
-                <X className="w-5 h-5" />
-              </button>
-
-              {/* Content */}
-              <div className="h-full overflow-y-auto p-8 md:p-12">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
-                  {/* Text Content */}
-                  <div>
-                    <h2 className="text-3xl font-bold text-[#050659] mb-6">{selectedService.title}</h2>
-                    
-                    {selectedService.subtitle && (
-                      <h3 className="text-2xl font-semibold text-[#2527D9] mb-4">
-                        {selectedService.subtitle}
-                      </h3>
-                    )}
-                    
-                    {selectedService.description && (
-                      <p className="text-lg text-[#313447] leading-relaxed mb-8">
-                        {selectedService.description}
-                      </p>
-                    )}
-
-                    {selectedService.sections.map((section: ServiceSection, idx: number) => (
-                      <div key={idx} className="mb-8">
-                        <h4 className="text-xl font-semibold text-[#2527D9] mb-4">
-                          {section.heading}
-                        </h4>
-                        
-                        {section.intro && (
-                          <p className="text-lg text-[#313447] leading-relaxed mb-4">
-                            {section.intro}
-                          </p>
-                        )}
-                        
-                        {section.bullets && (
-                          <ul className="list-disc list-inside space-y-2 ml-4 text-lg text-gray-700">
-                            {section.bullets.map((bullet: string, bidx: number) => (
-                              <li key={bidx} dangerouslySetInnerHTML={{ __html: bullet }} />
-                            ))}
-                          </ul>
-                        )}
-                      </div>
-                    ))}
-                  </div>
-
-                  {/* Image */}
-                  <div className="sticky top-0">
-                    <img
-                      src={selectedService.image}
-                      alt={selectedService.title}
-                      className="rounded-lg object-cover w-full shadow-lg"
-                    />
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          </>
-        )}
-      </AnimatePresence>
     </div>
   );
 }

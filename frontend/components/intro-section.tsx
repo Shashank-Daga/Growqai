@@ -17,7 +17,7 @@ export default function IntroSection({ onComplete }: { onComplete: () => void })
     if (currentSlide < slides.length - 1) {
       const timer = setTimeout(() => {
         setCurrentSlide(prev => prev + 1)
-      }, 1000)
+      }, 2000)
       return () => clearTimeout(timer)
     } else {
       const endTimer = setTimeout(() => {

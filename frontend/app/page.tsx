@@ -4,7 +4,7 @@ import { useEffect, useState } from "react"
 import { AnimatePresence } from "framer-motion"
 
 import { HeroSection } from "@/components/hero-section"
-import { Services } from "@/components/services"
+import Services  from "@/components/services"
 import { Testimonials } from "@/components/testimonials-slider"
 import { ContactSection } from "@/components/contact-section"
 import AboutUsSection from "@/components/about-us"

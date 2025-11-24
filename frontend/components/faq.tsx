@@ -39,7 +39,7 @@ export default function FAQ() {
   };
 
   return (
-    <section className="min-h-screen bg-[#E7E9F1] px-8 md:px-16 lg:px-24 py-16">
+    <section className=" bg-[#E7E9F1] px-8 md:px-16 lg:px-24 py-24">
       {/* Decorative top line */}
       <div className="relative mb-2">
         <div className="h-px bg-gray-400 w-full"></div>

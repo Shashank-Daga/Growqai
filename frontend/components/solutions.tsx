@@ -50,12 +50,6 @@ export default function SolutionsSection() {
                 "Transforms marketing and sales operations into conversion-focused ecosystems. Drives measurable results across every stage of the funnel.",
         },
         {
-            icon: <ShieldCheck className="w-6 h-6 text-gray-900" />,
-            title: "Automated talent sourcing",
-            description:
-                "Implements intelligent sourcing systems that identify and attract top talent efficiently. Reduces hiring effort while improving candidate quality.",
-        },
-        {
             icon: <Puzzle className="w-6 h-6 text-gray-900" />,
             title: "Expedite hiring",
             description:

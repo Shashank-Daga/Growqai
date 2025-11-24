@@ -52,17 +52,6 @@ export default function HubPage() {
                                 Read More
                             </button>
                         </div>
-
-                        {/* Right-side Card in hero section */}
-                        <div className="absolute right-10 bottom-10 bg-white/90 backdrop-blur-md rounded-xl p-4 shadow-lg max-w-xs">
-                            <h3 className="font-semibold text-gray-900 text-lg">
-                                New Location
-                            </h3>
-                            <p className="text-gray-600 text-sm mt-1">
-                                Our new location is finally ready! Schedule your
-                                first desk tour and grand opening promotion.
-                            </p>
-                        </div>
                     </div>
                 </div>
 
@@ -154,29 +143,6 @@ export default function HubPage() {
                         </div>
 
                     </div>
-                </div>
-
-                {/* JOIN THE MOVEMENT */}
-                <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 pb-20">
-
-                    <h3 className="text-3xl font-bold text-[#050659] mb-6">
-                        Join the Movement
-                    </h3>
-
-                    <p className="text-[#313447] leading-relaxed mb-6 max-w-4xl">
-                        Growth HUB isn't just a place to work; it's where Hustle,
-                        Unity, and Building come together. If you're ready to
-                        surround yourself with ambition, innovation, and purpose,
-                        join the Growth HUB community today.
-                    </p>
-
-                    <p className="text-[#313447] mb-8">
-                        Let's Grow Together.
-                    </p>
-
-                    <p className="text-lg">
-                        👉 Explore our spaces | Become a member | Collaborate with us
-                    </p>
                 </div>
 
                 {/* CONTACT + FOOTER */}
