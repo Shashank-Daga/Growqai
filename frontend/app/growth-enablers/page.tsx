@@ -109,8 +109,8 @@ export default function GrowthEnablers() {
               s.pos === "left"
                 ? "justify-start pl-0 md:pl-0"
                 : s.pos === "center"
-                ? "justify-center"
-                : "justify-end pr-0 md:pr-0";
+                  ? "justify-center"
+                  : "justify-end pr-0 md:pr-0";
 
             // card width: slightly narrower on center to mimic screenshot
             const cardWidth =
@@ -120,10 +120,16 @@ export default function GrowthEnablers() {
               <div key={idx} className="relative w-full">
                 {/* the card positioned left/center/right */}
                 <motion.div
-                  initial={{ opacity: 0, y: 24 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={
+                    s.pos === "left"
+                      ? { opacity: 0, x: -80 }
+                      : s.pos === "right"
+                        ? { opacity: 0, x: 80 }
+                        : { opacity: 0, y: 40 }
+                  }
+                  whileInView={{ opacity: 1, x: 0, y: 0 }}
                   viewport={{ once: true, amount: 0.3 }}
-                  transition={{ duration: 0.55 }}
+                  transition={{ duration: 0.6, ease: "easeOut" }}
                   className={`flex ${alignment}`}
                 >
                   <div
@@ -149,8 +155,8 @@ export default function GrowthEnablers() {
                     <div className="absolute top-6 right-0 h-[calc(100%-1.5rem)] w-0.5 bg-linear-to-b from-[#bfe8fb] to-transparent" />
                   </div>
 
-                    {/* horizontal accent line at bottom (subtle bluish) */}
-                    <div className="absolute bottom-0 left-6 right-0 w-[calc(100%-1.5rem)] h-1 bg-linear-to-r from-[#bfe8fb] to-transparent" />
+                  {/* horizontal accent line at bottom (subtle bluish) */}
+                  <div className="absolute bottom-0 left-6 right-0 w-[calc(100%-1.5rem)] h-1 bg-linear-to-r from-[#bfe8fb] to-transparent" />
                 </motion.div>
               </div>
             );

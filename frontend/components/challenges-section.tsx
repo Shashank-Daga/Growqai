@@ -110,7 +110,7 @@ export default function ChallengeSection() {
               className={`absolute ${item.position} bg-gray-50 border border-[#E7E9F1] shadow-sm px-4 py-2 flex items-start gap-3 max-w-xs opacity-0`}
             >
               <AlertTriangle className="w-5 h-5 text-yellow-500 mt-1 shrink-0" />
-              <p className="text-sm text-[#2527D9] text-left leading-snug">
+              <p className="text-base text-[#2527D9] text-left leading-snug">
                 {item.text}
               </p>
             </div>

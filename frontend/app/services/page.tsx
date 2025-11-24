@@ -130,31 +130,43 @@ export default function ServicesPage() {
           </div>
 
           {/* Service Cards Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-28">
-            {services.map((service, index) => (
-              <motion.div
-                key={service.id}
-                initial={{ opacity: 0, y: 40 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                onClick={() => setSelectedService(service)}
-                className="relative group cursor-pointer overflow-hidden rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
-                style={{
-                  height: index === 1 ? "500px" : "400px",
-                  marginTop: index === 1 ? "-50px" : "0"
-                }}
-              >
-                <div className="absolute inset-0 bg-linear-to-b from-transparent via-transparent to-black/70"></div>
-                <img
-                  src={service.image}
-                  alt={service.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                  <h3 className="text-2xl font-bold mb-2">{service.t1}</h3>
-                </div>
-              </motion.div>
-            ))}
+          <div className="w-full overflow-hidden mb-28">
+          <motion.div
+            className="flex gap-6"
+            animate={{ x: ["0%", "-50%"] }}
+            transition={{
+              repeat: Infinity,
+              duration: 28, // adjust speed
+              ease: "linear",
+            }}
+          >
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-28">
+              {services.map((service, index) => (
+                <motion.div
+                  key={service.id}
+                  initial={{ opacity: 0, y: 40 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  onClick={() => setSelectedService(service)}
+                  className="relative group cursor-pointer overflow-hidden rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
+                  style={{
+                    height: "500px",
+                  }}
+                >
+                  <div className="absolute inset-0 bg-linear-to-b from-transparent via-transparent to-black/70"></div>
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                    <h3 className="text-2xl font-bold mb-2">{service.t1}</h3>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+
+          </motion.div>
           </div>
 
 
@@ -170,67 +182,58 @@ export default function ServicesPage() {
                   transition={{ duration: 0.5 }}
                   className="p-10 rounded-3xl bg-gray-50 shadow-lg"
                 >
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+                  <div className="gap-10 items-start">
 
-                  {/* LEFT SIDE IMAGE */}
-                  <div className="w-full">
-                    <img
-                      src={selectedService.image}
-                      alt={selectedService.title}
-                      className="rounded-2xl shadow-lg object-cover w-full h-full"
-                    />
+                    {/* RIGHT SIDE CONTENT */}
+                    <div>
+                      <h2 className="text-3xl font-bold text-[#050659] mb-4">
+                        {selectedService.title}
+                      </h2>
+
+                      {selectedService.subtitle && (
+                        <h3 className="text-xl font-semibold text-[#2527D9] mb-4">
+                          {selectedService.subtitle}
+                        </h3>
+                      )}
+
+                      {selectedService.description && (
+                        <p className="text-lg text-[#313447] leading-relaxed mb-6">
+                          {selectedService.description}
+                        </p>
+                      )}
+
+                      {selectedService.sections.map((section, idx) => (
+                        <div key={idx} className="mb-6">
+                          <h4 className="text-xl font-semibold text-[#2527D9] mb-2">
+                            {section.heading}
+                          </h4>
+
+                          {section.intro && (
+                            <p className="text-lg text-gray-700 mb-2">
+                              {section.intro}
+                            </p>
+                          )}
+
+                          {section.bullets && (
+                            <ul className="list-disc list-inside space-y-2 ml-4 text-lg text-gray-700">
+                              {section.bullets.map((bullet, bidx) => (
+                                <li key={bidx} dangerouslySetInnerHTML={{ __html: bullet }} />
+                              ))}
+                            </ul>
+                          )}
+                        </div>
+                      ))}
+                    </div>
+
                   </div>
 
-                  {/* RIGHT SIDE CONTENT */}
-                  <div>
-                    <h2 className="text-3xl font-bold text-[#050659] mb-4">
-                      {selectedService.title}
-                    </h2>
-
-                    {selectedService.subtitle && (
-                      <h3 className="text-xl font-semibold text-[#2527D9] mb-4">
-                        {selectedService.subtitle}
-                      </h3>
-                    )}
-
-                    {selectedService.description && (
-                      <p className="text-lg text-[#313447] leading-relaxed mb-6">
-                        {selectedService.description}
-                      </p>
-                    )}
-
-                    {selectedService.sections.map((section, idx) => (
-                      <div key={idx} className="mb-6">
-                        <h4 className="text-xl font-semibold text-[#2527D9] mb-2">
-                          {section.heading}
-                        </h4>
-
-                        {section.intro && (
-                          <p className="text-lg text-gray-700 mb-2">
-                            {section.intro}
-                          </p>
-                        )}
-
-                        {section.bullets && (
-                          <ul className="list-disc list-inside space-y-2 ml-4 text-lg text-gray-700">
-                            {section.bullets.map((bullet, bidx) => (
-                              <li key={bidx} dangerouslySetInnerHTML={{ __html: bullet }} />
-                            ))}
-                          </ul>
-                        )}
-                      </div>
-                    ))}
-                  </div>
-
-                </div>
-
-                {/* Close Button */}
-                <button
-                  onClick={() => setSelectedService(null)}
-                  className="mt-8 px-6 py-3 bg-black text-white text-sm rounded-full hover:bg-gray-800 transition"
-                >
-                  Close
-                </button>
+                  {/* Close Button */}
+                  <button
+                    onClick={() => setSelectedService(null)}
+                    className="mt-8 px-6 py-3 bg-black text-white text-sm rounded-full hover:bg-gray-800 transition"
+                  >
+                    Close
+                  </button>
                 </motion.div>
               </div>
             )}

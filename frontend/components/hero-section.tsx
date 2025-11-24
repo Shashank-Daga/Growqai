@@ -67,46 +67,44 @@ export function HeroSection() {
           </div>
         </div>
 
-    {/* === LOGOS SECTION (PERFECT LOOP) === */}
-<motion.div
-  variants={fadeInUp}
-  className="mt-20 opacity-80 relative z-10"
->
-  {/* Decorative Line */}
-  <div className="relative mb-6">
-    <div className="h-px bg-gray-400 w-full"></div>
-    <div className="absolute top-0 left-0 w-48 h-[3px] bg-gray-600 -translate-y-0.5"></div>
-  </div>
+        {/* === LOGOS SECTION (PERFECT LOOP) === */}
+        <motion.div
+          variants={fadeInUp}
+          className="mt-20 opacity-80 relative z-10"
+        >
+          {/* Decorative Line */}
+          <div className="relative mb-6">
+            <div className="h-px bg-gray-400 w-full"></div>
+            <div className="absolute top-0 left-0 w-48 h-[3px] bg-gray-600 -translate-y-0.5"></div>
+          </div>
 
-  <p className="text-sm uppercase tracking-widest mb-6 text-gray-400">
-    /Trusted By
-  </p>
+          <p className="text-sm uppercase tracking-widest mb-6 text-gray-400">
+            /Trusted By
+          </p>
 
-  {/* === INFINITE LOOP === */}
-  <div className="overflow-hidden relative w-full">
-    <motion.div
-      className="flex items-center gap-16 whitespace-nowrap"
-      animate={{ x: ["0%", "-50%"] }}
-      transition={{
-        repeat: Infinity,
-        duration: 20,   // adjust speed
-        ease: "linear"
-      }}
-    >
-      {/* FIRST ROW */}
-      <Image src="/T.C. Logo/Kosoku.jpeg" alt="Kosoku" width={110} height={40} />
-      <Image src="/T.C. Logo/Merito.jpeg" alt="Merito" width={110} height={40} />
-      <Image src="/T.C. Logo/RAMS.jpeg" alt="RAMS" width={110} height={40} />
+          {/* === INFINITE LOOP === */}
+          <div className="overflow-hidden relative w-full">
+            <motion.div
+              className="flex items-center gap-16 whitespace-nowrap"
+              animate={{ x: ["0%", "-50%"] }}
+              transition={{
+                repeat: Infinity,
+                duration: 20,   // adjust speed
+                ease: "linear"
+              }}
+            >
+              {/* FIRST ROW */}
+              <Image src="/T.C. Logo/Kosoku.jpeg" alt="Kosoku" width={110} height={40} />
+              <Image src="/T.C. Logo/Merito.jpeg" alt="Merito" width={110} height={40} />
+              <Image src="/T.C. Logo/RAMS.jpeg" alt="RAMS" width={110} height={40} />
 
-      {/* SECOND ROW (NEEDED FOR SMOOTH ENTRY) */}
-      <Image src="/T.C. Logo/Kosoku.jpeg" alt="Kosoku" width={110} height={40} />
-      <Image src="/T.C. Logo/Merito.jpeg" alt="Merito" width={110} height={40} />
-      <Image src="/T.C. Logo/RAMS.jpeg" alt="RAMS" width={110} height={40} />
-    </motion.div>
-  </div>
-</motion.div>
-
-
+              {/* SECOND ROW (NEEDED FOR SMOOTH ENTRY) */}
+              <Image src="/T.C. Logo/Kosoku.jpeg" alt="Kosoku" width={110} height={40} />
+              <Image src="/T.C. Logo/Merito.jpeg" alt="Merito" width={110} height={40} />
+              <Image src="/T.C. Logo/RAMS.jpeg" alt="RAMS" width={110} height={40} />
+            </motion.div>
+          </div>
+        </motion.div>
 
       </motion.div>
     </section>
