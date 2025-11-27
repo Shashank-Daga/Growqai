@@ -14,9 +14,8 @@ export default function ShreyasCrestPage() {
     return (
         <section className="bg-white">
             <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 pt-6">
-                <Link href="/hub" className="inline-flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors">
+                <Link href="/hub" className="inline-flex items-center gap-2 text-[#313447] hover:text-gray-900 transition-colors">
                     <ArrowLeft className="w-4 h-4" />
-                    Back to Hubs
                 </Link>
             </div>
 
@@ -33,29 +32,25 @@ export default function ShreyasCrestPage() {
                     </p>
                 </div>
 
-                {/* Image Gallery */}
-                <div className="grid md:grid-cols-2 gap-8 mb-16">
-                    <div className="relative h-96 overflow-hidden">
-                        <Image
-                            src="/Service/1.jpg" // Replace with actual image
-                            alt="Shreyas Crest Workspace"
-                            fill
-                            className="object-cover"
-                        />
-                    </div>
-                    <div className="relative h-96 overflow-hidden">
-                        <Image
-                            src="/Service/2.jpg" // Replace with actual image
-                            alt="Shreyas Crest Interior"
-                            fill
-                            className="object-cover"
-                        />
-                    </div>
+                {/* Image Gallery – 6 equal-size images */}
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mb-16">
+
+                    {[1, 2, 3, 4, 5, 6].map((num) => (
+                        <div key={num} className="relative h-64 overflow-hidden rounded-lg">
+                            <Image
+                                src={`/Aariv Elegant/${num}.jpg`}
+                                alt={`Workspace Image ${num}`}
+                                fill
+                                className="object-cover"
+                            />
+                        </div>
+                    ))}
+
                 </div>
 
                 {/* Intro Description */}
                 <div className="max-w-4xl mx-auto mb-16 text-center">
-                    <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
+                    <p className="text-lg md:text-xl text-[#313447] leading-relaxed">
                         This premium office space at Aariv Elegant offers a well-designed layout ideal for startups,
                         small enterprises, or satellite offices seeking a ready-to-move-in setup in one of Pune’s
                         most sought-after commercial hubs — Baner.
@@ -73,7 +68,7 @@ export default function ShreyasCrestPage() {
                                 <span className="text-white text-2xl">🧑‍💻</span>
                             </div>
                             <h3 className="font-semibold mb-2">Bay 1</h3>
-                            <p className="text-gray-600">4 workstations + 2 cubicles</p>
+                            <p className="text-[#313447]">4 workstations + 2 cubicles</p>
                         </div>
 
                         <div className="text-center">
@@ -81,7 +76,7 @@ export default function ShreyasCrestPage() {
                                 <span className="text-white text-2xl">💼</span>
                             </div>
                             <h3 className="font-semibold mb-2">Bay 2</h3>
-                            <p className="text-gray-600">5 workstations with attached washroom</p>
+                            <p className="text-[#313447]">5 workstations with attached washroom</p>
                         </div>
 
                         <div className="text-center">
@@ -89,7 +84,7 @@ export default function ShreyasCrestPage() {
                                 <span className="text-white text-2xl">🏢</span>
                             </div>
                             <h3 className="font-semibold mb-2">Bay 3</h3>
-                            <p className="text-gray-600">2 cabins (1 open and 1 enclosed)</p>
+                            <p className="text-[#313447]">2 cabins (1 open and 1 enclosed)</p>
                         </div>
 
                         <div className="text-center">
@@ -97,7 +92,7 @@ export default function ShreyasCrestPage() {
                                 <span className="text-white text-2xl">📐</span>
                             </div>
                             <h3 className="font-semibold mb-2">Optimized Layout</h3>
-                            <p className="text-gray-600">Efficiently planned for space, privacy & collaboration</p>
+                            <p className="text-[#313447]">Efficiently planned for space, privacy & collaboration</p>
                         </div>
 
                         <div className="text-center">
@@ -105,7 +100,7 @@ export default function ShreyasCrestPage() {
                                 <span className="text-white text-2xl">🚻</span>
                             </div>
                             <h3 className="font-semibold mb-2">Modern Washrooms</h3>
-                            <p className="text-gray-600">Two clean and fully equipped washrooms</p>
+                            <p className="text-[#313447]">Two clean and fully equipped washrooms</p>
                         </div>
 
                         <div className="text-center">
@@ -113,7 +108,7 @@ export default function ShreyasCrestPage() {
                                 <span className="text-white text-2xl">☕</span>
                             </div>
                             <h3 className="font-semibold mb-2">Pantry & Dining</h3>
-                            <p className="text-gray-600">Common pantry area and dining space</p>
+                            <p className="text-[#313447]">Common pantry area and dining space</p>
                         </div>
 
                         <div className="text-center">
@@ -121,7 +116,7 @@ export default function ShreyasCrestPage() {
                                 <span className="text-white text-2xl">🧹</span>
                             </div>
                             <h3 className="font-semibold mb-2">Facilities Support</h3>
-                            <p className="text-gray-600">Refrigerator & regular cleaning support</p>
+                            <p className="text-[#313447]">Refrigerator & regular cleaning support</p>
                         </div>
 
                         <div className="text-center">
@@ -129,7 +124,7 @@ export default function ShreyasCrestPage() {
                                 <span className="text-white text-2xl">🌤️</span>
                             </div>
                             <h3 className="font-semibold mb-2">Bright & Ventilated</h3>
-                            <p className="text-gray-600">Natural airflow and well-lit interiors</p>
+                            <p className="text-[#313447]">Natural airflow and well-lit interiors</p>
                         </div>
 
                         <div className="text-center">
@@ -137,7 +132,7 @@ export default function ShreyasCrestPage() {
                                 <span className="text-white text-2xl">🔒</span>
                             </div>
                             <h3 className="font-semibold mb-2">Secure Workspace</h3>
-                            <p className="text-gray-600">Peaceful and safe working environment</p>
+                            <p className="text-[#313447]">Peaceful and safe working environment</p>
                         </div>
 
                         <div className="text-center md:col-span-3">
@@ -145,7 +140,7 @@ export default function ShreyasCrestPage() {
                                 <span className="text-white text-2xl">🚗</span>
                             </div>
                             <h3 className="font-semibold mb-2">Parking Availability</h3>
-                            <p className="text-gray-600">Ample parking for both 4-wheelers and 2-wheelers</p>
+                            <p className="text-[#313447]">Ample parking for both 4-wheelers and 2-wheelers</p>
                         </div>
 
                     </div>
@@ -157,18 +152,21 @@ export default function ShreyasCrestPage() {
                     <div className="grid md:grid-cols-2 gap-8">
                         <div>
                             <h3 className="font-semibold mb-4">Address</h3>
-                            <p className="text-gray-600 mb-4">
-                                Shreyas Crest,<br />
-                                [Actual Address],<br />
-                                [City], [State] - [PIN]
-                            </p>
+                            <a
+                                    href="https://www.google.com/maps/place/Aariv+Elegant/@18.5722572,73.7659764,17z/data=!3m1!4b1!4m6!3m5!1s0x3bc2b9d0d70feed5:0x6a97c0a5401a4589!8m2!3d18.5722572!4d73.7685513!16s%2Fg%2F11s4t3tp4b?entry=ttu&g_ep=EgoyMDI1MTEyMy4xIKXMDSoASAFQAw%3D%3D"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-[#313447] hover:underline mb-4"
+                                >
+                                Aariv Elegant,<br />
+                                Aariv Elegant Lane, Plot no 23/1B,<br /> Lane Number 7, Laxman Nagar, Baner<br />
+                                Pune, Maharashtra - 411045
+                            </a>
                         </div>
                         <div>
                             <h3 className="font-semibold mb-4">Operating Hours</h3>
-                            <p className="text-gray-600">
-                                Monday - Friday: 8:00 AM - 10:00 PM<br />
-                                Saturday: 9:00 AM - 8:00 PM<br />
-                                Sunday: 10:00 AM - 6:00 PM
+                            <p className="text-[#313447]">
+                                Monday - Friday:<br /> 8:00 AM - 10:00 PM<br />
                             </p>
                         </div>
                     </div>

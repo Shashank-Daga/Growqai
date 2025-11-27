@@ -45,7 +45,7 @@ export default function NewsSection() {
 
             <Link
               href="/insights"
-              className="inline-flex items-center gap-2 border border-gray-300 text-sm font-medium px-6 py-2  transition bg-black text-white"
+              className="inline-flex items-center gap-2 border border-gray-300 text-sm font-medium px-6 py-2  transition bg-[#2527D9] text-white"
             >
               Discover more
               <span className="bg-blue-100 text-black p-[3px]">
@@ -88,7 +88,7 @@ export default function NewsSection() {
                 </div>
 
                 {/* Title */}
-                <h3 className="font-semibold text-lg text-gray-900 leading-snug mb-2 hover:text-blue-600 transition-colors">
+                <h3 className="font-semibold text-lg text-[#313447] leading-snug mb-2 hover:text-blue-600 transition-colors">
                   {blog.title}
                 </h3>
               </motion.div>

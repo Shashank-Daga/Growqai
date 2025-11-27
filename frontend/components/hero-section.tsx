@@ -58,7 +58,7 @@ export function HeroSection() {
               className="relative w-full h-80 sm:h-96 lg:h-[460px]  overflow-hidden"
             >
               <Image
-                src="/placeholder.jpg"
+                src="/Banner.jpg"
                 alt="Developer at work"
                 fill
                 className="object-cover"

@@ -141,13 +141,13 @@ export default function GrowthEnablers() {
                         {s.icon}
                       </div>
                       <div>
-                        <h3 className="text-xl font-semibold text-[#2b6cb0]">
+                        <h3 className="text-xl font-semibold text-[#2527D9]">
                           {s.title}
                         </h3>
                       </div>
                     </div>
 
-                    <p className="text-[#313447] text-sm leading-relaxed">
+                    <p className="text-[#313437] text-sm leading-relaxed">
                       {s.description}
                     </p>
 

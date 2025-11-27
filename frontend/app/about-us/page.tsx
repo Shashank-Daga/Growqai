@@ -31,7 +31,7 @@ export default function AboutUsPage() {
       <div className="text-sm text-gray-500 mb-10">/ABOUT US</div>
 
       {/* ---------------------- HERO SECTION ---------------------- */}
-      <div className="text-center py-24 border-b border-[#E7E9F1]">
+      <div className="text-center py-72 border-b border-[#E7E9F1]" style={{ backgroundImage: "url('/AboutUs/Banner.jpg')" }}>
         <h1 className="text-4xl md:text-5xl font-bold text-[#050659] mb-6">
           We are obsessed with growth
         </h1>
@@ -55,10 +55,31 @@ export default function AboutUsPage() {
           </div>
 
           {/* Images Grid (3 blocks like your reference) */}
-          <div className="grid grid-cols-2 gap-4">
-            <div className="bg-gray-100 h-40" />
-            <div className="bg-gray-100 h-40" />
-            <div className="bg-gray-100 h-40 col-span-2" />
+          <div className="grid grid-cols-2 gap-4 bg-gray-100">
+            <Image
+              src="/AboutUs/Exellence.jpg"
+              alt="Excellence"
+              width={240}
+              height={240}
+              className="object-cover"
+            />
+            <Image
+              src="/AboutUs/Innovation.jpg"
+              alt="Innovation"
+              width={240}
+              height={240}
+              className="object-cover"
+            />
+            {/* Center the last image */}
+            <div className="flex justify-center items-center col-span-2">
+              <Image
+                src="/AboutUs/Integrity.jpg"
+                alt="Integrity"
+                width={240}
+                height={240}
+                className="object-cover"
+              />
+            </div>
           </div>
         </div>
       </div>

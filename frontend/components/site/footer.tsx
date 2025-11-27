@@ -26,9 +26,6 @@ export function Footer() {
               <Link href="/services" className="block hover:text-[#4FF2E8] text-sm transition-colors">
                 Services
               </Link>
-              {/* <Link href="/latest-insights" className="block hover:text-[#4FF2E8] text-sm transition-colors">
-                Case Studies
-              </Link> */}
               <Link href="#testimonials" className="block hover:text-[#4FF2E8] text-sm transition-colors">
                 Testimonials
               </Link>

@@ -165,14 +165,14 @@ export default function Services() {
                 ref={(el) => {
                   if (el) cardsRef.current[index] = el;
                 }}
-                className="absolute w-full border border-[#d2f7c9] bg-white p-10  shadow-[0_0_25px_rgba(0,255,0,0.15)]"
+                className="absolute w-full border bg-white p-10 shadow-[0_0_65px_rgba(5,6,89,0.15)]"
                 style={{ opacity: 0 }}
               >
-                <h3 className="text-3xl font-semibold text-[#003d31] mb-4">
+                <h3 className="text-3xl font-semibold text-[#050659] mb-4">
                   {service.title}
                 </h3>
 
-                <p className="text-gray-700 leading-relaxed text-lg mb-6">
+                <p className="text-[#313447] leading-relaxed text-lg mb-6">
                   {service.description}
                 </p>
 
@@ -180,8 +180,8 @@ export default function Services() {
                 <ul className="space-y-4 mb-4">
                   {service.points.map((point, i) => (
                     <li key={i} className="flex items-start gap-3">
-                      <CheckCircle2 className="w-6 h-6 text-green-600 shrink-0 mt-1" />
-                      <span className="text-gray-700 text-[17px] leading-relaxed">
+                      <CheckCircle2 className="w-6 h-6 text-[#2527D9] shrink-0 mt-1" />
+                      <span className="text-[#313447] text-[17px] leading-relaxed">
                         {point}
                       </span>
                     </li>
@@ -190,7 +190,7 @@ export default function Services() {
 
                 {/* CTA */}
                 <Link href={`/services?id=${service.id}`}>
-                  <button className="bg-[#b4ff80] hover:bg-[#a3ff66] transition  px-6 py-3 text-lg font-medium flex items-center gap-2">
+                  <button className="bg-[#2527D9] hover:bg-[#4B4DFF] transition px-6 py-3 text-lg text-white font-medium flex items-center gap-2">
                     {service.cta ?? "Get Started"}
                     <span className="text-xl">↗</span>
                   </button>

@@ -237,7 +237,7 @@ export default function ServicesPage() {
         }}
         transition={{ type: "spring", stiffness: 120, damping: 18 }}
         style={{ zIndex: z }}
-        className={`${baseCardClasses} ${widthClass} bg-white`}
+        className={`${baseCardClasses} ${widthClass} bg-white mb-16`}
       >
         {/* Image layer */}
         <div className="w-full h-full relative">
