@@ -1,0 +1,156 @@
+import Link from "next/link"
+import { ArrowLeft } from "lucide-react"
+import { Metadata } from "next"
+import Image from "next/image"
+import { ContactSection } from "@/components/contact-section"
+import { Footer } from "@/components/site/footer"
+
+export const metadata: Metadata = {
+    title: "Growth HUB - Shreyas Crest | Growqai",
+    description: "Discover Growth HUB Shreyas Crest - A vibrant, modern workspace for early-stage startups, solopreneurs, and growth-driven teams.",
+}
+
+export default function ShreyasCrestPage() {
+    return (
+        <section className="bg-white">
+            <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 pt-6">
+                <Link href="/hub" className="inline-flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors">
+                    <ArrowLeft className="w-4 h-4" />
+                    Back to Hubs
+                </Link>
+            </div>
+
+            <div className="max-w-7xl mx-auto py-12 px-6 md:px-12 lg:px-20">
+
+                {/* Hero Section */}
+                <div className="text-center mb-16">
+                    <h1 className="text-4xl md:text-5xl font-bold text-[#050659] mb-4">
+                        Growth HUB — Shreyas Crest
+                    </h1>
+                    <p className="text-xl text-[#2527D9] max-w-3xl mx-auto">
+                        A vibrant, modern workspace that blends functionality with creativity. It's where early-stage startups, solopreneurs, and growth-driven teams collaborate to turn ideas into action.
+                    </p>
+                </div>
+
+                {/* Image Gallery */}
+                <div className="grid md:grid-cols-2 gap-8 mb-16">
+                    <div className="relative h-96 rounded-2xl overflow-hidden">
+                        <Image
+                            src="/Service/1.jpg" // Replace with actual image
+                            alt="Shreyas Crest Workspace"
+                            fill
+                            className="object-cover"
+                        />
+                    </div>
+                    <div className="relative h-96 rounded-2xl overflow-hidden">
+                        <Image
+                            src="/Service/2.jpg" // Replace with actual image
+                            alt="Shreyas Crest Interior"
+                            fill
+                            className="object-cover"
+                        />
+                    </div>
+                </div>
+
+                {/* Intro Description */}
+                <div className="max-w-4xl mx-auto mb-16 text-center">
+                    <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
+                        Located in the heart of Baner, this ready-to-move office offers a modern, glass-enclosed environment ideal for teams seeking a blend of comfort, design, and functionality.
+                    </p>
+                </div>
+
+                {/* Amenities */}
+                <div className="bg-gray-50 rounded-3xl p-8 mb-16">
+                    <h2 className="text-3xl font-bold text-[#050659] mb-8 text-center">Amenities & Features</h2>
+                    <div className="grid md:grid-cols-3 gap-6">
+
+                        <div className="text-center">
+                            <div className="w-16 h-16 bg-[#1718FF] rounded-full flex items-center justify-center mx-auto mb-4">
+                                <span className="text-white text-2xl">🏢</span>
+                            </div>
+                            <h3 className="font-semibold mb-2">Fully Furnished Setup</h3>
+                            <p className="text-gray-600">Move-in ready workspace with modern interiors</p>
+                        </div>
+
+                        <div className="text-center">
+                            <div className="w-16 h-16 bg-[#1718FF] rounded-full flex items-center justify-center mx-auto mb-4">
+                                <span className="text-white text-2xl">💺</span>
+                            </div>
+                            <h3 className="font-semibold mb-2">40 Workstations + 3 Private Cabins</h3>
+                            <p className="text-gray-600">Ideal for teams, founders & private workspaces</p>
+                        </div>
+
+                        <div className="text-center">
+                            <div className="w-16 h-16 bg-[#1718FF] rounded-full flex items-center justify-center mx-auto mb-4">
+                                <span className="text-white text-2xl">👥</span>
+                            </div>
+                            <h3 className="font-semibold mb-2">12-Seater Conference Room</h3>
+                            <p className="text-gray-600">Perfect for meetings, presentations & discussions</p>
+                        </div>
+
+                        <div className="text-center">
+                            <div className="w-16 h-16 bg-[#1718FF] rounded-full flex items-center justify-center mx-auto mb-4">
+                                <span className="text-white text-2xl">☕</span>
+                            </div>
+                            <h3 className="font-semibold mb-2">Cafeteria Space</h3>
+                            <p className="text-gray-600">Dedicated area for breaks, snacks & refreshments</p>
+                        </div>
+
+                        <div className="text-center">
+                            <div className="w-16 h-16 bg-[#1718FF] rounded-full flex items-center justify-center mx-auto mb-4">
+                                <span className="text-white text-2xl">🌤️</span>
+                            </div>
+                            <h3 className="font-semibold mb-2">Naturally Ventilated</h3>
+                            <p className="text-gray-600">Bright, airy and comfortable environment</p>
+                        </div>
+
+                        <div className="text-center">
+                            <div className="w-16 h-16 bg-[#1718FF] rounded-full flex items-center justify-center mx-auto mb-4">
+                                <span className="text-white text-2xl">💼</span>
+                            </div>
+                            <h3 className="font-semibold mb-2">Reception & Waiting Area</h3>
+                            <p className="text-gray-600">Professional first-point-of-contact for visitors</p>
+                        </div>
+
+                        <div className="text-center md:col-span-3">
+                            <div className="w-16 h-16 bg-[#1718FF] rounded-full flex items-center justify-center mx-auto mb-4">
+                                <span className="text-white text-2xl">📶</span>
+                            </div>
+                            <h3 className="font-semibold mb-2">High-Speed WiFi</h3>
+                            <p className="text-gray-600">Fast and reliable internet for uninterrupted work</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                {/* Location */}
+                <div className="bg-gray-50 rounded-3xl p-8 mb-16">
+                    <h2 className="text-3xl font-bold text-[#050659] mb-8 text-center">Location & Hours</h2>
+                    <div className="grid md:grid-cols-2 gap-8">
+                        <div>
+                            <h3 className="font-semibold mb-4">Address</h3>
+                            <p className="text-gray-600 mb-4">
+                                Shreyas Crest,<br />
+                                [Actual Address],<br />
+                                [City], [State] - [PIN]
+                            </p>
+                        </div>
+                        <div>
+                            <h3 className="font-semibold mb-4">Operating Hours</h3>
+                            <p className="text-gray-600">
+                                Monday - Friday: 8:00 AM - 10:00 PM<br />
+                                Saturday: 9:00 AM - 8:00 PM<br />
+                                Sunday: 10:00 AM - 6:00 PM
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            {/* CONTACT + FOOTER */}
+            <ContactSection />
+            <Footer />
+        </section>
+    )
+}

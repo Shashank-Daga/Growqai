@@ -111,9 +111,11 @@ export default function HubPage() {
                     <div className="grid md:grid-cols-2 gap-10">
 
                         <div className="bg-gray-50 p-8 rounded-xl shadow-sm">
-                            <h3 className="text-2xl font-semibold text-[#2527D9] mb-4">
-                                Growth HUB – Shreyas Crest
-                            </h3>
+                            <Link href="/hub/hubs/shreyas-crest">
+                                <h3 className="text-2xl font-semibold text-[#2527D9] mb-4 cursor-pointer hover:text-[#1718FF] transition-colors">
+                                    Growth HUB – Shreyas Crest
+                                </h3>
+                            </Link>
                             <p className="text-gray-700 mb-6 leading-relaxed">
                                 A vibrant, modern workspace that blends functionality
                                 with creativity. It's where early-stage startups,
@@ -127,9 +129,11 @@ export default function HubPage() {
                         </div>
 
                         <div className="bg-gray-50 p-8 rounded-xl shadow-sm">
-                            <h3 className="text-2xl font-semibold text-[#2527D9] mb-4">
-                                Growth HUB – Aariv Elegant
-                            </h3>
+                            <Link href="/hub/hubs/aariv-elegant">
+                                <h3 className="text-2xl font-semibold text-[#2527D9] mb-4">
+                                    Growth HUB – Aariv Elegant
+                                </h3>
+                            </Link>
                             <p className="text-gray-700 mb-6 leading-relaxed">
                                 A space built for founders who believe in scaling
                                 fast and smart. With premium amenities and a

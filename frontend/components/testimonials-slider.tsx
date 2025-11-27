@@ -8,21 +8,21 @@ const testimonials = [
     name: "Chintaman Sanap",
     company: "Kosoku",
     text: "Growqai's collaborative approach, attention to detail, and commitment to delivering results set them apart from other consulting firms. I wouldn't hesitate to recommend.",
-    img: "/testimonials/chintaman.jpg", // add correct image later
+    img: "/Testimonials/Chintaman.jpg",
   },
   {
     id: 2,
     name: "Abhi Karn",
     company: "Merito",
     text: "Their team's depth of knowledge, strategic thinking, and commitment to excellence have been instrumental in helping us innovate talent acquisition at scale.",
-    img: "/testimonials/abhi.jpg",
+    img: "/Testimonials/Abhi.jpg",
   },
   {
     id: 3,
     name: "Manoj Baraskar",
     company: "RAMS",
     text: "The team at Growqai exceeded our expectations in every way. We are grateful for their partnership and the positive impact they've had on our business.",
-    img: "/testimonials/manoj.jpg",
+    img: "/Testimonials/Manoj.jpg",
   },
 ]
 

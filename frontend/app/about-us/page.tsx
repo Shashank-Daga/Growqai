@@ -79,7 +79,7 @@ export default function AboutUsPage() {
             {/* Left - Image */}
             <div className="flex justify-center md:justify-start flex-col items-center">
               <Image
-                src="/placeholder-user.jpg"
+                src="/AboutUs/Rush.png"
                 alt="Rushikesh Humbe"
                 width={240}
                 height={240}

@@ -7,18 +7,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ArrowLeft } from "lucide-react";
 import { ContactSection } from "@/components/contact-section";
 import { Footer } from "@/components/site/footer";
-
-/**
- * Carousel behaviour:
- * - shows three cards: prev | active (center, scaled) | next
- * - automatically advances every AUTO_PLAY interval with smooth slide animation
- * - circular wrap-around
- * - clicking any card selects it (also opens the details below)
- *
- * Notes:
- * - This keeps layout & design consistent with your project (rounded cards, shadow).
- * - No "blur glow" is applied.
- */
+import { useSearchParams } from "next/navigation";
 
 interface ServiceSection {
   heading: string;
@@ -135,6 +124,18 @@ export default function ServicesPage() {
   const [selectedService, setSelectedService] = useState<Service | null>(null);
   const [isAnimating, setIsAnimating] = useState(false);
   const autoplayRef = useRef<number | null>(null);
+  const searchParams = useSearchParams();
+
+  useEffect(() => {
+    const id = searchParams.get('id');
+    if (id) {
+      const serviceIndex = services.findIndex(s => s.id === id);
+      if (serviceIndex !== -1) {
+        setActive(serviceIndex);
+        setSelectedService(services[serviceIndex]);
+      }
+    }
+  }, [searchParams]);
 
   const n = services.length;
 
@@ -361,33 +362,41 @@ export default function ServicesPage() {
           {/* Stats + contact + footer */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
             <div className="bg-black text-white rounded-3xl p-10 relative overflow-hidden">
-              <h3 className="text-2xl font-bold mb-4">I'm Gaurav Pant</h3>
+              <h3 className="text-2xl font-bold mb-4">Growqai:</h3>
               <p className="text-gray-300 leading-relaxed mb-6">
-                A passionate web designer and developer dedicated to crafting purposeful
-                digital experiences.
+                A growth-driven consulting firm helping founders, startups, and companies scale through <strong>Capital Advisory, Client Acquisition, and Talent Solutions</strong>.<br />
+                Our purpose is simple to empower businesses with <strong>strategic capital, high-value clients</strong>, and <strong>top-tier talent</strong> to accelerate their growth journey.
               </p>
             </div>
 
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-gray-50 rounded-3xl p-8">
-                <div className="text-5xl font-bold text-gray-900 mb-2">8+</div>
-                <div className="text-sm text-gray-500 mb-2">years</div>
-                <p className="text-xs text-gray-600">Creating meaningful digital experiences</p>
+                <div className="text-5xl font-bold text-gray-900 mb-2">3+</div>
+                <div className="text-sm text-gray-500 mb-2">Industries we operate in</div>
+                <p className="text-xs text-gray-600">
+                  • Capital • Client Acquisition • Talent Solutions
+                </p>
               </div>
               <div className="bg-gray-50 rounded-3xl p-8">
-                <div className="text-5xl font-bold text-gray-900 mb-2">120+</div>
-                <div className="text-sm text-gray-500 mb-2">projects</div>
-                <p className="text-xs text-gray-600">Designed and delivered innovative solutions</p>
+                <div className="text-5xl font-bold text-gray-900 mb-2">4+</div>
+                <div className="text-sm text-gray-500 mb-2">Business Partnerships built</div>
+                <p className="text-xs text-gray-600">
+                  Driven with strategy & execution within 4 months
+                </p>
               </div>
               <div className="bg-gray-50 rounded-3xl p-8">
-                <div className="text-5xl font-bold text-gray-900 mb-2">35+</div>
-                <div className="text-sm text-gray-500 mb-2">happy clients</div>
-                <p className="text-xs text-gray-600">Built lasting partnerships</p>
+                <div className="text-5xl font-bold text-gray-900 mb-2">200+</div>
+                <div className="text-sm text-gray-500 mb-2">Successful placements</div>
+                <p className="text-xs text-gray-600">
+                  From entry to leadership roles
+                </p>
               </div>
               <div className="bg-gray-50 rounded-3xl p-8">
-                <div className="text-5xl font-bold text-gray-900 mb-2">99%</div>
-                <div className="text-sm text-gray-500 mb-2">satisfaction</div>
-                <p className="text-xs text-gray-600">Exceeding expectations consistently</p>
+                <div className="text-5xl font-bold text-gray-900 mb-2">95%</div>
+                <div className="text-sm text-gray-500 mb-2">Client Success Rate</div>
+                <p className="text-xs text-gray-600">
+                  Delivering measurable growth consistently
+                </p>
               </div>
             </div>
           </div>

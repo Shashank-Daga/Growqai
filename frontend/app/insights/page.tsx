@@ -2,67 +2,17 @@ import Image from "next/image"
 import Link from "next/link"
 import { ArrowLeft } from "lucide-react"
 import { Metadata } from "next"
+import { getAllBlogsMetadata } from "@/lib/blogs" // Adjust the path based on your project structure
 
 export const metadata: Metadata = {
   title: "Insights | Growqai",
   description: "Stay updated with the latest insights, news, and articles from Growqai.",
 }
 
-const articles = [
-  {
-    id: 1,
-    title: "Subduxion and Databricks join forces to make applied AI solutions possible",
-    image: "/news/databricks-subduxion.png",
-    large: true,
-  },
-  {
-    id: 2,
-    title: "Closing the Gap Between AI's Promise and Reality: Private AI Infrastructure",
-    image: "/news/ai-infra.png",
-  },
-  {
-    id: 3,
-    title: "Subduxion Running Team Participated in the ASML Marathon 2025",
-    image: "/placeholder.svg",
-  },
-  {
-    id: 4,
-    title: "From Capital to Capability: How Growth Consulting Firms Accelerate ROI",
-    image: "/placeholder.svg",
-  },
-  {
-    id: 5,
-    title: "How AI-Enabled Growth Consulting Is Changing the Startup Ecosystem in India",
-    image: "/placeholder.svg",
-  },
-  {
-    id: 6,
-    title: "Capital + Clients + Talent: The 3 Growth Levers Every Founder Should Master",
-    image: "/placeholder.svg",
-  },
-  {
-    id: 7,
-    title: "The Talent Equation: Why AI-Driven Teams Outperform Traditional Organizations",
-    image: "/placeholder.svg",
-  },
-  {
-    id: 8,
-    title: "From Leads to Loyalists: How Growth Consulting Firms Build Stronger Client Pipelines",
-    image: "/placeholder.svg",
-  },
-  {
-    id: 9,
-    title: "Capital Intelligence: How Data-Driven Insights Are Transforming Investment Decisions",
-    image: "/placeholder.svg",
-  },
-  {
-    id: 10,
-    title: "The Future of Growth Consulting: How AI Is Redefining Consulting Services.",
-    image: "/placeholder.svg",
-  },
-]
-
 export default function InsightsPage() {
+  // Fetch blogs from MDX files
+  const blogs = getAllBlogsMetadata()
+
   return (
     <section className="min-h-screen bg-white px-8 md:px-16 lg:px-24 py-16">
       {/* Back Button */}
@@ -86,30 +36,45 @@ export default function InsightsPage() {
         Latest Insights
       </h1>
 
-      {/* Articles Grid */}
+      {/* Blogs Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {articles.map((article) => (
-          <div
-            key={article.id}
-            className={`flex flex-col ${article.large ? "md:col-span-2 lg:col-span-2" : ""}`}
+        {blogs.map((blog, index) => (
+          <Link
+            key={blog.id}
+            href={`/insights/${blog.id}`}
+            className={`flex flex-col group ${index === 0 ? "md:col-span-2 lg:col-span-2" : ""}`}
           >
             {/* Image */}
-            <div className="relative w-full aspect-4/3 mb-4">
+            <div className="relative w-full aspect-video mb-4 overflow-hidden rounded-sm">
               <Image
-                src={article.image}
-                alt={article.title}
+                src={blog.image}
+                alt={blog.title}
                 fill
-                className="object-cover rounded-sm"
+                className="object-cover group-hover:scale-105 transition-transform duration-300"
               />
             </div>
 
+            {/* Category */}
+            {blog.category && (
+              <span className="text-xs text-gray-500 uppercase tracking-wide mb-2">
+                {blog.category}
+              </span>
+            )}
+
             {/* Title */}
-            <h3 className="font-semibold text-lg text-gray-900 leading-snug mb-2">
-              {article.title}
+            <h3 className="font-semibold text-lg text-gray-900 leading-snug mb-2 group-hover:text-gray-600 transition-colors">
+              {blog.title}
             </h3>
-          </div>
+          </Link>
         ))}
       </div>
+
+      {/* Empty state */}
+      {blogs.length === 0 && (
+        <div className="text-center py-12">
+          <p className="text-gray-500 text-lg">No Blogs found. Add MDX files to the content/blogs directory.</p>
+        </div>
+      )}
     </section>
   )
 }
