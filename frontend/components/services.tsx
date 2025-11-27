@@ -19,7 +19,7 @@ const services = [
       "We help you identify the right investor by sifting through investor databases and portfolios",
       "Standing out in a crowded capital market requires data-driven and customised pitches",
     ],
-    cta: "Contact Us",
+    cta: "Know More",
   },
   {
     id: "attract-clients",
@@ -32,7 +32,7 @@ const services = [
       "Navigating client acquisition in today’s competitive B2B landscape requires advanced strategies",
       "We believe in the power of technology to scale smartly",
     ],
-    cta: "Contact Us",
+    cta: "Know More",
   },
   {
     id: "accelerate-talent",
@@ -45,7 +45,7 @@ const services = [
       "Effective hiring and development help companies out-innovate and out-execute the competition",
       "The ability to attract, develop, and retain top talent isn't just an operational necessity but acts as a critical growth driver",
     ],
-    cta: "Contact Us",
+    cta: "Know More",
   },
 ];
 

@@ -21,7 +21,7 @@ export default function InsightsPage() {
           <ArrowLeft className="w-4 h-4" />
         </Link>
       </div>
-      
+
       {/* Decorative top line */}
       <div className="relative mb-2">
         <div className="h-px bg-gray-400 w-full"></div>
@@ -37,15 +37,15 @@ export default function InsightsPage() {
       </h1>
 
       {/* Blogs Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
         {blogs.map((blog, index) => (
           <Link
             key={blog.id}
             href={`/insights/${blog.id}`}
-            className={`flex flex-col group ${index === 0 ? "md:col-span-2 lg:col-span-2" : ""}`}
+            className={`flex flex-col group ${index === 0 ? "md:col-span-2 lg:col-span-3" : ""}`}
           >
             {/* Image */}
-            <div className="relative w-full aspect-video mb-4 overflow-hidden">
+            <div className="relative w-full h-64 md:h-72 lg:h-80 mb-4 overflow-hidden rounded-lg">
               <Image
                 src={blog.image}
                 alt={blog.title}
@@ -54,17 +54,11 @@ export default function InsightsPage() {
               />
             </div>
 
-            {/* Category */}
-            {blog.category && (
-              <span className="text-xs text-gray-500 uppercase tracking-wide mb-2">
-                {blog.category}
-              </span>
-            )}
-
             {/* Title */}
-            <h3 className="font-semibold text-lg text-gray-900 leading-snug mb-2 group-hover:text-gray-600 transition-colors">
+            <h3 className="font-semibold text-lg text-gray-900 leading-snug mb-2 group-hover:text-gray-600 transition-colors text-center">
               {blog.title}
             </h3>
+
           </Link>
         ))}
       </div>
