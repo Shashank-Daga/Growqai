@@ -22,7 +22,7 @@ export function HeroSection() {
         className="relative z-10 max-w-7xl mx-auto px-6"
       >
         {/* === TOP HERO AREA === */}
-        <div className="bg-white border border-[#E7E9F1] rounded-2xl p-8 shadow-lg">
+        <div className="bg-white border border-[#E7E9F1]  p-8 shadow-lg">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
 
             {/* LEFT SIDE: TEXT */}
@@ -39,13 +39,13 @@ export function HeroSection() {
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <a
                   href="#contact"
-                  className="px-6 py-3 rounded-md bg-[#2527D9] hover:bg-[#8B6CFF] transition-all duration-300 font-medium flex items-center gap-2 text-white"
+                  className="px-6 py-3  bg-[#2527D9] hover:bg-[#8B6CFF] transition-all duration-300 font-medium flex items-center gap-2 text-white"
                 >
                   Free Discovery Call ↗
                 </a>
                 <a
                   href="/services"
-                  className="px-6 py-3 rounded-md border border-gray-500 text-[#2527D9] hover:bg-white/10 transition-all duration-300 font-medium flex items-center gap-2"
+                  className="px-6 py-3  border border-gray-500 text-[#2527D9] hover:bg-white/10 transition-all duration-300 font-medium flex items-center gap-2"
                 >
                   Explore Our Services ↗
                 </a>
@@ -55,7 +55,7 @@ export function HeroSection() {
             {/* RIGHT SIDE: MAIN IMAGE */}
             <motion.div
               variants={fadeInUp}
-              className="relative w-full h-80 sm:h-96 lg:h-[460px] rounded-xl overflow-hidden"
+              className="relative w-full h-80 sm:h-96 lg:h-[460px]  overflow-hidden"
             >
               <Image
                 src="/placeholder.jpg"

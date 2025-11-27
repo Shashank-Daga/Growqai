@@ -45,10 +45,10 @@ export default function NewsSection() {
 
             <Link
               href="/insights"
-              className="inline-flex items-center gap-2 border border-gray-300 text-sm font-medium px-6 py-2 rounded-md transition bg-black text-white"
+              className="inline-flex items-center gap-2 border border-gray-300 text-sm font-medium px-6 py-2  transition bg-black text-white"
             >
               Discover more
-              <span className="bg-blue-100 text-black rounded-sm p-[3px]">
+              <span className="bg-blue-100 text-black p-[3px]">
                 <ArrowUpRight className="w-4 h-4" />
               </span>
             </Link>
@@ -83,7 +83,7 @@ export default function NewsSection() {
                   src={article.image}
                   alt={article.title}
                   fill
-                  className="object-cover rounded-sm"
+                  className="object-cover"
                 />
               </div>
 

@@ -60,7 +60,7 @@ export function ContactSection() {
               const Icon = item.icon
               return (
                 <motion.div key={i} variants={fadeInUp} className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center shrink-0">
+                  <div className="w-12 h-12 bg-primary/10  flex items-center justify-center shrink-0">
                     <Icon className="w-5 h-5 text-primary" />
                   </div>
                   <div className="max-w-sm wrap-break-word">
@@ -89,28 +89,28 @@ export function ContactSection() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: animationConfig.duration.normal }}
             viewport={{ once: true }}
-            className="border border-[#E7E9F1] rounded-lg p-6"
+            className="border border-[#E7E9F1]  p-6"
           >
             <form className="space-y-6">
             <input
               type="text"
               placeholder="Your Name"
-              className="w-full px-4 py-3 rounded-lg border border-border bg-white dark:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-primary"
+              className="w-full px-4 py-3  border border-border bg-white dark:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-primary"
             />
             <input
               type="email"
               placeholder="Your Email"
-              className="w-full px-4 py-3 rounded-lg border border-border bg-white dark:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-primary"
+              className="w-full px-4 py-3  border border-border bg-white dark:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-primary"
             />
             <textarea
               placeholder="Your Message"
               rows={5}
-              className="w-full px-4 py-3 rounded-lg border border-border bg-white dark:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-primary resize-none"
+              className="w-full px-4 py-3  border border-border bg-white dark:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-primary resize-none"
             />
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="w-full px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:shadow-lg transition-shadow"
+              className="w-full px-6 py-3 bg-primary text-primary-foreground  hover:shadow-lg transition-shadow"
             >
               Send Message
             </motion.button>

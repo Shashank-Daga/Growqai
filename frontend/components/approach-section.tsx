@@ -93,7 +93,7 @@ export function ApproachSection() {
               </p>
 
               {/* Image */}
-              <div className="w-[260px] h-[340px] shrink-0 relative rounded-lg overflow-hidden">
+              <div className="w-[260px] h-[340px] shrink-0 relative overflow-hidden">
                 <Image
                   src={step.image}
                   alt={step.title}

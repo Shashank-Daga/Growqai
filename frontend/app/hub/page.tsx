@@ -45,10 +45,10 @@ export default function HubPage() {
 
                         {/* Buttons like reference */}
                         <div className="mt-6 flex gap-4">
-                            <button className="px-6 py-3 bg-[#1718FF] text-black font-medium rounded-lg shadow-md hover:bg-[#4B4DFF]">
+                            <button className="px-6 py-3 bg-[#1718FF] text-black font-medium shadow-md hover:bg-[#4B4DFF]">
                                 Book Now
                             </button>
-                            <button className="px-6 py-3 bg-transparent border border-white text-white font-medium rounded-lg hover:bg-white/10">
+                            <button className="px-6 py-3 bg-transparent border border-white text-white font-medium hover:bg-white/10">
                                 Read More
                             </button>
                         </div>
@@ -68,28 +68,28 @@ export default function HubPage() {
 
                         <div className="grid md:grid-cols-4 gap-6">
 
-                            <div className="bg-white p-6 rounded-xl shadow-sm border">
+                            <div className="bg-white p-6 shadow-sm border">
                                 <h3 className="font-semibold mb-2 text-[#2527D9]">Community of Doers</h3>
                                 <p className="text-[#313447] text-sm">
                                     A curated network of founders, creators, and professionals who collaborate, learn, and build together.
                                 </p>
                             </div>
 
-                            <div className="bg-white p-6 rounded-xl shadow-sm border">
+                            <div className="bg-white p-6 shadow-sm border">
                                 <h3 className="font-semibold mb-2 text-[#2527D9]">Ecosystem Access</h3>
                                 <p className="text-[#313447] text-sm">
                                     Direct connection to Growqai's growth consulting verticals; Capital, Client, and Talent helping ventures scale faster.
                                 </p>
                             </div>
 
-                            <div className="bg-white p-6 rounded-xl shadow-sm border">
+                            <div className="bg-white p-6 shadow-sm border">
                                 <h3 className="font-semibold mb-2 text-[#2527D9]">Events & Learning Sessions</h3>
                                 <p className="text-[#313447] text-sm">
                                     From founder roundtables to AI-led growth workshops, we create spaces for knowledge and inspiration.
                                 </p>
                             </div>
 
-                            <div className="bg-white p-6 rounded-xl shadow-sm border">
+                            <div className="bg-white p-6 shadow-sm border">
                                 <h3 className="font-semibold mb-2 text-[#2527D9]">Curated Ambience</h3>
                                 <p className="text-[#313447] text-sm">
                                     Modern, inspiring workspaces designed to boost focus, creativity, and meaningful interaction.
@@ -110,7 +110,7 @@ export default function HubPage() {
 
                     <div className="grid md:grid-cols-2 gap-10">
 
-                        <div className="bg-gray-50 p-8 rounded-xl shadow-sm">
+                        <div className="bg-gray-50 p-8 shadow-sm">
                             <Link href="/hub/hubs/shreyas-crest">
                                 <h3 className="text-2xl font-semibold text-[#2527D9] mb-4 cursor-pointer hover:text-[#1718FF] transition-colors">
                                     Growth HUB – Shreyas Crest
@@ -123,12 +123,12 @@ export default function HubPage() {
                                 turn ideas into action.
                             </p>
 
-                            <div className="bg-gray-200 h-52 rounded-xl flex items-center justify-center text-gray-600">
+                            <div className="bg-gray-200 h-52  flex items-center justify-center text-gray-600">
                                 (Property video and details will appear here)
                             </div>
                         </div>
 
-                        <div className="bg-gray-50 p-8 rounded-xl shadow-sm">
+                        <div className="bg-gray-50 p-8  shadow-sm">
                             <Link href="/hub/hubs/aariv-elegant">
                                 <h3 className="text-2xl font-semibold text-[#2527D9] mb-4">
                                     Growth HUB – Aariv Elegant
@@ -141,7 +141,7 @@ export default function HubPage() {
                                 innovation finds its rhythm.
                             </p>
 
-                            <div className="bg-gray-200 h-52 rounded-xl flex items-center justify-center text-gray-600">
+                            <div className="bg-gray-200 h-52  flex items-center justify-center text-gray-600">
                                 (Property video and details will appear here)
                             </div>
                         </div>

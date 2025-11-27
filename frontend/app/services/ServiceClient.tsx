@@ -185,7 +185,7 @@ export default function ServicesPage() {
   }) {
     // style differences
     const baseCardClasses =
-      "rounded-3xl overflow-hidden shadow-lg cursor-pointer select-none relative";
+      " overflow-hidden shadow-lg cursor-pointer select-none relative";
     const commonImageClasses = "object-cover w-full h-full";
 
     let widthClass = "w-[300px] h-[420px]"; // left/right
@@ -310,7 +310,7 @@ export default function ServicesPage() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: 20 }}
                 transition={{ duration: 0.35 }}
-                className="mb-12 rounded-3xl border border-gray-200 bg-gray-50 p-8 shadow"
+                className="mb-12  border border-gray-200 bg-gray-50 p-8 shadow"
               >
                 <div className="w-full">
 
@@ -347,7 +347,7 @@ export default function ServicesPage() {
                     <div className="mt-6 flex gap-3">
                       <button
                         onClick={() => setSelectedService(null)}
-                        className="px-5 py-2 rounded-full bg-black text-white text-sm"
+                        className="px-5 py-2  bg-black text-white text-sm"
                       >
                         Close
                       </button>
@@ -360,7 +360,7 @@ export default function ServicesPage() {
 
           {/* Stats + contact + footer */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
-            <div className="bg-black text-white rounded-3xl p-10 relative overflow-hidden">
+            <div className="bg-black text-white  p-10 relative overflow-hidden">
               <h3 className="text-2xl font-bold mb-4">Growqai:</h3>
               <p className="text-gray-300 leading-relaxed mb-6">
                 A growth-driven consulting firm helping founders, startups, and companies scale through <strong>Capital Advisory, Client Acquisition, and Talent Solutions</strong>.<br />
@@ -369,28 +369,28 @@ export default function ServicesPage() {
             </div>
 
             <div className="grid grid-cols-2 gap-4">
-              <div className="bg-gray-50 rounded-3xl p-8">
+              <div className="bg-gray-50  p-8">
                 <div className="text-5xl font-bold text-gray-900 mb-2">3+</div>
                 <div className="text-sm text-gray-500 mb-2">Industries we operate in</div>
                 <p className="text-xs text-gray-600">
                   • Capital • Client Acquisition • Talent Solutions
                 </p>
               </div>
-              <div className="bg-gray-50 rounded-3xl p-8">
+              <div className="bg-gray-50  p-8">
                 <div className="text-5xl font-bold text-gray-900 mb-2">4+</div>
                 <div className="text-sm text-gray-500 mb-2">Business Partnerships built</div>
                 <p className="text-xs text-gray-600">
                   Driven with strategy & execution within 4 months
                 </p>
               </div>
-              <div className="bg-gray-50 rounded-3xl p-8">
+              <div className="bg-gray-50  p-8">
                 <div className="text-5xl font-bold text-gray-900 mb-2">200+</div>
                 <div className="text-sm text-gray-500 mb-2">Successful placements</div>
                 <p className="text-xs text-gray-600">
                   From entry to leadership roles
                 </p>
               </div>
-              <div className="bg-gray-50 rounded-3xl p-8">
+              <div className="bg-gray-50  p-8">
                 <div className="text-5xl font-bold text-gray-900 mb-2">95%</div>
                 <div className="text-sm text-gray-500 mb-2">Client Success Rate</div>
                 <p className="text-xs text-gray-600">

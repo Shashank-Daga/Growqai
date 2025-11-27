@@ -83,7 +83,7 @@ export default function AboutUsPage() {
                 alt="Rushikesh Humbe"
                 width={240}
                 height={240}
-                className="rounded-xl object-cover"
+                className="object-cover"
               />
               <h3 className="text-2xl font-semibold text-gray-900 mt-4">
                 Rushikesh Humbe

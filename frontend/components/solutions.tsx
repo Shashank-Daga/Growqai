@@ -111,7 +111,7 @@ export default function SolutionsSection() {
                         <motion.div
                             key={index}
                             variants={fadeInUp}
-                            className="flex items-start gap-4 p-4 bg-gray-50 rounded-lg shadow-sm max-w-lg"
+                            className="flex items-start gap-4 p-4 bg-gray-50  shadow-sm max-w-lg"
                         >
                             <div className="shrink-0">{useCase.icon}</div><hr />
                             <div>

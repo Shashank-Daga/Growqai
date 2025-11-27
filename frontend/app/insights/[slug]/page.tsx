@@ -72,7 +72,7 @@ export default async function BlogPostPage({
 
       {/* Article Content */}
       <div className="max-w-4xl mx-auto">
-        <article className="prose prose-lg max-w-none prose-headings:font-bold prose-h1:text-4xl prose-h2:text-3xl prose-h3:text-2xl prose-p:text-gray-700 prose-p:leading-relaxed prose-a:text-blue-600 prose-a:no-underline hover:prose-a:underline prose-img:rounded-lg prose-hr:border-gray-300">
+        <article className="prose prose-lg max-w-none prose-headings:font-bold prose-h1:text-4xl prose-h2:text-3xl prose-h3:text-2xl prose-p:text-gray-700 prose-p:leading-relaxed prose-a:text-blue-600 prose-a:no-underline hover:prose-a:underline prose-hr:border-gray-300">
           <MDXRemote source={post.content} />
         </article>
       </div>

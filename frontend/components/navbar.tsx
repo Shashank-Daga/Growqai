@@ -68,10 +68,10 @@ export function Navbar() {
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.3 }}
-                className="flex items-center gap-2 bg-[#1718FF] text-white px-4 py-2 rounded-md font-medium text-sm hover:opacity-90 hover:bg-[#4B4DFF] transition-all"
+                className="flex items-center gap-2 bg-[#1718FF] text-white px-4 py-2  font-medium text-sm hover:opacity-90 hover:bg-[#4B4DFF] transition-all"
               >
                 Get in touch
-                <span className="bg-blue-100 text-black rounded-sm p-[3px]">
+                <span className="bg-blue-100 text-black p-[3px]">
                   <ArrowUpRight size={14} />
                 </span>
               </motion.a>
@@ -107,9 +107,9 @@ export function Navbar() {
                 ))}
 
                 <div className="flex items-center gap-3 pt-2">
-                  <a href="#contact" className="flex items-center justify-center gap-2 w-full bg-black text-white px-4 py-2 rounded-md font-medium text-sm">
+                  <a href="#contact" className="flex items-center justify-center gap-2 w-full bg-black text-white px-4 py-2  font-medium text-sm">
                     Get in touch
-                    <span className="bg-blue-100 text-black rounded-sm p-[3px]">
+                    <span className="bg-blue-100 text-black p-[3px]">
                       <ArrowUpRight size={14} />
                     </span>
                   </a>

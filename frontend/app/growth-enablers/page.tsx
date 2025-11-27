@@ -133,11 +133,11 @@ export default function GrowthEnablers() {
                   className={`flex ${alignment}`}
                 >
                   <div
-                    className={`${cardWidth} bg-white border border-gray-200 rounded-xl p-8 relative shadow-sm`}
+                    className={`${cardWidth} bg-white border border-gray-200 p-8 relative shadow-sm`}
                   >
 
                     <div className="flex items-start gap-4 mb-4">
-                      <div className="w-10 h-10 flex items-center justify-center bg-[#f0fbff] rounded-full">
+                      <div className="w-10 h-10 flex items-center justify-center bg-[#f0fbff]">
                         {s.icon}
                       </div>
                       <div>

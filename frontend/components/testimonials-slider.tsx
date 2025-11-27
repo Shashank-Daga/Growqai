@@ -42,7 +42,7 @@ export function Testimonials() {
           {testimonials.map((item) => (
             <div
               key={item.id}
-              className="bg-white p-10 rounded-2xl shadow-sm border border-[#E7E9F1]"
+              className="bg-white p-10  shadow-sm border border-[#E7E9F1]"
             >
               {/* Stars */}
               <div className="flex gap-1 mb-5">
@@ -63,7 +63,7 @@ export function Testimonials() {
                   alt={item.name}
                   width={48}
                   height={48}
-                  className="rounded-full border"
+                  className=" border"
                 />
 
                 <div>

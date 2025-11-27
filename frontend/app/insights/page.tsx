@@ -45,7 +45,7 @@ export default function InsightsPage() {
             className={`flex flex-col group ${index === 0 ? "md:col-span-2 lg:col-span-2" : ""}`}
           >
             {/* Image */}
-            <div className="relative w-full aspect-video mb-4 overflow-hidden rounded-sm">
+            <div className="relative w-full aspect-video mb-4 overflow-hidden">
               <Image
                 src={blog.image}
                 alt={blog.title}

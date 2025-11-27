@@ -134,14 +134,14 @@ export default function Services() {
         <div className="grid grid-cols-1 md:grid-cols-2 w-full max-w-7xl mx-auto gap-15">
 
           {/* LEFT IMAGES */}
-          <div className="relative w-full h-[420px] overflow-hidden rounded-3xl">
+          <div className="relative w-full h-[420px] overflow-hidden ">
             {services.map((service, index) => (
               <div
                 key={service.id}
                 ref={(el) => {
                   if (el) imagesRef.current[index] = el;
                 }}
-                className="absolute inset-0 rounded-3xl overflow-hidden pointer-events-none will-change-transform"
+                className="absolute inset-0  overflow-hidden pointer-events-none will-change-transform"
                 style={{
                   zIndex: services.length - index,
                 }}
@@ -165,7 +165,7 @@ export default function Services() {
                 ref={(el) => {
                   if (el) cardsRef.current[index] = el;
                 }}
-                className="absolute w-full border border-[#d2f7c9] bg-white p-10 rounded-3xl shadow-[0_0_25px_rgba(0,255,0,0.15)]"
+                className="absolute w-full border border-[#d2f7c9] bg-white p-10  shadow-[0_0_25px_rgba(0,255,0,0.15)]"
                 style={{ opacity: 0 }}
               >
                 <h3 className="text-3xl font-semibold text-[#003d31] mb-4">
@@ -190,7 +190,7 @@ export default function Services() {
 
                 {/* CTA */}
                 <Link href={`/services?id=${service.id}`}>
-                  <button className="bg-[#b4ff80] hover:bg-[#a3ff66] transition rounded-full px-6 py-3 text-lg font-medium flex items-center gap-2">
+                  <button className="bg-[#b4ff80] hover:bg-[#a3ff66] transition  px-6 py-3 text-lg font-medium flex items-center gap-2">
                     {service.cta ?? "Get Started"}
                     <span className="text-xl">↗</span>
                   </button>
