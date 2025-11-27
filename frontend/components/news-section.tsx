@@ -5,22 +5,22 @@ import Link from "next/link"
 import { ArrowUpRight } from "lucide-react"
 import { motion } from "framer-motion"
 
-const articles = [
+const blogs = [
   {
     id: 1,
     title: "The Growth Gap: Why Most Companies Fail to Scale (and How AI Can Fix It)",
-    image: "/placeholder.svg",
+    image: "/Blog/Blog 1 Creative.jpg",
     large: true,
   },
   {
     id: 2,
     title: "Data Discipline Over AI: The Missing Link in Most Growth Strategies",
-    image: "/placeholder.svg",
+    image: "/Blog/Blog 2 Creative.jpg",
   },
   {
     id: 3,
     title: "Smart Growth for Smart Founders: Why Consulting with AI Is the New Competitive Edge",
-    image: "/placeholder.svg",
+    image: "/Blog/Blog 3 Creative.jpg",
   },
 ]
 
@@ -67,31 +67,32 @@ export default function NewsSection() {
             },
           }}
         >
-          {articles.slice(0, 3).map((article) => (
-            <motion.div
-              key={article.id}
-              variants={{
-                hidden: { opacity: 0, y: 20 },
-                visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-              }}
-              className={`flex flex-col ${article.large ? "md:col-span-1 md:row-span-2 md:aspect-4/3" : ""
-                }`}
-            >
-              {/* Image */}
-              <div className="relative w-full aspect-4/3 mb-4">
-                <Image
-                  src={article.image}
-                  alt={article.title}
-                  fill
-                  className="object-cover"
-                />
-              </div>
+          {blogs.slice(0, 3).map((blog) => (
+            <Link key={blog.id} href="/insights">
+              <motion.div
+                variants={{
+                  hidden: { opacity: 0, y: 20 },
+                  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+                }}
+                className={`flex flex-col cursor-pointer ${blog.large ? "md:col-span-1 md:row-span-2 md:aspect-4/3" : ""
+                  }`}
+              >
+                {/* Image */}
+                <div className="relative w-full aspect-4/3 mb-4">
+                  <Image
+                    src={blog.image}
+                    alt={blog.title}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
 
-              {/* Title */}
-              <h3 className="font-semibold text-lg text-gray-900 leading-snug mb-2">
-                {article.title}
-              </h3>
-            </motion.div>
+                {/* Title */}
+                <h3 className="font-semibold text-lg text-gray-900 leading-snug mb-2 hover:text-blue-600 transition-colors">
+                  {blog.title}
+                </h3>
+              </motion.div>
+            </Link>
           ))}
         </motion.div>
       </div>
