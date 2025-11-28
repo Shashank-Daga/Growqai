@@ -149,7 +149,7 @@ export function ContactSection() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 disabled={isSubmitting}
-                className="w-full px-6 py-3 bg-primary text-primary-foreground disabled:opacity-50"
+                className="w-full px-6 py-3 bg-[#1718FF] text-primary-foreground disabled:opacity-50"
               >
                 {isSubmitting ? "Sending..." : "Send Message"}
               </motion.button>

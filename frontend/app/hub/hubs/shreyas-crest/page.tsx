@@ -26,9 +26,6 @@ export default function ShreyasCrestPage() {
                     <h1 className="text-4xl md:text-5xl font-bold text-[#050659] mb-4">
                         Growth HUB — Shreyas Crest
                     </h1>
-                    <p className="text-xl text-[#2527D9] max-w-3xl mx-auto">
-                        A vibrant, modern workspace that blends functionality with creativity. It's where early-stage startups, solopreneurs, and growth-driven teams collaborate to turn ideas into action.
-                    </p>
                 </div>
 
                 {/* Image Gallery – 6 equal-size images */}
@@ -50,6 +47,9 @@ export default function ShreyasCrestPage() {
 
                 {/* Intro Description */}
                 <div className="max-w-4xl mx-auto mb-16 text-center">
+                    <p className="text-xl text-[#2527D9] max-w-3xl mx-auto">
+                        A vibrant, modern workspace that blends functionality with creativity. It's where early-stage startups, solopreneurs, and growth-driven teams collaborate to turn ideas into action.
+                    </p>
                     <p className="text-lg md:text-xl text-[#313447] leading-relaxed">
                         Located in the heart of Baner, this ready-to-move office offers a modern, glass-enclosed environment ideal for teams seeking a blend of comfort, design, and functionality.
                     </p>
@@ -61,7 +61,7 @@ export default function ShreyasCrestPage() {
                     <div className="grid md:grid-cols-3 gap-6">
 
                         <div className="text-center">
-                            <div className="w-16 h-16 bg-[#1718FF]  flex items-center justify-center mx-auto mb-4">
+                            <div className="w-16 h-16  flex items-center justify-center mx-auto mb-4">
                                 <span className="text-white text-2xl">🏢</span>
                             </div>
                             <h3 className="font-semibold mb-2">Fully Furnished Setup</h3>
@@ -69,7 +69,7 @@ export default function ShreyasCrestPage() {
                         </div>
 
                         <div className="text-center">
-                            <div className="w-16 h-16 bg-[#1718FF]  flex items-center justify-center mx-auto mb-4">
+                            <div className="w-16 h-16  flex items-center justify-center mx-auto mb-4">
                                 <span className="text-white text-2xl">💺</span>
                             </div>
                             <h3 className="font-semibold mb-2">40 Workstations + 3 Private Cabins</h3>
@@ -77,7 +77,7 @@ export default function ShreyasCrestPage() {
                         </div>
 
                         <div className="text-center">
-                            <div className="w-16 h-16 bg-[#1718FF]  flex items-center justify-center mx-auto mb-4">
+                            <div className="w-16 h-16 flex items-center justify-center mx-auto mb-4">
                                 <span className="text-white text-2xl">👥</span>
                             </div>
                             <h3 className="font-semibold mb-2">12-Seater Conference Room</h3>
@@ -85,7 +85,7 @@ export default function ShreyasCrestPage() {
                         </div>
 
                         <div className="text-center">
-                            <div className="w-16 h-16 bg-[#1718FF]  flex items-center justify-center mx-auto mb-4">
+                            <div className="w-16 h-16 flex items-center justify-center mx-auto mb-4">
                                 <span className="text-white text-2xl">☕</span>
                             </div>
                             <h3 className="font-semibold mb-2">Cafeteria Space</h3>
@@ -93,7 +93,7 @@ export default function ShreyasCrestPage() {
                         </div>
 
                         <div className="text-center">
-                            <div className="w-16 h-16 bg-[#1718FF]  flex items-center justify-center mx-auto mb-4">
+                            <div className="w-16 h-16 flex items-center justify-center mx-auto mb-4">
                                 <span className="text-white text-2xl">🌤️</span>
                             </div>
                             <h3 className="font-semibold mb-2">Naturally Ventilated</h3>
@@ -101,7 +101,7 @@ export default function ShreyasCrestPage() {
                         </div>
 
                         <div className="text-center">
-                            <div className="w-16 h-16 bg-[#1718FF]  flex items-center justify-center mx-auto mb-4">
+                            <div className="w-16 h-16 flex items-center justify-center mx-auto mb-4">
                                 <span className="text-white text-2xl">💼</span>
                             </div>
                             <h3 className="font-semibold mb-2">Reception & Waiting Area</h3>
@@ -109,7 +109,7 @@ export default function ShreyasCrestPage() {
                         </div>
 
                         <div className="text-center md:col-span-3">
-                            <div className="w-16 h-16 bg-[#1718FF]  flex items-center justify-center mx-auto mb-4">
+                            <div className="w-16 h-16 flex items-center justify-center mx-auto mb-4">
                                 <span className="text-white text-2xl">📶</span>
                             </div>
                             <h3 className="font-semibold mb-2">High-Speed WiFi</h3>
@@ -144,15 +144,15 @@ export default function ShreyasCrestPage() {
                             <p className="text-[#313447]">
                                 Monday - Friday:<br /> 8:00 AM - 10:00 PM<br />
                             </p>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-        </div >
+            </div >
 
-        {/* CONTACT + FOOTER */ }
-        < ContactSection />
-        <Footer />
+            {/* CONTACT + FOOTER */}
+            < ContactSection />
+            <Footer />
         </section >
     )
 }

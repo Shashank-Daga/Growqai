@@ -46,16 +46,16 @@ export default function AboutUsPage() {
 
           {/* Left Text Section */}
           <div>
-            <h2 className="text-3xl font-bold text-[#050659] mb-6">
+            <h2 className="text-4xl font-bold text-[#050659] mb-6">
               Our Values
             </h2>
-            <p className="text-lg text-[#313447] leading-relaxed">
+            <p className="text-xl  text-[#313447] leading-relaxed">
               At the core of Growqai are our guiding values: integrity, excellence, collaboration, and innovation. These principles guide every decision we make and shape how we work with clients, partners, and one another. They inspire us to build lasting relationships, deliver outstanding results, and constantly push the boundaries of what’s possible for your business growth.
             </p>
           </div>
 
           {/* Images Grid (3 blocks like your reference) */}
-          <div className="grid grid-cols-2 gap-4 bg-gray-100">
+          <div className="grid grid-cols-2">
             <Image
               src="/AboutUs/Exellence.jpg"
               alt="Excellence"
@@ -87,10 +87,10 @@ export default function AboutUsPage() {
       {/* ---------------------- OUR LEADER ---------------------- */}
       <div className="py-24 bg-gray-50 border-y border-[#E7E9F1]">
         <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-[#050659] text-center mb-6">
+          <h2 className="text-5xl font-bold text-[#050659] text-center mb-6">
             Our Leader
           </h2>
-          <p className="text-[#2527D9] max-w-2xl mx-auto text-center mb-16">
+          <p className="text-[#2527D9] text-xl max-w-2xl mx-auto text-center mb-16">
             Meet the vision behind Growqai.
           </p>
 
@@ -102,19 +102,18 @@ export default function AboutUsPage() {
               <Image
                 src="/AboutUs/Rush.png"
                 alt="Rushikesh Humbe"
-                width={240}
-                height={240}
+                width={480}
+                height={480}
                 className="object-cover"
               />
-              <h3 className="text-2xl font-semibold text-gray-900 mt-4">
+              <h3 className="text-3xl font-semibold text-gray-900 mt-4">
                 Rushikesh Humbe
               </h3>
             </div>
 
             {/* Right - Text */}
             <div>
-
-              <p className="text-[#313447] leading-relaxed">
+              <p className="text-[#313447] text-xl leading-relaxed">
                 Rushikesh Humbe is a seasoned business leader and growth strategist
                 with over 20 years of cross-functional experience in consulting,
                 entrepreneurship, and tech transformation.
@@ -141,10 +140,10 @@ export default function AboutUsPage() {
 
           {/* Left Text Section */}
           <div>
-            <h2 className="text-3xl font-bold text-[#050659] mb-6">
+            <h2 className="text-4xl font-bold text-[#050659] mb-6">
               Our Approach
             </h2>
-            <p className="text-lg text-[#313447] leading-relaxed">
+            <p className="text-xl text-[#313447] leading-relaxed">
               Our approach at Growqai blends the cutting-edge capabilities of Artificial Intelligence (AI) with the practical wisdom of Acquired Intelligence (AI)—the deep industry insights and experience our team brings. By combining these strengths, we deliver solutions that are not only data-driven and innovative but also grounded in a real-world understanding of business challenges. This synergy allows us to create sustainable growth for our clients.
             </p>
           </div>

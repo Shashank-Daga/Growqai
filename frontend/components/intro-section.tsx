@@ -53,11 +53,11 @@ export default function IntroSection({ onComplete }: { onComplete: () => void })
         >
           {slides[currentSlide].type === "logo" ? (
             <Image
-              src="/growqai.png"
+              src="/GROWQAI1.2.png"
               alt="GrowQai Logo"
               width={300}
               height={60}
-              className="object-contain mx-auto bg-white"
+              className="object-contain mx-auto"
             />
           ) : (
             slides[currentSlide].text

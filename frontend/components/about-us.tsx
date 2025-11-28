@@ -30,11 +30,11 @@ export default function AboutUsSection() {
 
             {/* About Us Button */}
             <Link href="/about-us" className="group flex w-fit items-center gap-0 bg-blue-100 hover:bg-blue-200 transition-colors">
-              <span className="px-8 text-lg font-medium text-gray-900">
+              <span className="px-8 text-lg font-medium text-white bg-[#1718FF] py-4 group-hover:bg-[#4B4DFF] transition-colors">
                 About Us
               </span>
-              <span className="bg-black px-4 py-4 flex items-center justify-center">
-                <ArrowUpRight className="w-6 h-6 text-white" />
+              <span className="bg-[#1718FF] group-hover:bg-[#4B4DFF] transition-colors px-4 py-4 flex items-center justify-center text-black">
+                <ArrowUpRight className="w-6 bg-blue-100 h-7" size={14} />
               </span>
             </Link>
           </div>
@@ -42,8 +42,8 @@ export default function AboutUsSection() {
           {/* Right Image */}
           <div className="relative flex items-start justify-end">
             <img
-              src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&h=600&fit=crop"
-              alt="Business professionals handshake"
+              src="/About-Us-Home.jpg"
+              alt="About Us Image"
               className="w-full h-[400px] object-cover"
             />
           </div>

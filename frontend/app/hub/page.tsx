@@ -25,7 +25,7 @@ export default function HubPage() {
                 {/* ================= HERO SECTION ================ */}
                 <div className="relative w-full h-[80vh] md:h-[85vh] lg:h-[90vh]">
                     <Image
-                        src="/hero_UI.png" // replace with your actual hero image
+                        src="/HUB.jpg" // replace with your actual hero image
                         alt="hero"
                         fill
                         className="object-cover"
@@ -45,7 +45,7 @@ export default function HubPage() {
 
                         {/* Buttons like reference */}
                         <div className="mt-6 flex gap-4">
-                            <button className="px-6 py-3 bg-[#1718FF] text-black font-medium shadow-md hover:bg-[#4B4DFF]">
+                            <button className="px-6 py-3 bg-[#1718FF] text-white font-medium shadow-md hover:bg-[#4B4DFF]">
                                 Book Now
                             </button>
                             <button className="px-6 py-3 bg-transparent border border-white text-white font-medium hover:bg-white/10">

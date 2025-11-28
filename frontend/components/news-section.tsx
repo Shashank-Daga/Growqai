@@ -35,7 +35,7 @@ export default function NewsSection() {
             <div className="absolute top-0 left-0 w-48 h-[3px] bg-gray-600 -translate-y-0.5"></div>
           </div>
 
-          <p className="text-xs uppercase tracking-widest text-gray-500 mb-8">/NEWS</p>
+          <p className="text-xs uppercase tracking-widest text-gray-500 mb-8">/Blogs</p>
 
           {/* Heading + Button aligned horizontally */}
           <div className="flex items-center justify-between">
@@ -45,7 +45,7 @@ export default function NewsSection() {
 
             <Link
               href="/insights"
-              className="inline-flex items-center gap-2 border border-gray-300 text-sm font-medium px-6 py-2  transition bg-[#2527D9] text-white"
+              className="inline-flex items-center gap-2 border border-gray-300 text-sm font-medium px-6 py-2  transition bg-[#1718FF] text-white"
             >
               Discover more
               <span className="bg-blue-100 text-black p-[3px]">

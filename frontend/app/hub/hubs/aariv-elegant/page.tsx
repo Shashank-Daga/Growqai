@@ -26,10 +26,6 @@ export default function ShreyasCrestPage() {
                     <h1 className="text-4xl md:text-5xl font-bold text-[#050659] mb-4">
                         Growth HUB — Aariv Elegant
                     </h1>
-                    <p className="text-xl text-[#2527D9] max-w-3xl mx-auto">
-                        A space built for founders who believe in scaling fast and smart.
-                        With premium amenities and a like-minded community, Aariv Elegant is where innovation finds its rhythm.
-                    </p>
                 </div>
 
                 {/* Image Gallery – 6 equal-size images */}
@@ -50,6 +46,10 @@ export default function ShreyasCrestPage() {
 
                 {/* Intro Description */}
                 <div className="max-w-4xl mx-auto mb-16 text-center">
+                    <p className="text-xl text-[#2527D9] max-w-3xl mx-auto">
+                        A space built for founders who believe in scaling fast and smart.
+                        With premium amenities and a like-minded community, Aariv Elegant is where innovation finds its rhythm.
+                    </p>
                     <p className="text-lg md:text-xl text-[#313447] leading-relaxed">
                         This premium office space at Aariv Elegant offers a well-designed layout ideal for startups,
                         small enterprises, or satellite offices seeking a ready-to-move-in setup in one of Pune’s
@@ -64,7 +64,7 @@ export default function ShreyasCrestPage() {
                     <div className="grid md:grid-cols-3 gap-6">
 
                         <div className="text-center">
-                            <div className="w-16 h-16 bg-[#1718FF] flex items-center justify-center mx-auto mb-4">
+                            <div className="w-16 h-16 flex items-center justify-center mx-auto mb-4">
                                 <span className="text-white text-2xl">🧑‍💻</span>
                             </div>
                             <h3 className="font-semibold mb-2">Bay 1</h3>
@@ -72,7 +72,7 @@ export default function ShreyasCrestPage() {
                         </div>
 
                         <div className="text-center">
-                            <div className="w-16 h-16 bg-[#1718FF] flex items-center justify-center mx-auto mb-4">
+                            <div className="w-16 h-16 flex items-center justify-center mx-auto mb-4">
                                 <span className="text-white text-2xl">💼</span>
                             </div>
                             <h3 className="font-semibold mb-2">Bay 2</h3>
@@ -80,7 +80,7 @@ export default function ShreyasCrestPage() {
                         </div>
 
                         <div className="text-center">
-                            <div className="w-16 h-16 bg-[#1718FF]  flex items-center justify-center mx-auto mb-4">
+                            <div className="w-16 h-16 flex items-center justify-center mx-auto mb-4">
                                 <span className="text-white text-2xl">🏢</span>
                             </div>
                             <h3 className="font-semibold mb-2">Bay 3</h3>
@@ -88,7 +88,7 @@ export default function ShreyasCrestPage() {
                         </div>
 
                         <div className="text-center">
-                            <div className="w-16 h-16 bg-[#1718FF]  flex items-center justify-center mx-auto mb-4">
+                            <div className="w-16 h-16 flex items-center justify-center mx-auto mb-4">
                                 <span className="text-white text-2xl">📐</span>
                             </div>
                             <h3 className="font-semibold mb-2">Optimized Layout</h3>
@@ -96,7 +96,7 @@ export default function ShreyasCrestPage() {
                         </div>
 
                         <div className="text-center">
-                            <div className="w-16 h-16 bg-[#1718FF]  flex items-center justify-center mx-auto mb-4">
+                            <div className="w-16 h-16 flex items-center justify-center mx-auto mb-4">
                                 <span className="text-white text-2xl">🚻</span>
                             </div>
                             <h3 className="font-semibold mb-2">Modern Washrooms</h3>
@@ -104,7 +104,7 @@ export default function ShreyasCrestPage() {
                         </div>
 
                         <div className="text-center">
-                            <div className="w-16 h-16 bg-[#1718FF]  flex items-center justify-center mx-auto mb-4">
+                            <div className="w-16 h-16 flex items-center justify-center mx-auto mb-4">
                                 <span className="text-white text-2xl">☕</span>
                             </div>
                             <h3 className="font-semibold mb-2">Pantry & Dining</h3>
@@ -112,7 +112,7 @@ export default function ShreyasCrestPage() {
                         </div>
 
                         <div className="text-center">
-                            <div className="w-16 h-16 bg-[#1718FF]  flex items-center justify-center mx-auto mb-4">
+                            <div className="w-16 h-16 flex items-center justify-center mx-auto mb-4">
                                 <span className="text-white text-2xl">🧹</span>
                             </div>
                             <h3 className="font-semibold mb-2">Facilities Support</h3>
@@ -120,7 +120,7 @@ export default function ShreyasCrestPage() {
                         </div>
 
                         <div className="text-center">
-                            <div className="w-16 h-16 bg-[#1718FF]  flex items-center justify-center mx-auto mb-4">
+                            <div className="w-16 h-16 flex items-center justify-center mx-auto mb-4">
                                 <span className="text-white text-2xl">🌤️</span>
                             </div>
                             <h3 className="font-semibold mb-2">Bright & Ventilated</h3>
@@ -128,7 +128,7 @@ export default function ShreyasCrestPage() {
                         </div>
 
                         <div className="text-center">
-                            <div className="w-16 h-16 bg-[#1718FF]  flex items-center justify-center mx-auto mb-4">
+                            <div className="w-16 h-16 flex items-center justify-center mx-auto mb-4">
                                 <span className="text-white text-2xl">🔒</span>
                             </div>
                             <h3 className="font-semibold mb-2">Secure Workspace</h3>
@@ -136,7 +136,7 @@ export default function ShreyasCrestPage() {
                         </div>
 
                         <div className="text-center md:col-span-3">
-                            <div className="w-16 h-16 bg-[#1718FF]  flex items-center justify-center mx-auto mb-4">
+                            <div className="w-16 h-16 flex items-center justify-center mx-auto mb-4">
                                 <span className="text-white text-2xl">🚗</span>
                             </div>
                             <h3 className="font-semibold mb-2">Parking Availability</h3>
@@ -147,31 +147,40 @@ export default function ShreyasCrestPage() {
                 </div>
 
                 {/* Location */}
-                <div className="bg-gray-50 p-8 mb-16">
-                    <h2 className="text-3xl font-bold text-[#050659] mb-8 text-center">Location & Hours</h2>
-                    <div className="grid md:grid-cols-2 gap-8">
-                        <div>
-                            <h3 className="font-semibold mb-4">Address</h3>
-                            <a
-                                    href="https://www.google.com/maps/place/Aariv+Elegant/@18.5722572,73.7659764,17z/data=!3m1!4b1!4m6!3m5!1s0x3bc2b9d0d70feed5:0x6a97c0a5401a4589!8m2!3d18.5722572!4d73.7685513!16s%2Fg%2F11s4t3tp4b?entry=ttu&g_ep=EgoyMDI1MTEyMy4xIKXMDSoASAFQAw%3D%3D"
+                <div className="bg-gray-50 p-8 mb-16 flex justify-center">
+                    <div className="max-w-3xl w-full text-center">   {/* Center container */}
+                        <h2 className="text-3xl font-bold text-[#050659] mb-8">Location & Hours</h2>
+
+                        <div className="grid md:grid-cols-2 gap-8 justify-center text-center">
+
+                            {/* Address */}
+                            <div>
+                                <h3 className="font-semibold mb-4">Address</h3>
+                                <a
+                                    href="https://www.google.com/maps/place/Aariv+Elegant/"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="text-[#313447] hover:underline mb-4"
+                                    className="text-[#313447] hover:underline"
                                 >
-                                Aariv Elegant,<br />
-                                Aariv Elegant Lane, Plot no 23/1B,<br /> Lane Number 7, Laxman Nagar, Baner<br />
-                                Pune, Maharashtra - 411045
-                            </a>
-                        </div>
-                        <div>
-                            <h3 className="font-semibold mb-4">Operating Hours</h3>
-                            <p className="text-[#313447]">
-                                Monday - Friday:<br /> 8:00 AM - 10:00 PM<br />
-                            </p>
+                                    Aariv Elegant,<br />
+                                    Aariv Elegant Lane, Plot no 23/1B,<br />
+                                    Lane Number 7, Laxman Nagar, Baner<br />
+                                    Pune, Maharashtra - 411045
+                                </a>
+                            </div>
+
+                            {/* Hours */}
+                            <div>
+                                <h3 className="font-semibold mb-4">Operating Hours</h3>
+                                <p className="text-[#313447]">
+                                    Monday - Friday:<br />
+                                    8:00 AM - 10:00 PM<br />
+                                </p>
+                            </div>
+
                         </div>
                     </div>
                 </div>
-
             </div>
 
             {/* CONTACT + FOOTER */}

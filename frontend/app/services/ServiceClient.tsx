@@ -221,40 +221,35 @@ export default function ServicesPage() {
     }
 
     return (
-      <motion.div
-        onClick={() => handleCardClick(index)}
-        layout
-        initial={false}
-        animate={{
-          x: translateX,
-          scale,
-          opacity,
-          // a subtle elevation on center
-          boxShadow:
-            position === "center"
-              ? "0 25px 40px rgba(4, 10, 25, 0.12)"
-              : "0 12px 24px rgba(4,10,25,0.06)",
-        }}
-        transition={{ type: "spring", stiffness: 120, damping: 18 }}
-        style={{ zIndex: z }}
-        className={`${baseCardClasses} ${widthClass} bg-white mb-16`}
-      >
-        {/* Image layer */}
-        <div className="w-full h-full relative">
-          <Image
-            src={service.image}
-            alt={service.title}
-            fill
-            sizes="(min-width: 1024px) 420px, 50vw"
-            className={commonImageClasses}
-          />
-        </div>
+      <div className="relative w-full max-w-7xl overflow-hidden">
+        <motion.div
+          className="flex items-center justify-center gap-6"
+          animate={{ x: `-${active * 60}px` }}  // slide effect
+          transition={{ duration: 0.2, ease: "easeOut" }}
+        >
+          {services.map((service, i) => (
+            <motion.div
+              key={service.id}
+              onClick={() => handleCardClick(i)}
+              className={`cursor-pointer rounded-lg shadow-lg overflow-hidden ${i === active ? "scale-100 w-[420px] h-[520px]" : "scale-90 w-[300px] h-[420px] opacity-80"
+                } transition-all duration-500`}
+            >
+              <div className="relative w-full h-full">
+                <Image
+                  src={service.image}
+                  alt={service.title}
+                  fill
+                  className="object-cover"
+                />
+              </div>
 
-        {/* overlay label bottom */}
-        <div className="absolute bottom-0 left-0 right-0 p-5 bg-linear-to-t from-black/40 to-transparent text-white">
-          <div className="text-lg font-semibold">{service.t1}</div>
-        </div>
-      </motion.div>
+              <div className="absolute bottom-0 inset-x-0 p-4 bg-linear-to-t from-black/40 to-transparent text-white">
+                <p className="text-lg font-semibold">{service.t1}</p>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
     );
   }
 
@@ -347,7 +342,7 @@ export default function ServicesPage() {
                     <div className="mt-6 flex gap-3">
                       <button
                         onClick={() => setSelectedService(null)}
-                        className="px-5 py-2  bg-black text-white text-sm"
+                        className="px-5 py-2  bg-[#1718FF] text-white text-sm"
                       >
                         Close
                       </button>
@@ -360,8 +355,8 @@ export default function ServicesPage() {
 
           {/* Stats + contact + footer */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
-            <div className="bg-black text-white  p-10 relative overflow-hidden">
-              <h3 className="text-2xl font-bold mb-4">Growqai:</h3>
+            <div className="bg-[#2527D9] text-white  p-10 relative overflow-hidden">
+              <h3 className="text-2xl font-bold mb-4">Growqai</h3>
               <p className="text-gray-300 leading-relaxed mb-6">
                 A growth-driven consulting firm helping founders, startups, and companies scale through <strong>Capital Advisory, Client Acquisition, and Talent Solutions</strong>.<br />
                 Our purpose is simple to empower businesses with <strong>strategic capital, high-value clients</strong>, and <strong>top-tier talent</strong> to accelerate their growth journey.
@@ -370,28 +365,28 @@ export default function ServicesPage() {
 
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-gray-50  p-8">
-                <div className="text-5xl font-bold text-gray-900 mb-2">3+</div>
+                <div className="text-5xl font-bold text-[#2527D9] mb-2">3+</div>
                 <div className="text-sm text-gray-500 mb-2">Industries we operate in</div>
                 <p className="text-xs text-gray-600">
                   • Capital • Client Acquisition • Talent Solutions
                 </p>
               </div>
               <div className="bg-gray-50  p-8">
-                <div className="text-5xl font-bold text-gray-900 mb-2">4+</div>
+                <div className="text-5xl font-bold text-[#2527D9] mb-2">4+</div>
                 <div className="text-sm text-gray-500 mb-2">Business Partnerships built</div>
                 <p className="text-xs text-gray-600">
                   Driven with strategy & execution within 4 months
                 </p>
               </div>
               <div className="bg-gray-50  p-8">
-                <div className="text-5xl font-bold text-gray-900 mb-2">200+</div>
+                <div className="text-5xl font-bold text-[#2527D9] mb-2">200+</div>
                 <div className="text-sm text-gray-500 mb-2">Successful placements</div>
                 <p className="text-xs text-gray-600">
                   From entry to leadership roles
                 </p>
               </div>
               <div className="bg-gray-50  p-8">
-                <div className="text-5xl font-bold text-gray-900 mb-2">95%</div>
+                <div className="text-5xl font-bold text-[#2527D9] mb-2">95%</div>
                 <div className="text-sm text-gray-500 mb-2">Client Success Rate</div>
                 <p className="text-xs text-gray-600">
                   Delivering measurable growth consistently

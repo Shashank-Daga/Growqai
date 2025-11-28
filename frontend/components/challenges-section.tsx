@@ -83,15 +83,7 @@ export default function ChallengeSection() {
       ref={sectionRef}
       id="joinUs"
       className="relative py-24 bg-[#E7E9F1] overflow-hidden min-h-screen"
-    >
-      <div className="max-w-7xl mx-auto">
-        <div className="relative mb-2">
-          <div className="h-px bg-gray-400 w-full"></div>
-          <div className="absolute top-0 left-0 w-48 h-[3px] bg-gray-600 -translate-y-0.5"></div>
-        </div>
-        <p className="text-sm text-gray-600 mb-6 tracking-wide">/Challenges</p>
-      </div>
-      
+    > 
       <div className="max-w-6xl mx-auto px-6 md:px-12 text-center relative flex flex-col items-center justify-center min-h-screen">
         {/* Title */}
         <h2
