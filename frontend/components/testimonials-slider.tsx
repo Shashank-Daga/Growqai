@@ -38,11 +38,12 @@ export function Testimonials() {
           </div>
           <p className="text-sm tracking-wide text-gray-800 font-medium">/TESTIMONIALS</p>
         </div>
+        
         <div className="grid md:grid-cols-3 gap-10">
           {testimonials.map((item) => (
             <div
               key={item.id}
-              className="bg-white p-10  shadow-sm border border-[#E7E9F1]"
+              className="bg-white p-10 shadow-sm border border-[#E7E9F1] flex flex-col h-full"
             >
               {/* Stars */}
               <div className="flex gap-1 mb-5">
@@ -57,15 +58,14 @@ export function Testimonials() {
               </p>
 
               {/* Profile */}
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-3 mt-auto">
                 <Image
                   src={item.img}
                   alt={item.name}
                   width={48}
                   height={48}
-                  className=" border"
+                  className="border"
                 />
-
                 <div>
                   <p className="font-semibold text-gray-900">{item.name}</p>
                   <p className="text-sm text-gray-500">{item.company}</p>
@@ -74,6 +74,7 @@ export function Testimonials() {
             </div>
           ))}
         </div>
+
       </div>
     </section>
   )

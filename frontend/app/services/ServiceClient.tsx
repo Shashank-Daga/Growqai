@@ -121,7 +121,6 @@ const AUTO_PLAY = 5000; // ms
 export default function ServicesPage() {
   const [active, setActive] = useState<number>(0); // index of center card
   const [selectedService, setSelectedService] = useState<Service | null>(null);
-  const [isAnimating, setIsAnimating] = useState(false);
   const autoplayRef = useRef<number | null>(null);
   const searchParams = useSearchParams();
 
@@ -180,75 +179,41 @@ export default function ServicesPage() {
     index,
   }: {
     service: Service;
-    position: "left" | "center" | "right" | "hidden";
+    position: "left" | "center" | "right";
     index: number;
   }) {
-    // style differences
-    const baseCardClasses =
-      " overflow-hidden shadow-lg cursor-pointer select-none relative";
-    const commonImageClasses = "object-cover w-full h-full";
+    const baseClass =
+      "cursor-pointer rounded-lg shadow-lg overflow-hidden transition-all duration-500 absolute";
 
-    let widthClass = "w-[300px] h-[420px]"; // left/right
-    let scale = 0.92;
-    let z = 10;
-    let translateX = 0;
-    let opacity = 1;
+    let styles = "";
 
     if (position === "center") {
-      widthClass = "w-[420px] h-[520px]";
-      scale = 1;
-      z = 20;
-      translateX = 0;
-      opacity = 1;
-    } else if (position === "left") {
-      widthClass = "w-[300px] h-[420px]";
-      scale = 0.92;
-      z = 15;
-      translateX = -100;
-      opacity = 0.95;
-    } else if (position === "right") {
-      widthClass = "w-[300px] h-[420px]";
-      scale = 0.92;
-      z = 15;
-      translateX = 100;
-      opacity = 0.95;
-    } else {
-      widthClass = "w-[240px] h-[340px]";
-      scale = 0.9;
-      translateX = 0;
-      opacity = 0;
-      z = 5;
+      // Center card - largest and prominent
+      styles = "w-[380px] h-[480px] z-30 scale-100 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2";
+    }
+    else if (position === "left") {
+      // Left card - visible and not overlapping
+      styles = "w-[320px] h-[400px] z-20 scale-90 left-[8%] top-1/2 -translate-y-1/2";
+    }
+    else if (position === "right") {
+      // Right card - visible and not overlapping
+      styles = "w-[320px] h-[400px] z-20 scale-90 right-[8%] top-1/2 -translate-y-1/2";
     }
 
     return (
-      <div className="relative w-full max-w-7xl overflow-hidden">
-        <motion.div
-          className="flex items-center justify-center gap-6"
-          animate={{ x: `-${active * 60}px` }}  // slide effect
-          transition={{ duration: 0.2, ease: "easeOut" }}
-        >
-          {services.map((service, i) => (
-            <motion.div
-              key={service.id}
-              onClick={() => handleCardClick(i)}
-              className={`cursor-pointer rounded-lg shadow-lg overflow-hidden ${i === active ? "scale-100 w-[420px] h-[520px]" : "scale-90 w-[300px] h-[420px] opacity-80"
-                } transition-all duration-500`}
-            >
-              <div className="relative w-full h-full">
-                <Image
-                  src={service.image}
-                  alt={service.title}
-                  fill
-                  className="object-cover"
-                />
-              </div>
+      <div
+        className={`${baseClass} ${styles}`}
+        onClick={() => handleCardClick(index)}
+      >
+        <div className="relative w-full h-full">
+          <Image src={service.image} alt={service.title} fill className="object-cover" />
+        </div>
 
-              <div className="absolute bottom-0 inset-x-0 p-4 bg-linear-to-t from-black/40 to-transparent text-white">
-                <p className="text-lg font-semibold">{service.t1}</p>
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
+        <div className="absolute bottom-0 inset-x-0 p-4 bg-linear-to-t from-black/70 to-transparent text-white">
+          <p className={`font-semibold ${position === 'center' ? 'text-2xl' : 'text-lg'}`}>
+            {service.t1}
+          </p>
+        </div>
       </div>
     );
   }
@@ -269,7 +234,7 @@ export default function ServicesPage() {
             <div className="flex items-center justify-center">
               <div className="relative w-full max-w-7xl h-[560px] md:h-[560px] flex items-center justify-center">
                 {/* container for three cards (we position absolutely for precise control) */}
-                <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center">
+                <div className="relative w-full max-w-7xl h-[560px] mx-auto">
                   {/* left */}
                   <Card
                     service={services[prevIndex]}
@@ -305,7 +270,7 @@ export default function ServicesPage() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: 20 }}
                 transition={{ duration: 0.35 }}
-                className="mb-12  border border-gray-200 bg-gray-50 p-8 shadow"
+                className="mb-12 border border-gray-200 bg-gray-50 p-8 shadow"
               >
                 <div className="w-full">
 
@@ -342,7 +307,7 @@ export default function ServicesPage() {
                     <div className="mt-6 flex gap-3">
                       <button
                         onClick={() => setSelectedService(null)}
-                        className="px-5 py-2  bg-[#1718FF] text-white text-sm"
+                        className="px-5 py-2 bg-[#1718FF] text-white text-sm hover:bg-[#0f10cc] transition-colors"
                       >
                         Close
                       </button>
@@ -355,7 +320,7 @@ export default function ServicesPage() {
 
           {/* Stats + contact + footer */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
-            <div className="bg-[#2527D9] text-white  p-10 relative overflow-hidden">
+            <div className="bg-[#2527D9] text-white p-10 relative overflow-hidden">
               <h3 className="text-2xl font-bold mb-4">Growqai</h3>
               <p className="text-gray-300 leading-relaxed mb-6">
                 A growth-driven consulting firm helping founders, startups, and companies scale through <strong>Capital Advisory, Client Acquisition, and Talent Solutions</strong>.<br />
@@ -364,28 +329,28 @@ export default function ServicesPage() {
             </div>
 
             <div className="grid grid-cols-2 gap-4">
-              <div className="bg-gray-50  p-8">
+              <div className="bg-gray-50 p-8">
                 <div className="text-5xl font-bold text-[#2527D9] mb-2">3+</div>
                 <div className="text-sm text-gray-500 mb-2">Industries we operate in</div>
                 <p className="text-xs text-gray-600">
                   • Capital • Client Acquisition • Talent Solutions
                 </p>
               </div>
-              <div className="bg-gray-50  p-8">
+              <div className="bg-gray-50 p-8">
                 <div className="text-5xl font-bold text-[#2527D9] mb-2">4+</div>
                 <div className="text-sm text-gray-500 mb-2">Business Partnerships built</div>
                 <p className="text-xs text-gray-600">
                   Driven with strategy & execution within 4 months
                 </p>
               </div>
-              <div className="bg-gray-50  p-8">
+              <div className="bg-gray-50 p-8">
                 <div className="text-5xl font-bold text-[#2527D9] mb-2">200+</div>
                 <div className="text-sm text-gray-500 mb-2">Successful placements</div>
                 <p className="text-xs text-gray-600">
                   From entry to leadership roles
                 </p>
               </div>
-              <div className="bg-gray-50  p-8">
+              <div className="bg-gray-50 p-8">
                 <div className="text-5xl font-bold text-[#2527D9] mb-2">95%</div>
                 <div className="text-sm text-gray-500 mb-2">Client Success Rate</div>
                 <p className="text-xs text-gray-600">

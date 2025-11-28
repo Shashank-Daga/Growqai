@@ -1,0 +1,43 @@
+"use client"
+import { useState } from "react"
+
+const allAmenities = [
+    { icon: "🏢", title: "Fully Furnished Setup", desc: "Move-in ready workspace with modern interiors" },
+    { icon: "💺", title: "40 Workstations + 3 Private Cabins", desc: "Ideal for teams, founders & private spaces" },
+    { icon: "👥", title: "12-Seater Conference Room", desc: "Perfect for meetings & discussions" },
+    { icon: "☕", title: "Cafeteria Space", desc: "Break area for snacks & refreshments" },
+    { icon: "🌤️", title: "Naturally Ventilated", desc: "Bright, airy and comfortable environment" },
+    { icon: "💼", title: "Reception & Waiting Area", desc: "Professional visitor handling" },
+    { icon: "📶", title: "High-Speed WiFi", desc: "Reliable internet for uninterrupted work" },
+]
+
+export function Amenities() {
+    const [showAll, setShowAll] = useState(false)
+
+    const visible = showAll ? allAmenities : allAmenities.slice(0, 4)
+
+    return (
+        <>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
+                {visible.map((item, idx) => (
+                    <div key={idx} className="text-center">
+                        <div className="w-16 h-16 flex items-center justify-center mx-auto mb-3">
+                            <span className="text-3xl">{item.icon}</span>
+                        </div>
+                        <h3 className="font-semibold mb-1">{item.title}</h3>
+                        <p className="text-[#313447] text-sm">{item.desc}</p>
+                    </div>
+                ))}
+            </div>
+
+            {!showAll && (
+                <button
+                    onClick={() => setShowAll(true)}
+                    className="mx-auto block text-white font-semibold bg-[#1718FF] px-4 py-2 hover:bg-[#4B4DFF] transition-all"
+                >
+                    Load More
+                </button>
+            )}
+        </>
+    )
+}
