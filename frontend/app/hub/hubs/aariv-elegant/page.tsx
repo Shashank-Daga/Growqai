@@ -65,7 +65,7 @@ export default function ShreyasCrestPage() {
                         </div>
 
                         {/* LOCATION & HOURS */}
-                        <div className="bg-gray-50 p-8 rounded-xl">
+                        <div className="bg-gray-50 p-8">
                             <h2 className="text-2xl font-bold text-[#050659] mb-6">Location & Hours</h2>
 
                             <div className="mb-8">
@@ -98,7 +98,7 @@ export default function ShreyasCrestPage() {
 
                     {/* RIGHT SECTION — AMENITIES WITH LOAD MORE */}
                     <div>
-                        <div className="bg-gray-50 p-8 rounded-xl">
+                        <div className="bg-gray-50 p-8">
                             <h2 className="text-2xl font-bold text-[#050659] mb-6 text-center">Amenities & Features</h2>
 
                             {/* Collapsible Grid */}

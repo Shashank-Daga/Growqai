@@ -69,7 +69,7 @@ interface CardProps {
 function ServiceCard({ title, points, link, full }: CardProps) {
   return (
     <div
-      className={`border rounded-xl bg-white p-8 shadow-sm hover:shadow-md transition flex flex-col 
+      className={`border bg-white p-8 shadow-sm hover:shadow-md transition flex flex-col 
       h-auto ${full ? "col-span-1 md:col-span-2 md:h-80" : "md:h-[400px]"}`}
     >
       <h2 className="text-3xl font-semibold mb-6 text-[#050659]">{title}</h2>

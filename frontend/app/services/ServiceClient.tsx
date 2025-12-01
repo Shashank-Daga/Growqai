@@ -36,14 +36,14 @@ const services: Service[] = [
       {
         heading: "Why do you need to engage with an expert for your capital raise?",
         bullets: [
+          "Leveraging technology for faster due diligence and closure",
           "We help you to identify the right investor, sifting through investor databases and portfolios",
-          "Standing out in a crowded capital market requires data-driven and customised pitches",
-          "Leveraging technology for faster due diligence and closure"
+          "Standing out in a crowded capital market requires data-driven and customised pitches"
         ]
       },
       {
         heading: "How do we make it happen?",
-        intro: "We strive to deliver value to our clients. Growqai helps you to identify & engage with potential investors, automating investor discovery, engagement & conversion.",
+        intro: "We strive to deliver value to our clients.",
         bullets: [
           "<strong>Investor Discovery:</strong> We automate the investor discovery and matching to identify the right investors.",
           "<strong>Multichannel Engagement:</strong> Our engagement tools ensure multichannel reach-outs and engagement with investors.",
@@ -74,7 +74,7 @@ const services: Service[] = [
       },
       {
         heading: "How do we make it happen?",
-        intro: "Expand your client base, enabled by AI. Expand your client base through AI-powered lead generation and targeted customer conversions.",
+        intro: "Expand your client base, enabled by AI.",
         bullets: [
           "<strong>Get more leads:</strong> Our tools boost qualified lead pipeline with lead sourcing & scoring.",
           "<strong>Effective Engagement:</strong> We help you to consistently reach and engage with your clients.",
@@ -105,7 +105,7 @@ const services: Service[] = [
       },
       {
         heading: "How do we make it happen?",
-        intro: "Attracting and Hiring the best talent. Our talent strategies are aimed at helping you attract and hire the best talent, which drives your growth.",
+        intro: "Attracting and Hiring the best talent.",
         bullets: [
           "<strong>Source:</strong> Automate talent outreach & sourcing",
           "<strong>Engage:</strong> Expedite screening & ensure engagement with top talent",
@@ -183,27 +183,47 @@ export default function ServicesPage() {
     index: number;
   }) {
     const baseClass =
-      "cursor-pointer rounded-lg shadow-lg overflow-hidden transition-all duration-500 absolute";
+      "cursor-pointer shadow-lg overflow-hidden transition-all duration-500 absolute";
 
     let styles = "";
 
-    if (position === "center") {
-      // Center card - largest and prominent
-      styles = "w-[380px] h-[480px] z-30 scale-100 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2";
-    }
-    else if (position === "left") {
-      // Left card - visible and not overlapping
-      styles = "w-[320px] h-[400px] z-20 scale-90 left-[8%] top-1/2 -translate-y-1/2";
-    }
-    else if (position === "right") {
-      // Right card - visible and not overlapping
-      styles = "w-[320px] h-[400px] z-20 scale-90 right-[8%] top-1/2 -translate-y-1/2";
-    }
+    const getPosition = (index: number) => {
+      if (index === active) return "center";
+      if (index === (active - 1 + services.length) % services.length) return "left";
+      return "right";
+    };
+
+    const cardVariants: any = {
+      center: {
+        scale: 1.25,
+        x: "-50%",
+        zIndex: 30,
+        boxShadow:
+          "rgba(102, 232, 76, 0.25) 0px 50px 100px -20px, rgba(102, 232, 76, 0.3) 0px 30px 60px -30px",
+        transition: { duration: 0.9, ease: "easeOut" },
+      },
+      left: {
+        scale: 0.9,
+        x: "-120%",
+        zIndex: 20,
+        opacity: 0.85,
+        transition: { duration: 0.9, ease: "easeOut" },
+      },
+      right: {
+        scale: 0.9,
+        x: "20%",
+        zIndex: 20,
+        opacity: 0.85,
+        transition: { duration: 0.9, ease: "easeOut" },
+      },
+    };
 
     return (
-      <div
+      <motion.div
         className={`${baseClass} ${styles}`}
         onClick={() => handleCardClick(index)}
+        animate={position}
+        variants={cardVariants}
       >
         <div className="relative w-full h-full">
           <Image src={service.image} alt={service.title} fill className="object-cover" />
@@ -214,7 +234,7 @@ export default function ServicesPage() {
             {service.t1}
           </p>
         </div>
-      </div>
+      </motion.div>
     );
   }
 
@@ -230,35 +250,72 @@ export default function ServicesPage() {
           </div>
 
           {/* CAROUSEL */}
-          <div className="w-full overflow-hidden mb-28">
-            <div className="flex items-center justify-center">
-              <div className="relative w-full max-w-7xl h-[560px] md:h-[560px] flex items-center justify-center">
-                {/* container for three cards (we position absolutely for precise control) */}
-                <div className="relative w-full max-w-7xl h-[560px] mx-auto">
-                  {/* left */}
-                  <Card
-                    service={services[prevIndex]}
-                    position="left"
-                    index={prevIndex}
-                    key={`left-${services[prevIndex].id}`}
-                  />
-                  {/* center */}
-                  <Card
-                    service={services[active]}
-                    position="center"
-                    index={active}
-                    key={`center-${services[active].id}`}
-                  />
-                  {/* right */}
-                  <Card
-                    service={services[nextIndex]}
-                    position="right"
-                    index={nextIndex}
-                    key={`right-${services[nextIndex].id}`}
-                  />
-                </div>
-              </div>
-            </div>
+          <div className="relative w-full max-w-6xl h-[430px] mt-8 mx-auto">
+
+            {services.map((service, index) => {
+              const position =
+                index === active
+                  ? "center"
+                  : index === (active - 1 + n) % n
+                    ? "left"
+                    : "right";
+
+              return (
+                <motion.div
+                  key={service.id}
+                  animate={position}
+                  variants={{
+                    center: {
+                      scale: 1.2,
+                      x: "-50%",
+                      opacity: 1,
+                      zIndex: 30,
+                      transition: { duration: 1.5 }
+                    },
+                    left: {
+                      scale: 0.9,
+                      x: "-175%",
+                      opacity: 0.5,
+                      zIndex: 20,
+                      transition: { duration: 1.5 }
+                    },
+                    right: {
+                      scale: 0.9,
+                      x: "75%",
+                      opacity: 0.5,
+                      zIndex: 20,
+                      transition: { duration: 1.5 }
+                    }
+                  }}
+                  onClick={() => handleCardClick(index)}
+                  className="
+                    absolute top-1/2 left-1/2 
+                    -translate-y-1/2 
+                    cursor-pointer
+                    overflow-hidden 
+                    bg-white 
+                    shadow-xl 
+                    w-[280px] 
+                    md:w-[340px] 
+                    h-[380px]
+                  "
+                >
+                  <div className="relative w-full h-85">
+                    <Image
+                      src={service.image}
+                      alt={service.title}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+
+                  <div className="p-1 text-center">
+                    <h2 className="text-xl text-[#050659] font-semibold">{service.title}</h2>
+                  </div>
+
+                </motion.div>
+              );
+            })}
           </div>
 
           {/* Details panel (appears below carousel) */}
@@ -270,11 +327,11 @@ export default function ServicesPage() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: 20 }}
                 transition={{ duration: 0.35 }}
-                className="mb-12 border border-gray-200 bg-gray-50 p-8 shadow"
+                className="py-24"
               >
                 <div className="w-full">
-
-                  <div>
+                  {/* Title and Description */}
+                  <div className="mb-8">
                     <h3 className="text-3xl font-bold text-[#050659] mb-4">
                       {selectedService.title}
                     </h3>
@@ -284,34 +341,89 @@ export default function ServicesPage() {
                       </h4>
                     )}
                     {selectedService.description && (
-                      <p className="text-gray-700 mb-6">{selectedService.description}</p>
+                      <p className="text-gray-700 mb-6 leading-relaxed">{selectedService.description}</p>
                     )}
+                  </div>
 
-                    {selectedService.sections &&
-                      selectedService.sections.map((s, i) => (
-                        <div key={i} className="mb-4">
-                          <h5 className="text-lg font-semibold text-[#2527D9] mb-2">
-                            {s.heading}
-                          </h5>
-                          {s.intro && <p className="mb-2 text-gray-700">{s.intro}</p>}
-                          {s.bullets && (
-                            <ul className="list-disc list-inside text-gray-700 space-y-1">
-                              {s.bullets.map((b, bi) => (
-                                <li key={bi} dangerouslySetInnerHTML={{ __html: b }} />
-                              ))}
-                            </ul>
-                          )}
-                        </div>
-                      ))}
+                  {/* Sections */}
+                  {selectedService.sections &&
+                    selectedService.sections.map((section, sectionIndex) => (
+                      <div key={sectionIndex} className="mb-12">
+                        <h5 className="text-2xl font-bold text-[#2527D9] mb-6">
+                          {section.heading}
+                        </h5>
 
-                    <div className="mt-6 flex gap-3">
-                      <button
-                        onClick={() => setSelectedService(null)}
-                        className="px-5 py-2 bg-[#1718FF] text-white text-sm hover:bg-[#0f10cc] transition-colors"
-                      >
-                        Close
-                      </button>
-                    </div>
+                        {/* Section 1 */}
+                        {section.intro && (
+                          <p className="mb-6 text-gray-700 italic text-center text-lg">
+                            {section.intro}
+                          </p>
+                        )}
+
+                        {/* Section 2 */}
+                        {!section.bullets?.some(b => b.includes('<strong>')) && section.bullets && (
+                          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            {section.bullets.map((bullet, bulletIndex) => (
+                              <div
+                                key={bulletIndex}
+                                className="flex flex-col items-center bg-blue-50 border border-blue-200 p-6 shadow-sm"
+                              >
+                                <p className="text-gray-800 text-center italic text-sm leading-relaxed">
+                                  {bullet}
+                                </p>
+                              </div>
+                            ))}
+                          </div>
+                        )}
+
+                        {/* Section 3 — bullets with icons + blue text box (screenshot style) */}
+                        {section.bullets?.some(b => b.includes("<strong>")) && (
+                          <div className="space-y-10">
+                            {section.bullets.map((bullet, bulletIndex) => {
+                              // Extract <strong>Title</strong> and rest of text
+                              const match = bullet.match(/<strong>(.*?)<\/strong>[:\-]?\s*(.*)/i);
+                              const title = match ? match[1] : "";
+                              const text = match ? match[2] : bullet;
+
+                              return (
+                                <div
+                                  key={bulletIndex}
+                                  className="flex flex-col md:flex-row items-start gap-6"
+                                >
+                                  {/* Left illustration (use your own icons per bullet) */}
+                                  <div className="w-32 h-32 shrink-0 flex items-center justify-center">
+                                    <Image
+                                      src={`/Service/icons/${bulletIndex + 1}.png`}
+                                      alt="icon"
+                                      width={128}
+                                      height={128}
+                                      className="object-contain opacity-80"
+                                    />
+                                  </div>
+
+                                  {/* Right blue box */}
+                                  <div className="flex-1 bg-blue-50 border border-blue-200 p-6 shadow-sm">
+                                    <p className="text-gray-900">
+                                      <span className="font-semibold">{title} – </span>
+                                      {text}
+                                    </p>
+                                  </div>
+                                </div>
+                              );
+                            })}
+                          </div>
+                        )}
+
+                      </div>
+                    ))}
+
+                  <div className="mt-8 flex gap-3">
+                    <button
+                      onClick={() => setSelectedService(null)}
+                      className="px-6 py-3 bg-[#1718FF] text-white text-sm font-semibold hover:bg-[#0f10cc] transition-colors"
+                    >
+                      Close
+                    </button>
                   </div>
                 </div>
               </motion.div>
@@ -319,7 +431,7 @@ export default function ServicesPage() {
           </AnimatePresence>
 
           {/* Stats + contact + footer */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
+          <div className="py-24 grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
             <div className="bg-[#2527D9] text-white p-10 relative overflow-hidden">
               <h3 className="text-2xl font-bold mb-4">Growqai</h3>
               <p className="text-gray-300 leading-relaxed mb-6">

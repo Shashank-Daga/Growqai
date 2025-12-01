@@ -25,7 +25,7 @@ export default function HubPage() {
                 {/* ================= HERO SECTION ================ */}
                 <div className="relative w-full h-[80vh] md:h-[85vh] lg:h-[90vh]">
                     <Image
-                        src="/HUB.jpg" // replace with your actual hero image
+                        src="/HUB.jpg"
                         alt="hero"
                         fill
                         className="object-cover"
@@ -123,8 +123,13 @@ export default function HubPage() {
                                 turn ideas into action.
                             </p>
 
-                            <div className="bg-gray-200 h-52  flex items-center justify-center text-gray-600">
-                                (Property video and details will appear here)
+                            <div className="relative w-full h-100 rounded-md overflow-hidden">
+                                <Image
+                                    src="/Shreyas Crest/6.jpg"
+                                    alt="Aariv Elegant Property"
+                                    fill
+                                    className="object-cover"
+                                />
                             </div>
                         </div>
 
@@ -141,8 +146,13 @@ export default function HubPage() {
                                 innovation finds its rhythm.
                             </p>
 
-                            <div className="bg-gray-200 h-52  flex items-center justify-center text-gray-600">
-                                (Property video and details will appear here)
+                            <div className="relative w-full h-100 overflow-hidden">
+                                <Image
+                                    src="/Aariv Elegant/7.jpg"
+                                    alt="Aariv Elegant Property"
+                                    fill
+                                    className="object-cover"
+                                />
                             </div>
                         </div>
 

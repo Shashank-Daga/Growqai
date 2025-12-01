@@ -68,18 +68,41 @@ export function ContactSection() {
   ]
 
   return (
-    <section className="py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20">
+    <section id="contact" className="py-9 px-6 bg-[#E7E9F1] overflow-hidden">
+      <div className="max-w-7xl mx-auto">
+        {/* Top Label */}
+        <div className="mb-9">
+          {/* Decorative top line */}
+          <div className="relative mb-2">
+            <div className="h-px bg-gray-400 w-full"></div>
+            <div className="absolute top-0 left-0 w-48 h-[3px] bg-gray-600 -translate-y-0.5"></div>
+          </div>
+          <p className="text-sm tracking-wide text-gray-800 font-medium">/CONTACT US</p>
+        </div>
+
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: animationConfig.duration.normal }}
+          viewport={{ once: true }}
+          className="text-center mb-16 grid md:grid-cols-2 gap-16"
+        >
+          <h2 className="text-3xl md:text-4xl text-[#050659] font-bold mb-4">Let's Connect</h2>
+          <p className="text-[#2527D9] max-w-2xl mx-auto">
+            Have a project in mind? We'd love to hear about it and explore how we can help bring your vision to life.
+          </p>
+        </motion.div>
+
         <motion.div
           variants={staggerContainer}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="grid md:grid-cols-2 gap-16"
+          className="grid md:grid-cols-2 gap-12"
         >
 
           {/* LEFT SIDE — CONTACT INFO */}
-          <motion.div variants={fadeInUp} className="space-y-8">
+          <motion.div variants={fadeInUp} className="py-12 space-y-12">
             {contactInfo.map((item, i) => {
               const Icon = item.icon
               return (

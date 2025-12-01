@@ -29,7 +29,7 @@ export default function InsightsPage() {
       </div>
 
       {/* Breadcrumb */}
-      <div className="text-sm text-gray-500 mb-10">/INSIGHTS</div>
+      <div className="text-sm text-gray-500 mb-10">/BLOGS</div>
 
       {/* Title */}
       <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-16">
@@ -45,7 +45,7 @@ export default function InsightsPage() {
             className={`flex flex-col group ${index === 0 ? "md:col-span-2 lg:col-span-3" : ""}`}
           >
             {/* Image */}
-            <div className="relative w-full h-64 md:h-72 lg:h-80 mb-4 overflow-hidden rounded-lg">
+            <div className="relative w-full h-64 md:h-72 lg:h-165 mb-4 overflow-hidden rounded-lg">
               <Image
                 src={blog.image}
                 alt={blog.title}
