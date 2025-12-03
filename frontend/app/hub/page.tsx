@@ -35,11 +35,11 @@ export default function HubPage() {
 
                     {/* Hero Content */}
                     <div className="relative z-10 max-w-7xl mx-auto h-full px-6 md:px-12 lg:px-20 flex flex-col justify-center">
-                        <h1 className="text-[#050659] text-4xl md:text-5xl lg:text-6xl font-bold max-w-2xl leading-tight">
+                        <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-bold max-w-2xl leading-tight">
                             Growth HUB — Hustle. Unite. Build.
                         </h1>
 
-                        <p className="text-lg md:text-xl text-[#2527D9] mt-4 max-w-xl">
+                        <p className="text-lg md:text-xl text-white mt-4 max-w-xl">
                             Where Ideas Thrive and Founders Connect
                         </p>
 

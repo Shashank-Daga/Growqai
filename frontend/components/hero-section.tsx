@@ -58,7 +58,7 @@ export function HeroSection() {
               className="relative w-full h-80 sm:h-96 lg:h-[460px]  overflow-hidden"
             >
               <Image
-                src="/Banner.jpg"
+                src="/Banner1.png"
                 alt="Developer at work"
                 fill
                 className="object-cover"
@@ -95,12 +95,12 @@ export function HeroSection() {
             >
               {/* FIRST ROW */}
               <Image src="/T.C. Logo/Kosoku.jpeg" alt="Kosoku" width={110} height={40} />
-              <Image src="/T.C. Logo/Merito.jpeg" alt="Merito" width={110} height={40} />
+              <Image src="/T.C. Logo/Merito.png" alt="Merito" width={110} height={40} />
               <Image src="/T.C. Logo/RAMS.jpeg" alt="RAMS" width={110} height={40} />
 
               {/* SECOND ROW (NEEDED FOR SMOOTH ENTRY) */}
               <Image src="/T.C. Logo/Kosoku.jpeg" alt="Kosoku" width={110} height={40} />
-              <Image src="/T.C. Logo/Merito.jpeg" alt="Merito" width={110} height={40} />
+              <Image src="/T.C. Logo/Merito.png" alt="Merito" width={110} height={40} />
               <Image src="/T.C. Logo/RAMS.jpeg" alt="RAMS" width={110} height={40} />
             </motion.div>
           </div>

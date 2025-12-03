@@ -8,10 +8,16 @@ import { ContactSection } from "@/components/contact-section";
 import { Footer } from "@/components/site/footer";
 import { useSearchParams } from "next/navigation";
 
+interface Bullet {
+  icon: string;
+  text: string;
+}
+
 interface ServiceSection {
   heading: string;
   intro?: string;
-  bullets?: string[];
+  bullets1?: string[]; // for simple text bullets
+  bullets2?: Bullet[];
 }
 
 interface Service {
@@ -29,13 +35,13 @@ const services: Service[] = [
     id: "arrange-capital",
     t1: "Capital",
     title: "Arrange Capital",
-    image: "/Service/1.jpg",
+    image: "/Service/CAPITAL.png",
     subtitle: "Capital fuels your growth journey",
     description: `Capital is a crucial lever for any growing company, providing the necessary resources to invest in talent, technology, and market expansion. With the right funding, businesses can accelerate innovation, scale their operations, and seize new opportunities more quickly. Effective capital management not only fuels immediate growth but also builds a strong foundation for sustainable success in a competitive landscape.`,
     sections: [
       {
         heading: "Why do you need to engage with an expert for your capital raise?",
-        bullets: [
+        bullets1: [
           "Leveraging technology for faster due diligence and closure",
           "We help you to identify the right investor, sifting through investor databases and portfolios",
           "Standing out in a crowded capital market requires data-driven and customised pitches"
@@ -44,10 +50,19 @@ const services: Service[] = [
       {
         heading: "How do we make it happen?",
         intro: "We strive to deliver value to our clients.",
-        bullets: [
-          "<strong>Investor Discovery:</strong> We automate the investor discovery and matching to identify the right investors.",
-          "<strong>Multichannel Engagement:</strong> Our engagement tools ensure multichannel reach-outs and engagement with investors.",
-          "<strong>Faster Deal Closure:</strong> We ensure due diligence time is reduced, resulting in faster investment closure."
+        bullets2: [
+          {
+            icon: "/Service/1/Discovery.png",
+            text: "<strong>Investor Discovery:</strong> We automate the investor discovery and matching to identify the right investors."
+          },
+          {
+            icon: "/Service/2/Engagement.png",
+            text: "<strong>Multichannel Engagement:</strong> Our engagement tools ensure multichannel reach-outs and engagement with investors."
+          },
+          {
+            icon: "/Service/1/Closure.png",
+            text: "<strong>Faster Deal Closure:</strong> We ensure due diligence time is reduced, resulting in faster investment closure."
+          }
         ]
       }
     ]
@@ -56,7 +71,7 @@ const services: Service[] = [
     id: "attract-clients",
     t1: "Clients",
     title: "Attract Clients",
-    image: "/Service/2.jpg",
+    image: "/Service/CLIENTS.png",
     subtitle: "Expand your client base through AI-powered lead generation & targeted customer conversions.",
     description: "",
     sections: [
@@ -66,7 +81,7 @@ const services: Service[] = [
       },
       {
         heading: "Why do you need an expert's help with client acquisition?",
-        bullets: [
+        bullets1: [
           "Navigating client acquisition in today's competitive B2B landscape requires advanced strategies",
           "We bring data-driven insights and advanced tools to consistently reach and engage your ideal clients",
           "We believe in the power of technology to scale smartly"
@@ -75,19 +90,29 @@ const services: Service[] = [
       {
         heading: "How do we make it happen?",
         intro: "Expand your client base, enabled by AI.",
-        bullets: [
-          "<strong>Get more leads:</strong> Our tools boost qualified lead pipeline with lead sourcing & scoring.",
-          "<strong>Effective Engagement:</strong> We help you to consistently reach and engage with your clients.",
-          "<strong>AI at Core:</strong> We collaborate with you to convert potential clients with targeted closures."
+        bullets2: [
+          {
+            icon: "/Service/2/Leads.png",
+            text: "<strong>Get more leads:</strong> Our tools boost qualified lead pipeline with lead sourcing & scoring.",
+          },
+          {
+            icon: "/Service/2/Engagement.png",
+            text: "<strong>Effective Engagement:</strong> We help you to consistently reach and engage with your clients.",
+          },
+          {
+            icon: "/Service/2/Core.png",
+            text: "<strong>AI at Core:</strong> We collaborate with you to convert potential clients with targeted closures."
+          }
         ]
       }
     ]
   },
+
   {
     id: "accelerate-talent",
     t1: "Talent",
     title: "Accelerate Talent",
-    image: "/Service/3.jpg",
+    image: "/Service/TALENT.png",
     subtitle: "Attract, engage, and hire top-tier talent with AI-assisted sourcing, hiring, and retention.",
     description: "",
     sections: [
@@ -97,7 +122,7 @@ const services: Service[] = [
       },
       {
         heading: "What makes talent a critical growth driver?",
-        bullets: [
+        bullets1: [
           "Effective hiring and development help companies out-innovate and out-execute the competition",
           "The ability to attract, develop, and retain top talent isn't just an operational necessity but acts as a critical growth driver",
           "Organizations that prioritize talent acquisition and development experience 68% higher profit increases"
@@ -106,10 +131,19 @@ const services: Service[] = [
       {
         heading: "How do we make it happen?",
         intro: "Attracting and Hiring the best talent.",
-        bullets: [
-          "<strong>Source:</strong> Automate talent outreach & sourcing",
-          "<strong>Engage:</strong> Expedite screening & ensure engagement with top talent",
-          "<strong>Hire:</strong> Reduce hiring time by deploying AI-enabled hiring"
+        bullets2: [
+          {
+            icon: "/Service/3/Source.png",
+            text: "<strong>Source:</strong> Automate talent outreach & sourcing",
+          },
+          {
+            icon: "/Service/2/Engagement.png",
+            text: "<strong>Engage:</strong> Expedite screening & ensure engagement with top talent",
+          },
+          {
+            icon: "/Service/3/Hire.png",
+            text: "<strong>Hire:</strong> Reduce hiring time by deploying AI-enabled hiring"
+          }
         ]
       }
     ]
@@ -310,7 +344,7 @@ export default function ServicesPage() {
                   </div>
 
                   <div className="p-1 text-center">
-                    <h2 className="text-xl text-[#050659] font-semibold">{service.title}</h2>
+                    <h2 className="text-xl text-[#050659] font-semibold">{service.t1}</h2>
                   </div>
 
                 </motion.div>
@@ -355,20 +389,20 @@ export default function ServicesPage() {
 
                         {/* Section 1 */}
                         {section.intro && (
-                          <p className="mb-6 text-gray-700 italic text-center text-lg">
+                          <p className="mb-6 text-gray-700 text-center text-lg">
                             {section.intro}
                           </p>
                         )}
 
                         {/* Section 2 */}
-                        {!section.bullets?.some(b => b.includes('<strong>')) && section.bullets && (
+                        {!section.bullets1?.some(b => b.includes('<strong>')) && section.bullets1 && (
                           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                            {section.bullets.map((bullet, bulletIndex) => (
+                            {section.bullets1.map((bullet, bulletIndex) => (
                               <div
                                 key={bulletIndex}
                                 className="flex flex-col items-center bg-blue-50 border border-blue-200 p-6 shadow-sm"
                               >
-                                <p className="text-gray-800 text-center italic text-sm leading-relaxed">
+                                <p className="text-gray-800 text-center text-base leading-relaxed">
                                   {bullet}
                                 </p>
                               </div>
@@ -377,13 +411,13 @@ export default function ServicesPage() {
                         )}
 
                         {/* Section 3 — bullets with icons + blue text box (screenshot style) */}
-                        {section.bullets?.some(b => b.includes("<strong>")) && (
+                        {section.bullets2?.some(b => b.text.includes("<strong>")) && (
                           <div className="space-y-10">
-                            {section.bullets.map((bullet, bulletIndex) => {
+                            {section.bullets2.map((bullet, bulletIndex) => {
                               // Extract <strong>Title</strong> and rest of text
-                              const match = bullet.match(/<strong>(.*?)<\/strong>[:\-]?\s*(.*)/i);
+                              const match = bullet.text.match(/<strong>(.*?)<\/strong>[:\-]?\s*(.*)/i);
                               const title = match ? match[1] : "";
-                              const text = match ? match[2] : bullet;
+                              const text = match ? match[2] : bullet.text;
 
                               return (
                                 <div
@@ -393,7 +427,7 @@ export default function ServicesPage() {
                                   {/* Left illustration (use your own icons per bullet) */}
                                   <div className="w-32 h-32 shrink-0 flex items-center justify-center">
                                     <Image
-                                      src={`/Service/icons/${bulletIndex + 1}.png`}
+                                      src={bullet.icon.startsWith('/') ? bullet.icon : '/' + bullet.icon}
                                       alt="icon"
                                       width={128}
                                       height={128}
@@ -402,9 +436,9 @@ export default function ServicesPage() {
                                   </div>
 
                                   {/* Right blue box */}
-                                  <div className="flex-1 bg-blue-50 border border-blue-200 p-6 shadow-sm">
-                                    <p className="text-gray-900">
-                                      <span className="font-semibold">{title} – </span>
+                                  <div className="flex-1 bg-blue-50 border border-blue-200 p-6 shadow-sm mt-7">
+                                    <p className="text-gray-900 text-lg">
+                                      <span className="font-semibold">{title} </span>
                                       {text}
                                     </p>
                                   </div>
