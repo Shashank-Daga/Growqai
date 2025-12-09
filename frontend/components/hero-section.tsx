@@ -6,7 +6,7 @@ import { fadeInUp, staggerContainer } from "@/lib/animations"
 
 export function HeroSection() {
   return (
-    <section className="relative w-full bg-white text-[#050659] overflow-hidden pt-28 pb-24">
+    <section className="relative w-full bg-white text-[#050659] overflow-hidden pt-20 pb-24">
       <Image
         src="/hero.jpg"
         alt="Hero background"
@@ -22,7 +22,7 @@ export function HeroSection() {
         className="relative z-10 max-w-7xl mx-auto px-6"
       >
         {/* === TOP HERO AREA === */}
-        <div className="bg-white border border-[#E7E9F1]  p-8 shadow-lg">
+        <div className="bg-white border border-[#E7E9F1] p-8 shadow-lg">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
 
             {/* LEFT SIDE: TEXT */}

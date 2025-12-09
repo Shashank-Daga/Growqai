@@ -14,8 +14,8 @@ export const metadata: Metadata = {
 export default function HubPage() {
     return (
         <section className="bg-white">
-            <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 pt-6">
-                <Link href="/" className="inline-flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors">
+            <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-5 pt-6 mb-6">
+                <Link href="/" className="inline-flex items-center text-gray-700 hover:text-gray-900 transition-colors">
                     <ArrowLeft className="w-4 h-4" />
                 </Link>
             </div>
@@ -31,26 +31,29 @@ export default function HubPage() {
                         className="object-cover"
                     />
 
-                    <div className="absolute inset-0 bg-black/30" />
+                    <div className="absolute inset-0 bg-black/20" />
 
                     {/* Hero Content */}
                     <div className="relative z-10 max-w-7xl mx-auto h-full px-6 md:px-12 lg:px-20 flex flex-col justify-center">
-                        <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-bold max-w-2xl leading-tight">
-                            Growth HUB — Hustle. Unite. Build.
-                        </h1>
+                        {/* White Content Box */}
+                        <div className="bg-white/90 backdrop-blur-sm p-8 md:p-8 max-w-2xl shadow-xl border border-gray-200">
+                            <h1 className="text-[#2527D9] text-4xl md:text-5xl lg:text-6xl font-bold max-w-2xl leading-tight">
+                                Growth HUB — Hustle. Unite. Build.
+                            </h1>
 
-                        <p className="text-lg md:text-xl text-white mt-4 max-w-xl">
-                            Where Ideas Thrive and Founders Connect
-                        </p>
+                            <p className="text-lg md:text-xl text-[#313447] mt-4 max-w-xl">
+                                Where Ideas Thrive and Founders Connect
+                            </p>
 
-                        {/* Buttons like reference */}
-                        <div className="mt-6 flex gap-4">
-                            <button className="px-6 py-3 bg-[#1718FF] text-white font-medium shadow-md hover:bg-[#4B4DFF]">
-                                Book Now
-                            </button>
-                            <button className="px-6 py-3 bg-transparent border border-white text-white font-medium hover:bg-white/10">
-                                Read More
-                            </button>
+                            {/* Buttons like reference */}
+                            <div className="mt-6 flex gap-4">
+                                <button className="px-6 py-3 bg-[#1718FF] text-white font-medium shadow-md hover:bg-[#4B4DFF]">
+                                    Book Now
+                                </button>
+                                <button className="px-6 py-3 bg-transparent border border-[#313447] text-[#313447] font-medium hover:bg-white/10">
+                                    Read More
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -14,21 +14,21 @@ const approachSteps = [
     title: "A-Assess",
     description:
       "Analyzes the business landscape, identifies growth gaps, and benchmarks performance across capital, client, and talent verticals. Establishes a clear foundation for scalable growth.",
-    image: "/Appr/1.jpg",
+    image: "/Appr/ASSESS.png",
   },
   {
     number: "2",
     title: "C- Create",
     description:
       "Designs tailored strategies, systems, and processes that align with business objectives. Builds actionable roadmaps that convert insights into measurable outcomes.",
-    image: "/Appr/2.jpg",
+    image: "/Appr/CREATE.png",
   },
   {
     number: "3",
     title: "E- Enable",
     description:
       "Implements the right tools, networks, and expertise to execute and sustain growth. Empowers businesses to accelerate performance and maintain long-term impact.",
-    image: "/Appr/3.jpg",
+    image: "/Appr/ENABLE.png",
   },
 ]
 
@@ -93,7 +93,7 @@ export function ApproachSection() {
               </p>
 
               {/* Image */}
-              <div className="w-[260px] h-[340px] shrink-0 relative overflow-hidden">
+              <div className="w-[380px] h-[340px] shrink-0 relative overflow-hidden">
                 <Image
                   src={step.image}
                   alt={step.title}
@@ -103,11 +103,11 @@ export function ApproachSection() {
               </div>
 
               {/* Title + Description */}
-              <div className="max-w-xl text-left space-y-4">
+              <div className="max-w-xl text-left space-y-6">
                 <h3 className="text-4xl md:text-5xl font-bold text-[#2527D9]">
                   {step.title}
                 </h3>
-                <p className="text-lg text-[#313447] leading-relaxed">
+                <p className="text-xl text-[#313447] leading-relaxed">
                   {step.description}
                 </p>
               </div>

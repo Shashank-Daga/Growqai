@@ -389,7 +389,7 @@ export default function ServicesPage() {
 
                         {/* Section 1 */}
                         {section.intro && (
-                          <p className="mb-6 text-gray-700 text-center text-lg">
+                          <p className="mb-6 text-gray-700 text-left text-lg">
                             {section.intro}
                           </p>
                         )}

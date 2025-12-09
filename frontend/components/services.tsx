@@ -75,27 +75,26 @@ function ServiceCard({ title, icon, points, link, full }: CardProps) {
     <div
       className={`border bg-white p-8 shadow-sm hover:shadow-md transition flex 
       ${full ? "md:flex-row flex-col md:items-start" : "flex-col"}
-      h-auto ${full ? "col-span-1 md:col-span-2 md:h-80" : "md:h-[420px]"}`}
+      h-auto ${full ? "col-span-1 md:col-span-2 md:h-87" : "md:h-[435px]"}`}
     >
-      {/* LEFT SECTION (Title + Points) */}
+      {/* LEFT SECTION (Title + Icon) */}
       <div className={`flex-1 ${full ? "md:pr-10" : ""}`}>
-        
+
         {/* Title + Icon */}
         <div className="flex items-center gap-4 mb-6">
-          <h2 className="text-3xl font-semibold text-[#050659]">{title}</h2>
-
-          {/* Icon only for first two cards */}
-          {!full && icon && (
+          {/* Icon (on the left side for all cards) */}
+          {icon && (
             <img
               src={icon}
               alt="icon"
               className="w-12 h-12 object-contain"
             />
           )}
+          <h2 className="text-3xl font-semibold text-[#050659]">{title}</h2>
         </div>
 
         {/* Points List */}
-        <ul className="space-y-4 text-gray-700">
+        <ul className="space-y-6 text-gray-700">
           {points.map((point, idx) => (
             <li key={idx} className="flex gap-3">
               <CheckCircle2 className="w-5 h-5 text-[#2527D9] mt-1" />
@@ -115,15 +114,15 @@ function ServiceCard({ title, icon, points, link, full }: CardProps) {
       </div>
 
       {/* RIGHT SIDE ICON (Only for full-width card) */}
-      {full && icon && (
-        <div className="flex justify-center md:justify-end mt-8 md:mt-0">
+      {/* {full && icon && (
+        <div className="flex justify-center md:justify-start mt-8 md:mt-0 md:pl-10">
           <img
             src={icon}
             alt="icon"
-            className="w-40 h-40 md:w-56 md:h-56 object-contain"
+            className="w-12 h-12 object-contain"
           />
         </div>
-      )}
+      )} */}
     </div>
   );
 }
