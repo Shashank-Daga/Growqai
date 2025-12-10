@@ -50,7 +50,6 @@ export default async function BlogPostPage({
       <div className="mb-8">
         <Link href="/insights" className="inline-flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors">
           <ArrowLeft className="w-4 h-4" />
-          Back to Insights
         </Link>
       </div>
 
@@ -61,7 +60,7 @@ export default async function BlogPostPage({
       </div>
 
       {/* Breadcrumb */}
-      <div className="text-sm text-gray-500 mb-15">/INSIGHTS / {post.title.toUpperCase()}</div>
+      <div className="text-sm text-gray-500 mb-15">/BLOGS /{post.title.toUpperCase()}</div>
 
       {/* Article Header */}
       <div className="max-w-4xl mx-auto mb-12">

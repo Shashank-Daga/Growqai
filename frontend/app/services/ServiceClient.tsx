@@ -429,8 +429,8 @@ export default function ServicesPage() {
                                     <Image
                                       src={bullet.icon.startsWith('/') ? bullet.icon : '/' + bullet.icon}
                                       alt="icon"
-                                      width={128}
-                                      height={128}
+                                      width={110}
+                                      height={110}
                                       className="object-contain opacity-80"
                                     />
                                   </div>
