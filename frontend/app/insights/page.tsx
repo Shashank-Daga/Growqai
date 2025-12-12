@@ -22,15 +22,6 @@ export default function InsightsPage() {
         </Link>
       </div>
 
-      {/* Decorative top line */}
-      <div className="relative mb-2">
-        <div className="h-px bg-gray-400 w-full"></div>
-        <div className="absolute top-0 left-0 w-48 h-[3px] bg-gray-600 -translate-y-0.5"></div>
-      </div>
-
-      {/* Breadcrumb */}
-      <div className="text-sm text-gray-500 mb-10">/BLOGS</div>
-
       {/* Title */}
       <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-16">
         Latest Insights
@@ -45,7 +36,7 @@ export default function InsightsPage() {
             className={`flex flex-col group ${index === 0 ? "md:col-span-2 lg:col-span-3" : ""}`}
           >
             {/* Image */}
-            <div className="relative w-full h-64 md:h-72 lg:h-165 mb-4 overflow-hidden rounded-lg">
+            <div className="relative w-full aspect-4/3 overflow-hidden">
               <Image
                 src={blog.image}
                 alt={blog.title}

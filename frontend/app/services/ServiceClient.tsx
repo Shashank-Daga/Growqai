@@ -56,11 +56,11 @@ const services: Service[] = [
             text: "<strong>Investor Discovery:</strong> We automate the investor discovery and matching to identify the right investors."
           },
           {
-            icon: "/Service/2/Engagement.png",
+            icon: "/Service/1/Multichannel engagement.png",
             text: "<strong>Multichannel Engagement:</strong> Our engagement tools ensure multichannel reach-outs and engagement with investors."
           },
           {
-            icon: "/Service/1/Closure.png",
+            icon: "/Service/1/Deal Closure.png",
             text: "<strong>Faster Deal Closure:</strong> We ensure due diligence time is reduced, resulting in faster investment closure."
           }
         ]

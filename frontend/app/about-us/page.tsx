@@ -21,21 +21,17 @@ export default function AboutUsPage() {
         </Link>
       </div>
 
-      {/* Decorative top line */}
-      <div className="relative mb-2">
-        <div className="h-px bg-gray-400 w-full"></div>
-        <div className="absolute top-0 left-0 w-48 h-[3px] bg-gray-600 -translate-y-0.5"></div>
-      </div>
-
-      {/* Breadcrumb */}
-      <div className="text-sm text-gray-500 mb-10">/ABOUT US</div>
-
       {/* ---------------------- HERO SECTION ---------------------- */}
-      <div className="text-center py-72 border-b border-[#E7E9F1]" style={{ backgroundImage: "url('/AboutUs/Banner.png')" }}>
-        <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+      <div className="text-center py-72 border-b border-[#E7E9F1]"
+        style={{
+          backgroundImage: "url('/AboutUs/Banner.png')",
+          backgroundSize: '110%', // Slightly decrease the image size
+          backgroundPosition: 'center', // Ensure the image stays centered 
+        }}>
+        <h1 className="text-5xl md:text-5xl font-bold text-white mb-6">
           We are obsessed with growth
         </h1>
-        <p className="text-lg text-white max-w-3xl mx-auto">
+        <p className="text-2xl text-white max-w-3xl mx-auto">
           Growth is never by mere chance but by the choices you make, and we help you make the right choices to unlock your growth potential.
         </p>
       </div>
@@ -134,11 +130,18 @@ export default function AboutUsPage() {
             </p>
           </div>
 
-          {/* Images Grid (3 blocks like your reference) */}
-          <div className="grid grid-cols-2 gap-4">
-            <div className="bg-gray-100 h-40" />
-            <div className="bg-gray-100 h-40" />
-            <div className="bg-gray-100 h-40 col-span-2" />
+          {/* Image */}
+          <div className="grid grid-cols-2">
+            {/* Center the last image */}
+            <div className="flex justify-center items-center col-span-2">
+              <Image
+                src="/AboutUs/Our Approach.png"
+                alt="Integrity"
+                width={350}
+                height={350}
+                className="object-cover"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -147,6 +150,6 @@ export default function AboutUsPage() {
 
       <Footer />
 
-    </section>
+    </section >
   )
 }
