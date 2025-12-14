@@ -15,22 +15,22 @@ export default function ChallengeSection() {
     {
       id: 1,
       text: "Difficulty in sourcing capital to fuel growth.",
-      position: "bottom-3/4 left-0 translate-x-8 -translate-y-4",
+      position: "top-[10%] left-0 translate-x-8 -translate-y-6",
     },
     {
       id: 2,
       text: "Stagnant or unpredictable client pipelines.",
-      position: "bottom-3/4 right-0 -translate-x-8 -translate-y-4",
+      position: "top-[25%] right-0 -translate-x-8 translate-y-2",
     },
     {
       id: 3,
       text: "Scaling that requires more people instead of smarter systems.",
-      position: "bottom-1/4 left-0 translate-x-8 translate-y-4",
+      position: "top-[60%] left-0 translate-x-8 -translate-y-2",
     },
     {
       id: 4,
       text: "Leveraging Technology for bringing predictable outcomes.",
-      position: "bottom-1/4 right-0 -translate-x-8 translate-y-4",
+      position: "top-[73%] right-0 -translate-x-8 translate-y-6",
     },
   ]
 
