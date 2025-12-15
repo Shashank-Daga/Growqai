@@ -1,6 +1,4 @@
 import { notFound } from "next/navigation"
-import Link from "next/link"
-import { ArrowLeft } from "lucide-react"
 import { Metadata } from "next"
 import { MDXRemote } from "next-mdx-remote/rsc"
 import { getBlogById, getAllBlogs } from "@/lib/blogs"
@@ -46,12 +44,6 @@ export default async function BlogPostPage({
 
   return (
     <section className="min-h-screen bg-white px-8 md:px-16 lg:px-24 py-16">
-      {/* Back Button */}
-      <div className="mb-8">
-        <Link href="/insights" className="inline-flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors">
-          <ArrowLeft className="w-4 h-4" />
-        </Link>
-      </div>
 
       {/* Decorative top line */}
       <div className="relative mb-2">

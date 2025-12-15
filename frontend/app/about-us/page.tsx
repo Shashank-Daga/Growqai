@@ -1,5 +1,3 @@
-import Link from "next/link"
-import { ArrowLeft } from "lucide-react"
 import { Footer } from "@/components/site/footer"
 import { Metadata } from "next"
 import Image from "next/image"
@@ -13,13 +11,6 @@ export const metadata: Metadata = {
 export default function AboutUsPage() {
   return (
     <section className="bg-white max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-
-      {/* Back Button */}
-      <div className="mb-8">
-        <Link href="/" className="inline-flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors">
-          <ArrowLeft className="w-4 h-4" />
-        </Link>
-      </div>
 
       {/* ---------------------- HERO SECTION ---------------------- */}
       <div className="text-center py-72 border-b border-[#E7E9F1]"

@@ -1,6 +1,5 @@
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowLeft } from "lucide-react"
 import { Metadata } from "next"
 import { getAllBlogsMetadata } from "@/lib/blogs" // Adjust the path based on your project structure
 
@@ -15,12 +14,6 @@ export default function InsightsPage() {
 
   return (
     <section className="min-h-screen bg-white px-8 md:px-16 lg:px-24 py-16">
-      {/* Back Button */}
-      <div className="mb-8">
-        <Link href="/" className="inline-flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors">
-          <ArrowLeft className="w-4 h-4" />
-        </Link>
-      </div>
 
       {/* Title */}
       <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-16">

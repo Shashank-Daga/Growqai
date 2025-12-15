@@ -12,16 +12,6 @@ import {
   Repeat2,
 } from "lucide-react";
 
-/**
- * GrowthEnablers (updated)
- * - places each step on its own full-width horizontal "row" (thin rule).
- * - the card sits ON that row and is aligned left / center / right to match the screenshot.
- * - vertical accent line on right edge of card, subtle borders and spacing tuned.
- * - fade-in animation whileInView.
- *
- * Content is kept exactly as you provided.
- */
-
 const STEPS = [
   {
     icon: <FileText className="w-6 h-6 text-[#2B6CB0]" />,
@@ -94,8 +84,8 @@ export default function GrowthEnablers() {
       <div className="max-w-7xl mx-auto px-4">
         {/* header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <h2 className="text-4xl font-bold text-[#050659] mb-3">Use Cases</h2>
-          <p className="text-[#313447]">
+          <h2 className="text-5xl font-bold text-[#050659] mb-3">Use Cases</h2>
+          <p className="text-[#313447] text-xl">
             Here's how we ensure every project delivers exceptional results
             across motion graphics, short-form videos, and graphic creatives.
           </p>

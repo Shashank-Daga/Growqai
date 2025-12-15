@@ -3,7 +3,6 @@
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowLeft } from "lucide-react";
 import { ContactSection } from "@/components/contact-section";
 import { Footer } from "@/components/site/footer";
 import { useSearchParams } from "next/navigation";
@@ -157,6 +156,7 @@ export default function ServicesPage() {
   const [selectedService, setSelectedService] = useState<Service | null>(null);
   const autoplayRef = useRef<number | null>(null);
   const searchParams = useSearchParams();
+  const detailsRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const id = searchParams.get('id');
@@ -183,6 +183,20 @@ export default function ServicesPage() {
     };
   }, [n]);
 
+  useEffect(() => {
+    if (!selectedService || !detailsRef.current) return;
+
+    const y =
+      detailsRef.current.getBoundingClientRect().top +
+      window.scrollY -
+      80; // adjust for navbar height
+
+    window.scrollTo({
+      top: y,
+      behavior: "smooth",
+    });
+  }, [selectedService]);
+
   // When user clicks a card, stop autoplay briefly and open details
   function handleCardClick(index: number) {
     // make clicked index the active center first
@@ -194,6 +208,7 @@ export default function ServicesPage() {
       window.clearInterval(autoplayRef.current);
       autoplayRef.current = null;
     }
+
     // resume autoplay after short delay
     window.setTimeout(() => {
       autoplayRef.current = window.setInterval(() => {
@@ -276,12 +291,6 @@ export default function ServicesPage() {
     <div className="bg-white min-h-screen">
       <section className="px-6 md:px-16 lg:px-24 py-12">
         <div className="max-w-7xl mx-auto">
-          {/* Back Button */}
-          <div className="mb-12">
-            <button className="inline-flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors">
-              <ArrowLeft className="w-4 h-4" />
-            </button>
-          </div>
 
           {/* CAROUSEL */}
           <div className="relative w-full max-w-6xl h-[430px] mt-8 mx-auto">
@@ -354,6 +363,7 @@ export default function ServicesPage() {
 
           {/* Details panel (appears below carousel) */}
           <AnimatePresence>
+            <div ref={detailsRef} className="scroll-mt-[120px]" />
             {selectedService ? (
               <motion.div
                 key={selectedService.id}

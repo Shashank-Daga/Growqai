@@ -1,5 +1,4 @@
 import Link from "next/link"
-import { ArrowLeft } from "lucide-react"
 import { Metadata } from "next"
 import Image from "next/image"
 import { ContactSection } from "@/components/contact-section"
@@ -13,13 +12,7 @@ export const metadata: Metadata = {
 
 export default function HubPage() {
     return (
-        <section className="bg-white">
-            <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-5 pt-6 mb-6">
-                <Link href="/" className="inline-flex items-center text-gray-700 hover:text-gray-900 transition-colors">
-                    <ArrowLeft className="w-4 h-4" />
-                </Link>
-            </div>
-
+        <section className="bg-white py-15">
             <div className="max-w-7xl mx-auto">
 
                 {/* ================= HERO SECTION ================ */}
