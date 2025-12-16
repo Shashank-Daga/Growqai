@@ -14,14 +14,10 @@ const allAmenities = [
 ]
 
 export function Amenities() {
-    const [showAll, setShowAll] = useState(false)
-
-    const visible = showAll ? allAmenities : allAmenities.slice(0, 4)
-
     return (
         <>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
-                {visible.map((item, idx) => (
+                {allAmenities.map((item, idx) => (
                     <div key={idx} className="text-center">
                         <div className="w-16 h-16 flex items-center justify-center mx-auto mb-3">
                             <img
@@ -35,15 +31,6 @@ export function Amenities() {
                     </div>
                 ))}
             </div>
-
-            {!showAll && (
-                <button
-                    onClick={() => setShowAll(true)}
-                    className="mx-auto block text-white font-semibold bg-[#1718FF] px-4 py-2 hover:bg-[#4B4DFF] transition-all"
-                >
-                    Load More
-                </button>
-            )}
         </>
     )
 }

@@ -108,22 +108,22 @@ export default function HubPage() {
                                 <h3 className="text-2xl font-semibold text-[#2527D9] mb-4 cursor-pointer hover:text-[#1718FF] transition-colors">
                                     Growth HUB – Shreyas Crest
                                 </h3>
-                            </Link>
-                            <p className="text-gray-700 mb-6 leading-relaxed">
-                                A vibrant, modern workspace that blends functionality
-                                with creativity. It's where early-stage startups,
-                                solopreneurs, and growth-driven teams collaborate to
-                                turn ideas into action.
-                            </p>
+                                <p className="text-gray-700 mb-6 leading-relaxed">
+                                    A vibrant, modern workspace that blends functionality
+                                    with creativity. It's where early-stage startups,
+                                    solopreneurs, and growth-driven teams collaborate to
+                                    turn ideas into action.
+                                </p>
 
-                            <div className="relative w-full h-100 rounded-md overflow-hidden">
-                                <Image
-                                    src="/Shreyas Crest/6.jpg"
-                                    alt="Aariv Elegant Property"
-                                    fill
-                                    className="object-cover"
-                                />
-                            </div>
+                                <div className="relative w-full h-100 rounded-md overflow-hidden">
+                                    <Image
+                                        src="/Shreyas Crest/6.jpg"
+                                        alt="Aariv Elegant Property"
+                                        fill
+                                        className="object-cover"
+                                    />
+                                </div>
+                            </Link>
                         </div>
 
                         <div className="bg-gray-50 p-8  shadow-sm">
@@ -131,22 +131,22 @@ export default function HubPage() {
                                 <h3 className="text-2xl font-semibold text-[#2527D9] mb-4">
                                     Growth HUB – Aariv Elegant
                                 </h3>
-                            </Link>
-                            <p className="text-gray-700 mb-6 leading-relaxed">
-                                A space built for founders who believe in scaling
-                                fast and smart. With premium amenities and a
-                                like-minded community, Aariv Elegant is where
-                                innovation finds its rhythm.
-                            </p>
+                                <p className="text-gray-700 mb-6 leading-relaxed">
+                                    A space built for founders who believe in scaling
+                                    fast and smart. With premium amenities and a
+                                    like-minded community, Aariv Elegant is where
+                                    innovation finds its rhythm.
+                                </p>
 
-                            <div className="relative w-full h-100 overflow-hidden">
-                                <Image
-                                    src="/Aariv Elegant/7.jpg"
-                                    alt="Aariv Elegant Property"
-                                    fill
-                                    className="object-cover"
-                                />
-                            </div>
+                                <div className="relative w-full h-100 overflow-hidden">
+                                    <Image
+                                        src="/Aariv Elegant/7.jpg"
+                                        alt="Aariv Elegant Property"
+                                        fill
+                                        className="object-cover"
+                                    />
+                                </div>
+                            </Link>
                         </div>
 
                     </div>

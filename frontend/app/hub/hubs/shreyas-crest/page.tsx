@@ -4,7 +4,7 @@ import { Metadata } from "next"
 import Image from "next/image"
 import { ContactSection } from "@/components/contact-section"
 import { Footer } from "@/components/site/footer"
-import { Amenities } from "./amentites"
+import { Amenities } from "./amenities"
 
 export const metadata: Metadata = {
     title: "Growth HUB - Shreyas Crest | Growqai",
@@ -50,11 +50,11 @@ export default function ShreyasCrestPage() {
                     <div>
 
                         {/* Intro Description */}
-                        <div className="py-12 mb-12 text-[#313447]">
+                        <div className="py-12 text-[#313447]">
                             <p className="text-xl mb-4">
                                 A vibrant, modern workspace that blends functionality with creativity. It's where early-stage startups, solopreneurs, and growth-driven teams collaborate to turn ideas into action.
                             </p>
-                            <p className="text-xl md:text-xlleading-relaxed">
+                            <p className="text-xl md:text-xl leading-relaxed">
                                 Located in the heart of Baner, this ready-to-move office offers a modern, glass-enclosed environment ideal for teams seeking a blend of comfort, design, and functionality.
                             </p>
                         </div>
@@ -83,6 +83,20 @@ export default function ShreyasCrestPage() {
                                     Monday - Friday:<br />
                                     8:00 AM - 10:00 PM
                                 </p>
+                            </div>
+                        </div>
+
+                        {/* Contact Us */}
+                        <div className="p-8">
+                            <h2 className="text-2xl font-bold text-[#050659] mb-6">Contact Us</h2>
+                            <div>
+                                <h3 className="font-semibold mb-2 text-[#2527D9]">Phone No.</h3>
+                                <a
+                                    href="tel:+919767663123"
+                                    className="text-[#313447] hover:text-[#2527D9] transition-colors"
+                                >
+                                    +91 9767663123
+                                </a>
                             </div>
                         </div>
 

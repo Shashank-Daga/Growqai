@@ -49,8 +49,8 @@ export function ContactSection() {
     {
       icon: Mail,
       label: "Email",
-      value: "contact@growqai.com",
-      link: "mailto:contact@growqai.com"
+      value: "shikha@growqai.com",
+      link: "mailto:shikha@growqai.com"
     },
     {
       icon: Linkedin,

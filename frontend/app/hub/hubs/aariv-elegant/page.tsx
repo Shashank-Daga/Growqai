@@ -4,7 +4,7 @@ import { Metadata } from "next"
 import Image from "next/image"
 import { ContactSection } from "@/components/contact-section"
 import { Footer } from "@/components/site/footer"
-import { Amenities } from "./amentites"
+import { Amenities } from "./amenities"
 
 export const metadata: Metadata = {
     title: "Growth HUB - Aariv Elegant | Growqai",
@@ -52,7 +52,7 @@ export default function ShreyasCrestPage() {
                     <div>
 
                         {/* Intro Description */}
-                        <div className="py-12 mb-12 text-[#313447] ">
+                        <div className="py-12 text-[#313447] ">
                             <p className="text-xl mb-4">
                                 A space built for founders who believe in scaling fast and smart.
                                 With premium amenities and a like-minded community, Aariv Elegant is where innovation finds its rhythm.
@@ -89,6 +89,20 @@ export default function ShreyasCrestPage() {
                                     Monday - Friday:<br />
                                     8:00 AM - 10:00 PM
                                 </p>
+                            </div>
+                        </div>
+
+                        {/* Contact Us */}
+                        <div className="p-8">
+                            <h2 className="text-2xl font-bold text-[#050659] mb-6">Contact Us</h2>
+                            <div>
+                                <h3 className="font-semibold mb-2 text-[#2527D9]">Phone No.</h3>
+                                <a
+                                    href="tel:+919767663123"
+                                    className="text-[#313447] hover:text-[#2527D9] transition-colors"
+                                >
+                                    +91 9767663123
+                                </a>
                             </div>
                         </div>
 
