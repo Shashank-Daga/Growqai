@@ -41,10 +41,7 @@ export default function HubPage() {
                             {/* Buttons like reference */}
                             <div className="mt-6 flex gap-4">
                                 <button className="px-6 py-3 bg-[#1718FF] text-white font-medium shadow-md hover:bg-[#4B4DFF]">
-                                    Book Now
-                                </button>
-                                <button className="px-6 py-3 bg-transparent border border-[#313447] text-[#313447] font-medium hover:bg-white/10">
-                                    Read More
+                                    <Link href="#active-hubs">Read More</Link>
                                 </button>
                             </div>
                         </div>
@@ -97,7 +94,7 @@ export default function HubPage() {
                 </div>
 
                 {/* ================== OUR ACTIVE HUBS =================== */}
-                <div className="max-w-7xl mx-auto py-20 px-6 md:px-12 lg:px-20">
+                <div id="active-hubs" className="max-w-7xl mx-auto py-20 px-6 md:px-12 lg:px-20">
 
                     <h2 className="text-3xl font-bold text-[#050659]">Our Active Hubs</h2>
                     <p className="text-[#313447] mt-2 mb-10">

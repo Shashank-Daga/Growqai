@@ -8,8 +8,6 @@ import Link from "next/link"
 import { animationConfig } from "@/lib/animations"
 
 export function Navbar() {
-  const calendlyLink = process.env.NEXT_PUBLIC_CALENDLY_URL
-
   const [isOpen, setIsOpen] = useState(false)
 
   const navItems = ["Services", "Growth Enablers", "About Us", "Insights", "HUB"]
@@ -66,7 +64,7 @@ export function Navbar() {
 
               {/* Get in touch Button */}
               <motion.a
-                href={calendlyLink}
+                href="#contact"
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.3 }}
@@ -109,7 +107,7 @@ export function Navbar() {
                 ))}
 
                 <div className="flex items-center gap-3 pt-2">
-                  <a href={calendlyLink} className="flex items-center justify-center gap-2 w-full bg-black text-white px-4 py-2  font-medium text-sm">
+                  <a href="#contact" className="flex items-center justify-center gap-2 w-full bg-black text-white px-4 py-2  font-medium text-sm">
                     Get in touch
                     <span className="bg-blue-100 text-black p-[3px]">
                       <ArrowUpRight size={14} />

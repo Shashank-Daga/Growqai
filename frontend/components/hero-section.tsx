@@ -3,8 +3,11 @@
 import Image from "next/image"
 import { motion } from "framer-motion"
 import { fadeInUp, staggerContainer } from "@/lib/animations"
+import Link from "next/link"
 
 export function HeroSection() {
+  const calendlyLink = process.env.NEXT_PUBLIC_CALENDLY_URL
+  
   return (
     <section className="relative w-full bg-white text-[#050659] overflow-hidden pt-20 pb-24">
       <Image
@@ -38,7 +41,7 @@ export function HeroSection() {
               {/* BUTTONS */}
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <a
-                  href="#contact"
+                  href={calendlyLink}
                   className="px-6 py-3  bg-[#2527D9] hover:bg-[#8B6CFF] transition-all duration-300 font-medium flex items-center gap-2 text-white"
                 >
                   Free Discovery Call ↗
